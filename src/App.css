@@ -1,17 +1,4 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
 .App-header {
   background-color: #282c34;
@@ -23,16 +10,338 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.bg-height {
+  background-color: #FFE01B;
+  height: 90vh;
+}
+.bg {
+  background-color:#e9cb0e;
+  
+}
+.login-btn{
+  display: inline-block;
+text-decoration: none !important;
+font-weight: 400;
+text-align: center;
+vertical-align: middle;
+border: 1px solid #0B1B1F;;
+background-color:#0B1B1F;
+font-size: 1rem;
+cursor: pointer;
+padding: 4px 15px;
+line-height: 1.5;
+color: #ffffff;
+border-radius: 1.55rem;
+transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.navbrand {
+  font-size: x-large;
+  font-weight: bold;
+  padding-left: 5px;
+}
+.log-btn{
+  display: inline-block;
+  text-decoration: none !important;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid #ffffff;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 4px 20px;
+  background-color: #ffffff;
+  line-height: 1.5;
+  color:#0B1B1F;;
+  border-radius: 1.55rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  
+}
+.form-field{
+  background-color: #ffffff;
+}
+.form-look {
+  padding: 20px;
+}
+.form-box{
+  display: flex;
+}
+input[type="button"] {
+  flex: 1;
+  margin-left: 20px;
+  border-radius: 15px;
+  padding: 10px;
+  font-weight: 600;
+  border: none;
+ }
+ input:focus {
+   outline: none;
+ }
+input.delivery {
+  display: flex;
+  margin-left: 2px;
+  color: #ffffff;
+    margin-right: 10px;
+    background-color: #0B1B1F;
+}
+.Pickup {
+display: flex;
+}
+.landing-image {
+  background-position-x: 80%;
+  height: auto;
+  width: 100%;
+  margin-top: -15px;
+  background-size: cover;
+}
+.order-steps{
+  align-self: flex-end;
+  padding: 20px;
 
-.App-link {
-  color: #61dafb;
+}
+.steps {
+  align-self: center;
+  padding: 15px;
+}
+.order-steps > h2 {
+  margin: 5px
+}
+.favs {
+  display: flex;
+  flex-wrap: wrap;
+padding: 20px;
+}
+text {
+  font-size: x-large;
+}
+.svg {
+  display: flex;
+}
+.p-svg {
+align-self: center;
+width: 62%;
+}
+.p-color-header {
+  color: #BEBBBB;
+}
+.p-change {
+  margin: 0 !important;
+}
+.go-left {
+  min-height: 10vh;
+  margin-top: 30px;
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.go-left > img {
+  background-color: #ffffff;
+  color: #0B1B1F;
+}
+.header-bulk {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 1.5rem;
+  width: 68%;
+}
+.bg-footer-header{
+  background-color:#135053;
+  height: 65vh;
+}
+.jumbo {
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  border-radius: .3rem;
+  position: relative;
+}
+@media only screen and (min-width: 578px){ 
+.jumbo {
+    padding: 4rem 2rem;
+}
+}
+@media only screen and (max-width: 650px){
+  .background-image{
+      background-position: 75%;
+      
+  }
+}
+.browse-local{
+  color: #000000;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+}
+.ready {
+  padding: 0 20px;
+}
+@media only screen and (min-width:420px){
+  .ready {
+    max-width: 410px;
+  }
+}
+@media only screen and (max-width:475px) {
+  .header-bulk{
+    width: auto;
+    padding-right: 0px;
+  }
+}
+.elegant-color {
+  background-color: #0B1B1F;
+  color: #ffffff;
+
+}
+.wd{
+  word-break: break-all;
+}
+.responsive-img{
+  width: 100%;
+  border-radius: 25px;
+}
+@media only screen and (min-width:1440px){
+  .bg-height {
+    height: 70vh;
+  }
+}
+.dl-btn {
+  padding: 23px;
+  position: absolute;
+    top: -20px;
+    left: -3px;
+    border: aliceblue;
+    color: #E3E2E2;
+  border-radius: 0px 15px 15px 0px;
+  background: black
+}
+.form-flex {
+  display: flex;
+  justify-content: center;
+}
+.h1-change {
+  font-size: 3rem !important;
+}
+@media only screen and (max-width:576px){
+  .form-inline {
+    flex-flow: nowrap;
+  }
+  .h1-change {
+    font-size: 2rem !important;
+  }
+}
+.op-btn {
+  position: relative;
+  bottom: 3px;
+}
+.form-control-footer {
+  padding-left: 2.75rem !important;
+  padding-right: 2.75rem !important;
+  padding-top: 1.3rem !important;
+  padding-bottom: 1.3rem !important;
+}
+img.s {
+  position: relative;
+  left: 25px;
+}
+@media only screen and (max-width:420px) {
+  .form-control-footer {
+    padding-right: .75rem !important;
+    padding-left: 1.75rem !important ;
+  }
+}
+@media only screen and (max-width : 320px) {
+.dl-btn {
+  position: relative;
+  top: 0px;
+}
+.op-btn {
+  bottom: 0px;
+}
+  .form-flex {
+    justify-content: normal;
+  }
+}
+.mx-auto > h5 {
+  font-size: 1.15rem;
+}
+.postion-img {
+  position: absolute;
+  top: 60px;
+}
+img.img-change {
+  position: absolute;
+  top: 74px; 
+  right: 73px; 
+}
+@media only screen and (width :768px){
+img.img-change {
+  right: 30px;
+} 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (max-width:620px) {
+  img.img-change {
+    position: relative;
+    right: 20px;
+    top: 20px;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .postion-img {
+    right: 30px;
+    top: auto;
+}
+.bg-footer-header {
+  height: 100vh;
+}
+}
+@media only screen and (max-width:575px){
+  .fixed-top {
+    position: relative;
+  }
+}
+.footer-copyright {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+.platform {
+ font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 23px;
+
+color: #FFE01B;
+
+}
+.w-60 {
+  width: 40%;
+  background-color: aliceblue;
+}
+.foot-desc > a {
+  text-decoration: none;
+  color: #FDFBFB;
+}
+.d-stroke {
+  margin-top: -8px;
+}
+img.dot-stroke {
+  margin-bottom: -10px;
+}
+.arr {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+}
+.svg-ic {
+  position: relative;
+}
+.cs {
+  background-color: rgba(196, 196, 196, 0.22);
+}
+@media only screen and (max-width:354px){
+.arr {
+  z-index: -1;
+}
+}
+@media only screen and (width:768px){
+  .arr {
+    z-index: -1;
   }
 }
