@@ -1,18 +1,7 @@
 
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 .bg-height {
   background-color: #FFE01B;
-  height: 90vh;
+  height: auto
 }
 .bg {
   background-color:#e9cb0e;
@@ -86,6 +75,7 @@ input.delivery {
 .Pickup {
 display: flex;
 }
+
 .landing-image {
   background-position-x: 80%;
   height: auto;
@@ -202,7 +192,7 @@ width: 62%;
   }
 }
 .dl-btn {
-  padding: 23px;
+  padding: 11px;
   position: absolute;
     top: -20px;
     left: -3px;
@@ -327,7 +317,7 @@ img.dot-stroke {
 .arr {
   position: absolute;
   top: 6px;
-  right: 8px;
+  right: 4px;
 }
 .svg-ic {
   position: relative;
@@ -344,4 +334,59 @@ img.dot-stroke {
   .arr {
     z-index: -1;
   }
+}
+.work{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  flex-wrap: nowrap !important;
+  padding-top: 20px;
+  margin-left: 15px;
+
+}
+.one-piece {
+  margin-bottom: 2rem;
+  padding-top: 2rem;
+  margin-top: 1rem;
+}
+.dds {
+  display: flex;
+  justify-content: flex-end;
+}
+img.sos {
+  width: 80%;
+}
+.email-form {
+  max-width: 50%;
+  margin-right: 6px;
+  margin-left: 6px;
+  padding: 0px 20px;
+  flex: 0 0 45%;
+}
+@media only screen and (max-width:576px){
+.work {
+  flex-wrap: wrap !important;
+}
+img.sos {
+  width: 46%;
+}
+.email-form {
+  max-width: 100%;
+  flex: 1 0 50%;
+}
+.one-piece {
+  margin-top: 0 !important;
+}
+}
+.footer-signup-btn {
+  display: flex;
+  width: 45%;
+    margin-left: 2px;
+    color: #ffffff;
+    margin-right: 10px;
+    background-color: #0B1B1F;
+}
+.btn-cls {
+  background-color: #FFE01B;
+  border-radius: 0px !important;
 }

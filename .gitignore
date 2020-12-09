@@ -21,3 +21,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+
+{display: flex;
+    justify-content: space-between;
+    margin-top: 6rem;
+}

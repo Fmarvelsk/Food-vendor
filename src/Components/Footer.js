@@ -84,6 +84,9 @@ const Footer = () => {
         <div className="col-md-6 col-lg-6 ">
     <p className="platform">We have Over 100 restuarants and deliveries on</p> <p className="platform"> our plartform
 sign up today to  partner with  us </p>
+<div className="footer-signup-btn mb-5">
+  <input className="btn-cls" type="button" value="Sign up"/>
+</div>
 </div>
 <div className="col-md-6 col-lg-6">
 <a href="/" className="ml-3"><img src="https://belladivafitness.com/wp-content/uploads/2019/05/Download-on-the-app-store-button-01.svg" alt="svg" width="30%"/></a>

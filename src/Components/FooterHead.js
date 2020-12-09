@@ -1,6 +1,7 @@
 import {Container, Form } from 'react-bootstrap'
 import Arrow from '../Image/arrow.png'
 import Jollof from '../Image/jollof2.png'
+import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 const FooterHeader = () => {
     return(
         <div className="bg-footer-header mt-5">
@@ -16,12 +17,12 @@ const FooterHeader = () => {
                     <Form.Control className="form-control-footer" type="text" placeholder="Email address or ericode"/>
                    
                     <div className="op-btn">
-                    <button className="dl-btn"/>
+                    <button className="dl-btn"><ArrowForwardIcon/></button>
                     </div>
                 </Form>
             </div>
             <div className="postion-img">
-                
+
                 <img className="img-change" src={Jollof} alt="jollof"/>
             </div>
                 </Container>
