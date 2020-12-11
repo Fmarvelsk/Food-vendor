@@ -32,16 +32,31 @@ const Footer = () => {
   title : "About us ",
   page : [{
     link :'About us', 
-    url:'Price Promise'}
+    url:'/'},
+{
+  link : 'Price Promise',
+  url:'/'
+},
+{
+  link : 'FAQs',
+  url : '/'
+}
     ,{
-      link: 'FAQs', url:'Browse Takeaways'},
+      link: 'Browse Takeaways', url:'/'},
       {
-        link: 'Redeem a gift card', url:'Privacy Policy'},
-        {
-          link: 'Terms and Conditions', url:'Cookie Policy'},
+        link: 'Redeem a gift card',
+        url : '/'
+      },
+      {
+        link: 'Privacy Policy', url:'/'},
+        { link : 'Terms and Conditions',
+        url : '/'
+
+        }, {
+          link: 'Cookie Policy', url:'/'},
           {
             link: 'Become a courier Courier portal',
-          url:''} ]
+          url:'/'} ]
 },
 {
   title : "Delivery locations",

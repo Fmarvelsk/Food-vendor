@@ -1,5 +1,5 @@
 import Form from './Form'
-import Jollof from '../Image/jollof.jpeg'
+import CarouselFood from './CarouselFood.js'
 const Header = () => {
     return(
         <div className="one-piece bg-height">
@@ -18,8 +18,8 @@ const Header = () => {
                     </div>
                 </div>
                 <div className="dds">
-                    <img class="sos" src={Jollof} alt="jollof"/>
-                </div>
+                    <CarouselFood/>
+ </div>
             </div> 
                    </div>
     )

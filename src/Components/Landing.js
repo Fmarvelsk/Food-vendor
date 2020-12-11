@@ -30,7 +30,7 @@ const Landing = () => {
                     <Col md={6} className="order-steps mt-3">
                         
                         <div className="favs mt-3">
-                        <h2>Order from your favourite restuarant in 3 Steps?</h2>
+                        <h2 className="reduce-h2">Order from your favourite restuarant in 3 Steps?</h2>
                         </div>      
                             <SVG items={stateFav}/>
                             <div className="go-left">

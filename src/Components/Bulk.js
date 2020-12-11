@@ -22,7 +22,7 @@ body : "Order lunchs, fuel for meetings, or late-night deliveries to the office"
                 <Row>
                     <Col md={6} lg={6} >
                       <div className="header-bulk">
-                    <h3>Bulk Orders for special Occasions?</h3>
+                    <h3 className="reduce-h2">Bulk Orders for special Occasions?</h3>
                     </div>
           <SVG items={bulkOrder}/>
 
