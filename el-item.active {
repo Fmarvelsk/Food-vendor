@@ -1,0 +1,29 @@
+[33mcommit 3eb8717f4091f0fe8c595040663f3b879c7e0d0e[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: fmarvelsk <fmarvelsk@gmail.com>
+Date:   Fri Dec 11 09:17:58 2020 +0100
+
+    addcarousel
+
+[33mcommit e6dab45619851de9af30862828a77c15d2c4044e[m
+Author: fmarvelsk <fmarvelsk@gmail.com>
+Date:   Wed Dec 9 23:04:58 2020 +0100
+
+    deploy
+
+[33mcommit 8ec17dd6a7707aac344a142ffa3ad23ca10ec8d4[m
+Author: fmarvelsk <fmarvelsk@gmail.com>
+Date:   Wed Dec 9 22:38:49 2020 +0100
+
+    changes
+
+[33mcommit b30d2c969c88aa16a291854c49c01326bce9d330[m
+Author: fmarvelsk <fmarvelsk@gmail.com>
+Date:   Wed Dec 9 17:56:31 2020 +0100
+
+    food-vendor
+
+[33mcommit 3915866a794019d4e5d50be8fbe119d03e71f3d2[m
+Author: fmarvelsk <fmarvelsk@gmail.com>
+Date:   Mon Dec 7 19:59:53 2020 +0100
+
+    Initialize project using Create React App

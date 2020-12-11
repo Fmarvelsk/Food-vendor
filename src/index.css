@@ -98,3 +98,7 @@ p.da{
 .svg-width{
 	width: 2rem !important;
 }
+.carousel-item.active {
+    display: flex;
+    justify-content: flex-end;
+}
