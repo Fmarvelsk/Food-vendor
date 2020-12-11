@@ -352,7 +352,7 @@ img.dot-stroke {
 .dds {
   display: flex;
   justify-content: flex-end;
-  
+  width: 45%;
   
 }
 .email-form {
