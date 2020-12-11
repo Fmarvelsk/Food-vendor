@@ -47,6 +47,7 @@ transition: color .15s ease-in-out,background-color .15s ease-in-out,border-colo
 }
 .form-field{
   background-color: #ffffff;
+  width: 94%;
 }
 .form-look {
   padding: 10px;
@@ -268,7 +269,7 @@ img.img-change {
 @media only screen and (max-width:620px) {
   img.img-change {
     position: relative;
-    right: 20px;
+    right: 30px;
     top: 20px;
   }
   
@@ -351,7 +352,7 @@ img.dot-stroke {
 .dds {
   display: flex;
   justify-content: flex-end;
-  width: 45%;
+  width: 40%;
   
 }
 .email-form {

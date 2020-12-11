@@ -119,6 +119,9 @@ p.da{
 	.jumbocolor{
 		display: none
 	}
+	.form-flex{
+		justify-content: normal;
+	}
 }
 .content {
 	justify-content: space-between;
