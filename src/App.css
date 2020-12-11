@@ -359,7 +359,8 @@ img.dot-stroke {
   max-width: 50%;
   margin-right: 6px;
   margin-left: 6px;
-  padding: 0px 20px;
+  padding-left:20px;
+  padding-right: 20px;
   flex: 0 0 45%;
 }
 @media only screen and (max-width:576px){
@@ -372,6 +373,8 @@ img.sos {
 .email-form {
   max-width: 100%;
   flex: 1 0 50%;
+  padding: 0px 10px;
+
 }
 .one-piece {
   margin-top: 0 !important;
@@ -398,4 +401,12 @@ img.sos {
 .header-bulk {
   width: 100%;
 }
+}
+@media only screen and (max-width:662px){
+  div#my-carousel {
+  display: none !important
+  }
+  .bg-height {
+    height: 84vh;
+  }
 }
