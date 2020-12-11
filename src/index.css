@@ -102,3 +102,27 @@ p.da{
     display: flex;
     justify-content: flex-end;
 }
+.create-menu {
+	display: flex;
+   align-items: center;
+	flex-direction: column;
+	justify-content: space-between;
+	
+}
+.jumbocolor {
+	background-color: #ffffff !important;
+}
+.loadmenu {
+	background-color: #e9ecef;
+}
+@media only screen and (max-width:426px){
+	.jumbocolor{
+		display: none
+	}
+}
+.content {
+	justify-content: space-between;
+}
+.w-fles {
+	width: 20%;
+}

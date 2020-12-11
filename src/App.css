@@ -49,7 +49,7 @@ transition: color .15s ease-in-out,background-color .15s ease-in-out,border-colo
   background-color: #ffffff;
 }
 .form-look {
-  padding: 20px;
+  padding: 10px;
 }
 .form-box{
   display: flex;
@@ -135,11 +135,10 @@ width: 70%;
 }
 .bg-footer-header{
   background-color:#135053;
-  height: 65vh;
+  height: auto;
 }
 .jumbo {
   padding: 2rem 1rem;
-  margin-bottom: 2rem;
   border-radius: .3rem;
   position: relative;
 }
@@ -262,7 +261,7 @@ img.img-change {
 }
 @media only screen and (width :768px){
 img.img-change {
-  right: 30px;
+  right: -43px;
 } 
 }
 
@@ -408,5 +407,10 @@ img.sos {
   }
   .bg-height {
     height: 84vh;
+  }
+}
+@media only screen and (min-width :1024px){
+  .form-field {
+    width: 80%;
   }
 }

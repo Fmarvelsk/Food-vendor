@@ -9,10 +9,10 @@ import N from '../Image/n@2x.svg'
 import D from '../Image/d@2x.svg'
 import R from '../Image/r@2x.svg'
 import Dot from '../Image/-@2x.svg'
-const Foodnav = () => {
-    return(<div className="bg-height">
-        <div className="nav-adjust">
-        <Nav className="d-whole" activeKey="/home">
+const FoodNav = () => {
+        return (
+            <>
+                    <Nav className="d-whole" activeKey="/home">
           <Navbar.Brand>
             <Nav.Link href="/home">
             <img src={V} alt="logo"/>
@@ -30,7 +30,7 @@ const Foodnav = () => {
             </Nav.Link>
           
             <Nav.Link href="/home">
-<p className="dw"><ShoppingCartOutlinedIcon className="black-cls"/><p className="da">s</p></p>
+<p className="dw"><ShoppingCartOutlinedIcon className="black-cls"/><span className="da">s</span></p>
             </Nav.Link>
            </div>
           </Nav>
@@ -51,8 +51,8 @@ const Foodnav = () => {
               
               </div>
           </Nav>
-        </div>
-      </div>
-    )
+
+            </>
+        )
 }
-export default Foodnav
+export default FoodNav

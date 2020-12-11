@@ -5,7 +5,7 @@ import Header from './Components/Header'
 import Footer from './Components/Footer'
 import Landing from './Components/Landing'
 import './App.css';
-import Foodnav from './Components/FoodNav';
+import FoodMenu from './Components/FoodMenu';
 
 function App() {
   const wrapper = createRef()
@@ -26,7 +26,7 @@ function App() {
      <Footer/>
      </Route>
      <Route path="/home">
-       <Foodnav/>
+       <FoodMenu/>
      </Route>
      </Switch>
 </Router>
