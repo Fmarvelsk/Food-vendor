@@ -7,7 +7,9 @@ const Header = () => {
             <div className="work">
                 <div className="email-form">
                 <div className="mt-5">
-                        <h2 className="header-highlight">Want Jollof?</h2>
+                <h2 className="header-highlight">Want Jollof?</h2>
+    
+    
                     </div>
                    
                     <div class="order-food">

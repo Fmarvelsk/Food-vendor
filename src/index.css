@@ -112,9 +112,6 @@ p.da{
 .jumbocolor {
 	background-color: #ffffff !important;
 }
-.loadmenu {
-	background-color: #e9ecef;
-}
 @media only screen and (max-width:426px){
 	.jumbocolor{
 		display: none
@@ -123,9 +120,17 @@ p.da{
 		justify-content: normal;
 	}
 }
-.content {
-	justify-content: space-between;
-}
 .w-fles {
 	width: 20%;
+}
+.checkbox-menu {
+	display: flex;
+	background-color:#EEEEEE;
+}
+.checkbox-menu:hover{
+	cursor: pointer;
+
+}
+.content {
+	background-color:#EEEEEE;
 }
