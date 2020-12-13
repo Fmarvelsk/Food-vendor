@@ -27,6 +27,7 @@ function App() {
      </Route>
      <Route path="/home">
        <FoodMenu/>
+       <Footer/>
      </Route>
      </Switch>
 </Router>
