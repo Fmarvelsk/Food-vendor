@@ -9,6 +9,7 @@ const MenuTab = (props) => {
                     <div className="content ">
                         <Row className="moblie-m">
                     <Col md={4} sm={6} className="food ">
+                        
                         <img src={props.Image} className="img-food-menu" alt="group"/>
                     </Col>
                     <Col md={4} sm={6}>
@@ -17,9 +18,10 @@ const MenuTab = (props) => {
                         <div><Rating/></div>
                         <p>African and Continental dishes</p>
                         </div>
+
                     </Col>
                     <Col md={4} sm={8} className="mk-border mt-3">
-                        <div className="ktchen pt-3"> 
+                        <div className="ktchen pt-3 details"> 
                         <div className="checkbox-menu">                     
                         <AccessTimeIcon/> <p>Starting from: 12 noon </p>
                         </div>

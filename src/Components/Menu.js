@@ -1,4 +1,4 @@
-import { Container, Col, Row } from 'react-bootstrap'
+import { Container, Col, Row, Navbar } from 'react-bootstrap'
 import MenuTab from './MenuTab'
 import Group1 from '../Image/Pounded.jpeg'
 import Group2 from '../Image/Snacks.jpeg'
@@ -7,9 +7,18 @@ import ChooseMenu from './ChooseMenu'
 const Menu = () => {
     return(
         <Container className="jumbotron jumbocolor">
+            <div class="header-row">
+                <div>
+                    <p>Menu</p>
+                </div>
+                <div>
+                    <p>Sort by Popular</p>
+                </div>
+            
+            </div>
             <Row className="create-menu">
-            <Col md={2} className="content ">
-              <ChooseMenu
+            <Col md={2} className="content nav">
+			    <ChooseMenu
               Title='Soup'
               l1='Egusi'
               l2='Efo riro'
@@ -31,7 +40,7 @@ const Menu = () => {
               l2='Agege bread'
               l3='Groundnut'
               l4='Gizdodo'
-              l5='Grilled fish'/>     
+              l5='Grilled fish'/>   
                          </Col>
             
             <Col md={9}>

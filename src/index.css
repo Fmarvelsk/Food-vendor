@@ -150,6 +150,7 @@ p.da{
 }
 .content > .color-menu {
 	padding-left: 8px;
+	padding-right: 8px;
 }
 .hr-u {
 	border-top: 1px solid;
@@ -197,12 +198,36 @@ height: 174px;
     max-width: 25%;
 }
 .col-md-4.col-sm-6 {
-    flex: 0 0 50%;
+    flex: 0 0 100%;
+    text-align: center;
+}
+.ktchen {
+    padding-top: 1rem !important;
 }
 }
 .mk-border {
 	border-left: 1px solid black;
 }
 @media (max-width:765px){
-
+	.mk-border {
+		border-left: none
+	}
+	.details {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.content.col-md-2 {
+		margin: 2rem ;
+	}
+}
+@media only screen and (max-width: 540px){
+.bg-height-nav {
+    height: 66vh !important;
+}
+}
+.header-row {
+    display: flex;
+	justify-content: space-between;
+	padding: 0px 10px;
 }
