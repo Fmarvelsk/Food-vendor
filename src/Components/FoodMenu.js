@@ -1,6 +1,6 @@
 import Foodnav from './FoodNav'
 import Menu from './Menu'
-import Moblie from './MoblieMenu'
+//import Moblie from './MoblieMenu'
 
  const Foodmenu = () => {
     return( <>
@@ -10,7 +10,6 @@ import Moblie from './MoblieMenu'
         </div>
       </div>
       <Menu/>
-      <Moblie/>
       </>
     )
 }
