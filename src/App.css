@@ -186,11 +186,6 @@ width: 70%;
   width: 100%;
   border-radius: 25px;
 }
-@media only screen and (min-width:1440px){
-  .bg-height {
-    height: 70vh;
-  }
-}
 .dl-btn {
   padding: 11px;
   position: absolute;
@@ -214,6 +209,9 @@ width: 70%;
   }
   .h1-change {
     font-size: 2rem !important;
+  }
+  .moblie-m{
+    margin: 0px;
   }
 }
 .op-btn {
@@ -308,6 +306,9 @@ color: #FFE01B;
   text-decoration: none;
   color: #FDFBFB;
 }
+a:hover {
+text-decoration: none;
+}
 .d-stroke {
   margin-top: -8px;
 }
@@ -355,6 +356,11 @@ img.dot-stroke {
   width: 40%;
   
 }
+@media only screen and (min-width:2453px){
+  .dds{
+    width:38%
+  }
+}
 .email-form {
   max-width: 50%;
   margin-right: 6px;
@@ -372,7 +378,7 @@ img.sos {
 }
 .email-form {
   max-width: 100%;
-  flex: 1 0 50%;
+  flex: 1 0 95%;
   padding: 0px 10px;
 
 }
@@ -402,7 +408,7 @@ img.sos {
   width: 100%;
 }
 }
-@media only screen and (max-width:662px){
+@media only screen and (max-width:540px){
   div#my-carousel {
   display: none !important
   }
@@ -413,5 +419,10 @@ img.sos {
 @media only screen and (min-width :1024px){
   .form-field {
     width: 80%;
+  }
+}
+@media only screen and (max-width : 768px){
+  .dds {
+    width: 50%;
   }
 }
