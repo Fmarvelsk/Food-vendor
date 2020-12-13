@@ -43,7 +43,7 @@ const FoodNav = () => {
             <p><strong>25 Merchants</strong> delivering to your area: <strong>35 Parnell street, D09 H45</strong> </p>
             <Link className="pl-nav mb-3" to="/">change address</Link>
           </Nav.Item>
-            <div class="form-nav form-inline">
+            <div className="form-nav form-inline">
               <Form.Control className="nav-search" placeholder="Search"/>
               <div className="search-svg">
               <SearchOutlinedIcon className="svg-width"/>

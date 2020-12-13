@@ -14,7 +14,7 @@ const MenuTab = (props) => {
                     <Col md={4} sm={6}>
                         <div className="ktchen pt-3">
                         <p><b>{props.Name}</b></p>
-                        <p><Rating/></p>
+                        <div><Rating/></div>
                         <p>African and Continental dishes</p>
                         </div>
                     </Col>

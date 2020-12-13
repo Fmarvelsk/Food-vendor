@@ -45,8 +45,15 @@ const Menu = () => {
                 />
                 <MenuTab Image={Chicken}
                 Name='Rilwan Kitchen , Ballymun.'/>
+                 <div className="text-center">
+                    <a href=""> More meals</a>
                 </div>
+
+                </div>
+               
 </Col>
+
+               
             </Row>
         </Container>
     )
