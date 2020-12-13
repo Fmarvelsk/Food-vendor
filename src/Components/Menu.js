@@ -4,9 +4,12 @@ import Group1 from '../Image/Pounded.jpeg'
 import Group2 from '../Image/Snacks.jpeg'
 import Chicken from '../Image/Chicken.jpeg'
 import ChooseMenu from './ChooseMenu'
+import {useSelector} from 'react-redux'
 const Menu = () => {
+    const loadData = useSelector( state => state.filterStore)
     return(
         <Container className="jumbotron jumbocolor">
+            {console.log(loadData)}
             <div class="header-row">
                 <div>
                     <p>Menu</p>
@@ -18,6 +21,7 @@ const Menu = () => {
             </div>
             <Row className="create-menu">
             <Col md={2} className="content nav">
+                
 			    <ChooseMenu
               Title='Soup'
               l1='Egusi'

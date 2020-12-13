@@ -6,12 +6,25 @@ import Footer from './Components/Footer'
 import Landing from './Components/Landing'
 import './App.css';
 import FoodMenu from './Components/FoodMenu';
+import {useDispatch} from 'react-redux';
+import {loadData} from "./store";
+import Foodmenu from './Components/FoodMenu';
+import axios from 'axios'
 
 function App() {
   const wrapper = createRef()
+  const dispatch = useDispatch()
   useEffect(() => {
     // eslint-disable-next-line
       const node = wrapper.current
+      const FoodMenuDB = async () => {
+        const FoodFetch = await axios({
+          method : 'GET',
+          url: 'https://jsonplaceholder.typicode.com/posts'
+        }).then( result => dispatch(loadData(result)))
+        .catch(err => console.log(err))
+      }
+      FoodMenuDB()
   })
  
   return (
@@ -35,5 +48,4 @@ function App() {
    </div>
     );
 }
-
 export default App;
