@@ -1,0 +1,36 @@
+@media only screen and (max-width:765px){
+    
+    .filter{        
+    display: block !important;
+    }
+    
+.cod {
+	display: none;
+}
+}
+.show{
+    display: block;
+}
+.filter {
+    display: block;
+    padding: 10px 15px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    display: none;
+    background: #FFFFFF;
+    border: 1px solid black;
+}
+.try {
+    float: right;
+    color: #9097a1;
+    margin-top: 4px;
+    transform: rotate(0deg);
+}
+.try.active {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+

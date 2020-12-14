@@ -21,7 +21,7 @@ const MenuTab = (props) => {
 
                     </Col>
                     <Col md={4} sm={8} className="mk-border mt-3">
-                        <div className="ktchen pt-3 details"> 
+                        <div className="ktchen details"> 
                         <div className="checkbox-menu">                     
                         <AccessTimeIcon/> <p>Starting from: 12 noon </p>
                         </div>

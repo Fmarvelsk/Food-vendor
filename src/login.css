@@ -1,0 +1,104 @@
+.modal-content  {
+background: none !important;
+border: 1px solid rgba(0,0,0,0);
+}
+.modal-body {
+    background-color: #ffffff
+}
+.logo-modal{
+    display: flex;
+    justify-content: center;
+    color: #FFE01B;
+}
+.google-facebook{
+    display: flex;
+    justify-content: space-between
+    
+}
+.google-button-text {
+    color:#191C1EDB;
+    font-size: 17px;
+}
+.google-button-text > img {
+    width: 20px;
+    height: 20px;
+    margin: 0px 8px;
+}
+@media only screen and (max-width:525px){
+    .google-facebook{
+        flex-direction: column;
+    }
+    .google-facebook > button {
+        margin-bottom: 2rem;
+    }
+}
+#login-modal-title{
+    font-size: 24px;
+    font-weight: bold;
+}
+.link-color {
+    color: #FFE01B;
+    cursor: pointer;
+}
+.login-button-google {
+    border: 1px solid #707070;
+    border-radius: 2px;
+    opacity: 1;
+    background-color: #ffffff;
+
+}
+.login-button-google:hover{
+    background-color: #eeeeee;
+    border: 1px solid #707070;
+}
+.login-button-google:focus {
+    outline: 0;
+    background-color: #ffffff;
+   
+}
+.login-button-google:active {
+    outline: 0;
+    border: none;
+    background-color: #eeeeee !important;
+    }
+button#login-button {
+        border: 1px solid #707070;
+        border-radius: 2px;
+        opacity: 1;
+ 
+}
+@media (min-width: 576px){
+.modal-dialog {
+    max-width: 576px;
+}
+}
+small#forgot-password {
+    text-align: right;
+}
+.mr-f{
+    margin-right: 10px;
+}
+.clor-black{
+    background-color: #000000;
+}
+.visiblity {
+    position: absolute;
+    right: 8px;
+    top: 40px;
+}
+div#form-group-login-password {
+    position: relative;
+}
+.pos-or {
+    display: flex;
+    justify-content: space-around;
+}
+.border-or > hr {
+    background-color: black;
+}
+.border-or {
+    width: 45%;
+ }
+ .red {
+     color: red;
+ }

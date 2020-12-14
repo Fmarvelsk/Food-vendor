@@ -4,13 +4,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import $ from 'jquery';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import {Provider} from 'react-redux'
-import { createStore} from 'redux'
-import reducers from './store/filterStore'
+import configureStore from './store/configureStore';
 import './index.css';
 import App from './App';
 
 import reportWebVitals from './reportWebVitals';
-const store = createStore(reducers)
+const store = configureStore()
 ReactDOM.render(
   <React.StrictMode>
     

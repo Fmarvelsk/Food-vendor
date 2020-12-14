@@ -10,7 +10,7 @@ import {useDispatch} from 'react-redux';
 import {loadData} from "./store";
 import Foodmenu from './Components/FoodMenu';
 import axios from 'axios'
-
+import AuthPage from './Components/AuthPage'
 function App() {
   const wrapper = createRef()
   const dispatch = useDispatch()
@@ -43,6 +43,8 @@ function App() {
        <Footer/>
      </Route>
      </Switch>
+     
+     <AuthPage/>
 </Router>
      
    </div>

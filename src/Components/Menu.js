@@ -1,15 +1,20 @@
-import { Container, Col, Row, Navbar } from 'react-bootstrap'
+import { Container, Col, Row, Navbar, Form } from 'react-bootstrap'
 import MenuTab from './MenuTab'
 import Group1 from '../Image/Pounded.jpeg'
 import Group2 from '../Image/Snacks.jpeg'
 import Chicken from '../Image/Chicken.jpeg'
 import ChooseMenu from './ChooseMenu'
+import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import {useSelector} from 'react-redux'
+import style from '../moblie.module.css'
+import { useState } from 'react'
+import { Collapse } from 'bootstrap'
 const Menu = () => {
+    const [block, setBlock] = useState(style.cod)
+    const filterArrow = ( e => e.preventDefault(), console.log(block))
     const loadData = useSelector( state => state.filterStore)
     return(
         <Container className="jumbotron jumbocolor">
-            {console.log(loadData)}
             <div class="header-row">
                 <div>
                     <p>Menu</p>
@@ -21,7 +26,11 @@ const Menu = () => {
             </div>
             <Row className="create-menu">
             <Col md={2} className="content nav">
-                
+    			<div className={style.filter}>
+                <span className="filter-toggle-text">Filters By</span>
+              <i className={style.try} onClick={filterArrow} > <ArrowDropDownIcon /></i>
+		</div>
+        <div className={block}>
 			    <ChooseMenu
               Title='Soup'
               l1='Egusi'
@@ -44,7 +53,8 @@ const Menu = () => {
               l2='Agege bread'
               l3='Groundnut'
               l4='Gizdodo'
-              l5='Grilled fish'/>   
+              l5='Grilled fish'/>  
+             </div>
                          </Col>
             
             <Col md={9}>

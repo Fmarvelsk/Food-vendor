@@ -1,5 +1,7 @@
 import React from 'react';
 import {Navbar, Nav } from 'react-bootstrap'
+import { useDispatch } from 'react-redux'
+import { showModalLogin, showModalSignup } from '../store/actionTypes'
 import V from '../Image/v@2x.svg'
 import E from '../Image/e@2x.svg'
 import N from '../Image/n@2x.svg'
@@ -8,13 +10,15 @@ import R from '../Image/r@2x.svg'
 import Dot from '../Image/-@2x.svg'
 const Navigation = () => {
     //const logo = [V, E, N, D, R, Dot]
-const showModalLoginHandler = () => {
-        console.log('working...')
-    }
-    const showModalSignupHandler = () => {
-        console.log('loading')
-    }
-    
+    const dispatch = useDispatch()
+
+	const showModalLoginHandler = () => {
+        dispatch(showModalLogin())
+	}
+
+	const showModalSignupHandler = () => {
+		dispatch(showModalSignup())
+	}    
     return (
 		<>
 			<Navbar collapseOnSelect className="bg" variant="light" expand="lg" fixed="top">
