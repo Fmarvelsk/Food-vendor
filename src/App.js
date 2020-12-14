@@ -4,13 +4,16 @@ import Navbar from './Components/Navbar'
 import Header from './Components/Header'
 import Footer from './Components/Footer'
 import Landing from './Components/Landing'
+import NavBus from './Components/NavBus'
 import './App.css';
 import FoodMenu from './Components/FoodMenu';
 import {useDispatch} from 'react-redux';
 import {loadData} from "./store";
 import Foodmenu from './Components/FoodMenu';
+import SignupBuss from './Components/SignupBusiness'
 import axios from 'axios'
 import AuthPage from './Components/AuthPage'
+import BusinessLanding from './Components/BusinessLandingPage';
 function App() {
   const wrapper = createRef()
   const dispatch = useDispatch()
@@ -38,10 +41,19 @@ function App() {
      <Landing/>
      <Footer/>
      </Route>
-     <Route path="/home">
+     <Route exact path="/home">
        <FoodMenu/>
        <Footer/>
      </Route>
+     <Route exact path="/merchant">
+     <NavBus/>
+       <BusinessLanding/>
+     </Route>
+     <Route exact path="/merchant/signup">
+     <NavBus/>
+       <SignupBuss/>
+     </Route>
+   
      </Switch>
      
      <AuthPage/>
