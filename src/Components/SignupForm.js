@@ -35,7 +35,13 @@ function Signup() {
 			dispatch(showModalLogin())
 		}
 		const confirmPassword = (e) => {
-				(password===e.target.value ?  setConfirmPass(confirmPass): setErrorConfirm('password is not the same')  )
+				if(password===e.target.value){
+					  setConfirmPass(confirmPass)
+					  setErrorConfirm('')
+				}
+				 else {
+					 return setErrorConfirm('password is not the same') 
+				 }
 		}
 const emailValidate = (e) => {
 	if(!e.target.value){
