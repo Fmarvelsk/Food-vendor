@@ -35,8 +35,9 @@ const FoodNav = () => {
            </div>
           </Nav>
         <div className="nav-home mt-4 mb-4">
-     <Link to="/">   <p className="home p-btn ">Home</p></Link> 
-                    <p className="home p-btn">Choose customer</p>
+     <Link to="/">   <p className="home">Home</p></Link> {`${'>'}`}
+     <Link to="/">
+                    <p className="home">Choose customer</p></Link>
         </div>
         <Nav className="mr-3 pb-3" activeKey="/home">
           <Nav.Item className="ml-3 nav-location">

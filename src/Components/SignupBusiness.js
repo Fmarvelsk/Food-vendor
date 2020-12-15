@@ -86,7 +86,7 @@ const LoginBus = () => {
 				</Form.Row>
 				<div className="buss-sign-btn mt-3">
 					<Button variant="primary" className="p-btn login-btn" type="submit">
-						Log In
+						Sign Up
 					</Button>
 				</div>
 			

@@ -1,0 +1,23 @@
+.home {
+ color: black !important;   
+}
+.panel{
+background: #FFFFFF 0% 0% no-repeat padding-box;
+box-shadow: 0px 2px 4px #C5C5C52B;
+}
+.merchant-header{
+    display: flex;
+}
+.padding-order {
+    padding: 15px;
+}
+.setspacing {
+    letter-spacing: 0.4px;
+}
+.order-p{
+    font: normal normal bold 15px/17px Roboto;
+letter-spacing: 0.04px;
+color: #000000;
+text-transform: uppercase
+
+}

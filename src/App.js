@@ -9,6 +9,7 @@ import './App.css';
 import FoodMenu from './Components/FoodMenu';
 import {useDispatch} from 'react-redux';
 import {loadData} from "./store";
+import Order from './Components/Order'
 import Foodmenu from './Components/FoodMenu';
 import SignupBuss from './Components/SignupBusiness'
 import axios from 'axios'
@@ -53,7 +54,9 @@ function App() {
      <NavBus/>
        <SignupBuss/>
      </Route>
-   
+  <Route exact path="/orders">
+    <Order/>
+  </Route>
      </Switch>
      
      <AuthPage/>
