@@ -8,7 +8,9 @@ document.body.style.backgroundColor = '#F9F9F9'
     }, [])
     return(
         <>
+        <div className="foodnav">
         <FoodNav/>
+        </div>
         <Orders/>
 
         </>

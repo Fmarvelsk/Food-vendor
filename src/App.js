@@ -41,6 +41,7 @@ function App() {
      <Header/>
      <Landing/>
      <Footer/>
+     <AuthPage/>
      </Route>
      <Route exact path="/home">
        <FoodMenu/>
@@ -56,10 +57,11 @@ function App() {
      </Route>
   <Route exact path="/orders">
     <Order/>
+    <Footer/>
   </Route>
      </Switch>
      
-     <AuthPage/>
+
 </Router>
      
    </div>

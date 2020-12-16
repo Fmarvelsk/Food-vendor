@@ -21,3 +21,35 @@ color: #000000;
 text-transform: uppercase
 
 }
+.item-order{
+    display: flex;
+    justify-content: space-between;
+}
+.rate-star {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.size-large{
+    font-size: xx-large !important;
+    font-weight: 700;
+}
+.font-rate{
+    font-weight: 600 !important;
+}
+.foodnav {
+    background-color: #FFFFFF;
+}
+.font-est{
+    font-size: 12px;
+    padding-top: 15px;
+}
+.tabscreen {
+    justify-content: center;
+}
+.underline-order {
+    height: 2px;
+    width: 30%;
+    background: linear-gradient(90deg, #ffc107 0%, rgb(241, 91, 42) 100%);
+    margin-top: -18px;
+}

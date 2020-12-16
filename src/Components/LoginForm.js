@@ -41,6 +41,8 @@ export default function LoginForm() {
 		}
 		console.log(info)
 		e.preventDefault()
+		history.push('/home')
+
 		/*const dbUser = async() => {
 				const response = await axios({
 					method: "post",

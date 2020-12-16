@@ -78,6 +78,7 @@ const emailValidate = (e) => {
 			email : email,
 			password : password
 		};
+		history.push('/home')
 		
 					/*const dbUrl = async() => {
 						const response = await axios({

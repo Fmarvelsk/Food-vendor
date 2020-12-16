@@ -14,7 +14,7 @@ const FoodNav = () => {
             <>
                     <Nav className="d-whole" activeKey="/home">
           <Navbar.Brand>
-            <Nav.Link href="/home">
+            <Nav.Link href="/">
             <img src={V} alt="logo"/>
                 <img src={E} alt="logo"/>
                 <img src={N} alt="logo"/>
@@ -35,7 +35,7 @@ const FoodNav = () => {
            </div>
           </Nav>
         <div className="nav-home mt-4 mb-4">
-     <Link to="/">   <p className="home">Home</p></Link> {`${'>'}`}
+     <Link to="/home">   <p className="home">Home</p></Link> {`${'>'}`}
      <Link to="/">
                     <p className="home">Choose customer</p></Link>
         </div>

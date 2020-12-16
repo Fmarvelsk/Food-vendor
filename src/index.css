@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  letter-spacing: 0.5px;
 }
 .carousel-fade .carousel-item {
 	opacity: 0;
@@ -239,4 +240,22 @@ height: 174px;
     color: #9097a1;
     letter-spacing: 1px;
     font-family: 'Montserrat', sans-serif;
+}
+#dropdown-basic {
+    /* background-color: #01579b; */
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+#dropdown-basic:focus {
+    outline: none !important;
+}
+
+.dropdown *{
+	color: black !important;
+}
+.dropdown-sort {
+	margin-bottom: 1rem;
+	text-align: end;
 }
