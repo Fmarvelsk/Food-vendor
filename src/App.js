@@ -15,6 +15,7 @@ import SignupBuss from './Components/SignupBusiness'
 import axios from 'axios'
 import AuthPage from './Components/AuthPage'
 import BusinessLanding from './Components/BusinessLandingPage';
+import Resturant from './Components/Resturants';
 function App() {
   const wrapper = createRef()
   const dispatch = useDispatch()
@@ -58,6 +59,9 @@ function App() {
   <Route exact path="/orders">
     <Order/>
     <Footer/>
+  </Route>
+  <Route exact path='/Resturant'>
+    <Resturant/>
   </Route>
      </Switch>
      

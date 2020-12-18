@@ -8,7 +8,7 @@ border: 1px solid rgba(0,0,0,0);
 .logo-modal{
     display: flex;
     justify-content: center;
-    color: #FFE01B;
+    
 }
 .google-facebook{
     display: flex;
@@ -37,7 +37,7 @@ border: 1px solid rgba(0,0,0,0);
     font-weight: bold;
 }
 .link-color {
-    color: #FFE01B;
+    color: rgba(19, 80, 83, 1);
     cursor: pointer;
 }
 .login-button-google {

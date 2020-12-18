@@ -9,9 +9,17 @@ import N from '../Image/n@2x.svg'
 import D from '../Image/d@2x.svg'
 import R from '../Image/r@2x.svg'
 import Dot from '../Image/-@2x.svg'
-const FoodNav = () => {
+import { propTypes } from 'react-bootstrap/esm/Image';
+import { useEffect } from 'react';
+const FoodNav = (props) => {
+  useEffect( () => {
+   const imageStyle = {
+          backgroundImage: `url('https://foodhive.com.ng/wp-content/uploads/2020/10/GrillXpress-foodhive-nigeria-banner.jpeg')`
+    }
+  }, [props])
         return (
             <>
+            {console.log(props)}
                     <Nav className="d-whole" activeKey="/home">
           <Navbar.Brand>
             <Nav.Link href="/">
@@ -34,7 +42,8 @@ const FoodNav = () => {
             </Nav.Link>
            </div>
           </Nav>
-        <div className="nav-home mt-4 mb-4">
+          {( props.details ? (<div><img src={props.details.Image} width="100%" alt="Res"/></div>) : (<div>helo</div>))}
+          <div className="nav-home mt-4 mb-4">
      <Link to="/home">   <p className="home">Home</p></Link> {`${'>'}`}
      <Link to="/">
                     <p className="home">Choose customer</p></Link>
