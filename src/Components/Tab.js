@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Tab from '@material-ui/core/Tab';
 import TabContext from '@material-ui/lab/TabContext';
+import Meats from '../Image/Meats.jpeg'
 import TabList from '@material-ui/lab/TabList';
 import TabPanel from '@material-ui/lab/TabPanel';
 import SearchOutlinedIcon from '@material-ui/icons/SearchOutlined';
@@ -28,7 +29,7 @@ export default function LabTabs() {
         <AppBar position="static">
           <TabList onChange={handleChange} aria-label="simple tabs example">
             <Tab label="ChooseMenu" value="1" />
-            <Tab label="Information" value="2" />
+            <Tab label="More Information" value="2" />
            </TabList>
         </AppBar>
         <TabPanel value="1">
@@ -39,6 +40,19 @@ export default function LabTabs() {
             <SearchOutlinedIcon className="outline"/>
             </div>
           </Form>
+          <div className="mt-3 merchant-header">
+          <div className="">
+            <img className="menu-img" src={Meats} alt="menu"/>
+          </div>
+          <div className="ml-3 weatr">
+            <h5>Egusi soup</h5>
+            <p>Served with choice of swallow (e.g poundo, eba, etc), and choice of protein (e.g goat meat, fish, assorted, etc)</p>
+          </div>
+          <div className="wde4">
+            <span>£10.00</span>
+          <span class="span-btn">+</span>
+          </div>
+          </div>
         </TabPanel>
         <TabPanel value="2">Item Two</TabPanel>
         </TabContext>

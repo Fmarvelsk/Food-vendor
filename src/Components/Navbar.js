@@ -2,12 +2,7 @@ import React from 'react';
 import {Navbar, Nav } from 'react-bootstrap'
 import { useDispatch } from 'react-redux'
 import { showModalLogin, showModalSignup } from '../store/actionTypes'
-import V from '../Image/v@2x.svg'
-import E from '../Image/e@2x.svg'
-import N from '../Image/n@2x.svg'
-import D from '../Image/d@2x.svg'
-import R from '../Image/r@2x.svg'
-import Dot from '../Image/-@2x.svg'
+import Logo from '../Image/vendr..svg'
 const Navigation = () => {
     //const logo = [V, E, N, D, R, Dot]
     const dispatch = useDispatch()
@@ -24,15 +19,7 @@ const Navigation = () => {
 			<Navbar collapseOnSelect className="bg" variant="light" expand="lg" fixed="top">
 				
                 <Navbar.Brand className="navbrand mb-3" href="/">
-                <img src={V} alt="logo"/>
-                <img src={E} alt="logo"/>
-                <img src={N} alt="logo"/>
-                <img src={D} className="d-stroke"alt="logo"/>
-                <img src={R} alt="logo"/>
-                <img src={Dot} className="dot-stroke" alt="logo"/>
-                    {/*logo.map( (logo) => 
-                    <img src={logo} alt="logo"/>
-                    )*/}
+                <img src={Logo} alt="logo"/>
                     </Navbar.Brand>
                     
 				<Navbar.Toggle  aria-controls="basic-navbar-nav" />

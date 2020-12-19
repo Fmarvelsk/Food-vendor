@@ -39,6 +39,7 @@ text-transform: uppercase
 }
 .foodnav {
     background-color: #FFFFFF;
+    padding-bottom: 3rem;
 }
 .font-est{
     font-size: 12px;
@@ -86,4 +87,12 @@ text-transform: uppercase
 button:active {
     border: 0;
     outline: none;
+}
+.bold {
+    font-weight: bold;
+}
+.remove{
+    font-size: 12;
+    text-decoration: underline;
+    cursor: pointer;
 }

@@ -132,3 +132,11 @@ button:focus {
 .search-food:hover{
 background-color: #FFE01B;
 }
+.menu-img {
+    width: 98px;
+height: 90px;
+}
+.wde4 {
+    display: flex;
+    align-items: center;
+}

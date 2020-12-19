@@ -1,67 +1,51 @@
-import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
-import PermIdentityOutlinedIcon from '@material-ui/icons/PermIdentityOutlined';
-import SearchOutlinedIcon from '@material-ui/icons/SearchOutlined';
-import { Form, Nav, Navbar } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
-import V from '../Image/v@2x.svg'
-import E from '../Image/e@2x.svg'
-import N from '../Image/n@2x.svg'
-import D from '../Image/d@2x.svg'
-import R from '../Image/r@2x.svg'
-import Dot from '../Image/-@2x.svg'
-import { propTypes } from 'react-bootstrap/esm/Image';
-import { useEffect } from 'react';
+import { Nav, Navbar } from 'react-bootstrap'
+import Result from './Result'
+import Logo from '../Image/vendr..svg'
+import Details from './Details'
 const FoodNav = (props) => {
-  useEffect( () => {
-   const imageStyle = {
-          backgroundImage: `url('https://foodhive.com.ng/wp-content/uploads/2020/10/GrillXpress-foodhive-nigeria-banner.jpeg')`
-    }
-  }, [props])
         return (
             <>
             {console.log(props)}
-                    <Nav className="d-whole" activeKey="/home">
-          <Navbar.Brand>
-            <Nav.Link href="/">
-            <img src={V} alt="logo"/>
-                <img src={E} alt="logo"/>
-                <img src={N} alt="logo"/>
-                <img src={D} className="d-stroke"alt="logo"/>
-                <img src={R} alt="logo"/>
-                <img src={Dot} className="dot-stroke" alt="logo"/>
-                
-            </Nav.Link>
-          </Navbar.Brand>
-          <div className="carts-brand">
-               <Nav.Link to ="/">
-                <p><PermIdentityOutlinedIcon className="black-cls"/></p>
-            </Nav.Link>
-          
-            <Nav.Link href="/home">
-<p className="dw"><ShoppingCartOutlinedIcon className="black-cls"/><span className="da">s</span></p>
-            </Nav.Link>
-           </div>
-          </Nav>
-          {( props.details ? (<div><img src={props.details.Image} width="100%" alt="Res"/></div>) : (<div>helo</div>))}
-          <div className="nav-home mt-4 mb-4">
-     <Link to="/home">   <p className="home">Home</p></Link> {`${'>'}`}
-     <Link to="/">
-                    <p className="home">Choose customer</p></Link>
-        </div>
-        <Nav className="mr-3 pb-3" activeKey="/home">
-          <Nav.Item className="ml-3 nav-location">
-            <p><strong>25 Merchants</strong> delivering to your area: <strong>35 Parnell street, D09 H45</strong> </p>
-            <Link className="pl-nav mb-3" to="/">change address</Link>
-          </Nav.Item>
-            <div className="form-nav form-inline">
-              <Form.Control className="nav-search" placeholder="Search"/>
-              <div className="search-svg">
-              <SearchOutlinedIcon className="svg-width"/>
-              </div>
-              
-              </div>
-          </Nav>
+            <Navbar collapseOnSelect variant="light" expand="lg">
+				
+        <Navbar.Brand className="navbrand mb-3" href="/">
+        <img src={Logo} alt="logo"/>
+            </Navbar.Brand>
+            
+<Navbar.Toggle  aria-controls="basic-navbar-nav" />
+<Navbar.Collapse id="basic-navbar-nav">
+  <Nav className="ml-auto">
 
+
+<div >
+    <Nav.Item className="log-btn">
+      Login
+    </Nav.Item>
+  </div>
+            <div>
+  <Nav.Item className="  log-btn">
+    Sign Up
+  </Nav.Item>
+            </div>
+            <div >
+    <Nav.Item className="log-btn">
+          Help
+    </Nav.Item>
+  </div>
+  <div >
+    <Nav.Item className="log-btn ">
+      Carts
+    </Nav.Item>
+  </div>
+
+
+            </Nav>
+
+</Navbar.Collapse>
+</Navbar>
+          {( props.details ? (
+      <Details/>   ) : (<Result/>))}
+      
             </>
         )
 }

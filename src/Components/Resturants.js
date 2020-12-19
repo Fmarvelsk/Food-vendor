@@ -4,9 +4,8 @@ import '../Resturant.css'
 
 export default function Resturants() {
     const Navdetails = {
-        link : 'home',
+        link : 'Heritage Kitchen',
         url :'/',
-        Image : 'https://foodhive.com.ng/wp-content/uploads/2020/10/GrillXpress-foodhive-nigeria-banner.jpeg'
     }
     return(
         <>

@@ -41,7 +41,7 @@ const customIcons = {
   5: {
     icon: <SentimentVerySatisfiedIcon />,
     label: 'Very Satisfied',
-  },
+  },  
 };
 
 function IconContainer(props) {

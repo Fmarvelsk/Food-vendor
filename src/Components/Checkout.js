@@ -9,17 +9,19 @@ const Checkout = () => {
     return(
         <>
         <p className="order-p"><b>Order no: 2345473854</b></p>
-        <div className="item-order">
-      <div>      
+        <div className="item-order bold">
+      
+      <div>    
         <p>Efo riro</p></div>
         <div>
                               
                     <p>£ 20.00</p>
          </div>
+         
         </div>
         <div className="item-order">
                   <div>      
-                    <p>Remove</p></div>
+                    <a className="remove">Remove</a></div>
                     <div>
                     <span className="span-btn" onClick={()=>DecreaseQuantity()}>-</span>
                                     <span className="b">0</span>
@@ -34,11 +36,11 @@ const Checkout = () => {
         </div>
         <hr/>
         <div>
-            <p><b>Delivery address</b></p>
+           <b> <p>Delivery address</p>
             <div className="border-address">
                 <p>St. Edmondsbury, Lucan, Co.Dublin, K78 Y892</p>
                 <a className="change-l">change</a>
-            </div>
+            </div></b>
         </div>
         <hr/>
                <div className="item-order">

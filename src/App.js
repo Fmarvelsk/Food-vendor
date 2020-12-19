@@ -42,7 +42,6 @@ function App() {
      <Header/>
      <Landing/>
      <Footer/>
-     <AuthPage/>
      </Route>
      <Route exact path="/home">
        <FoodMenu/>
@@ -65,7 +64,8 @@ function App() {
   </Route>
      </Switch>
      
-
+     <AuthPage/>
+    
 </Router>
      
    </div>

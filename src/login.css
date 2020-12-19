@@ -102,3 +102,11 @@ div#form-group-login-password {
  .red {
      color: red;
  }
+ .merchant-logo{
+    width: 90px;
+    height: 95px;
+    margin-right: 1rem;
+ }
+ p.logo {
+     margin-bottom: 8px !important;
+ }

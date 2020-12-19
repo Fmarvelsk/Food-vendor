@@ -70,6 +70,7 @@ padding: 7px;
 padding-top: .3125rem;
 padding-bottom: .3125rem;
 margin-right: 1rem;
+align-items: center;
 font-size: 1.25rem;
 line-height: inherit;
 white-space: nowrap;
@@ -90,12 +91,6 @@ white-space: nowrap;
 }
 p.dw {
 	position: relative;
-}
-p.da{
-	position: absolute;
-	top: 0px;
-	left: 30px;
-	color: black;
 }
 .svg-width{
 	width: 2rem !important;
@@ -193,6 +188,15 @@ height: 174px;
 .ktchen{
 	padding-top: 1rem !important;
 }
+.mt-3.merchant-header{
+	flex-wrap:wrap !important
+}
+.ml-3.weatr {
+    margin-left: 0px !important;
+}
+}
+.mt-3.merchant-header{
+	flex-wrap: nowrap;
 }
 @media (max-width: 576px){
 .col-sm-3 {
@@ -258,4 +262,32 @@ height: 174px;
 .dropdown-sort {
 	margin-bottom: 1rem;
 	text-align: end;
+}
+.wrap-logo {
+	flex-wrap: wrap;
+}
+.Heading {
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid;
+}
+.Cell {
+    display: flex;
+	padding: 0 15px;
+	border-bottom: 1px solid;
+}
+.border-delivery {
+    border: 1px solid;
+    display: flex;
+}
+@media (max-width: 320px){
+.wrap-logo {
+	margin: 0px 2rem !important;
+}
+}
+@media (max-width:765px){
+.border-delivery{
+	display:block
+}
+
 }
