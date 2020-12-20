@@ -2,7 +2,7 @@ import RoomServiceIcon from '@material-ui/icons/RoomService';
 import { Link } from 'react-router-dom'
 import AccessAlarmIcon from '@material-ui/icons/AccessAlarm';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
-import LocalShippingIcon from '@material-ui/icons/LocalShipping';
+import HomeDelivery from '../Image/Group 137.svg'
 
 const Details = () => {
     const imageStyle = {
@@ -40,16 +40,17 @@ const Details = () => {
         <div class="Cell">
            <RoomServiceIcon className="mr-3"/> <p className="mr-3">Minimum order:</p><b><p>£ 5.00</p></b>
         </div>
-        <div class="Cell igcell">
-           <AccessAlarmIcon className="mr-3"/> <p className="mr-3">Starting from:</p><b><p>£ 20.00</p></b>
+        <div class="Cell igcell">   
+        <img src={HomeDelivery} alt="Delivery" className="mr-3"/><p className="mr-3">Delivery fee:</p><b><p>12 noon</p></b>
+       
         </div>
        </div>
        <div class="Heading">
         <div class="Cell">
-           <RoomServiceIcon className="mr-3"/><p className="mr-3">Delivery fee:</p><b><p>12 noon</p></b>
+        <AccessAlarmIcon className="mr-3"/> <p className="mr-3">Starting from:</p><b><p>£ 20.00</p></b>
         </div>
         <div class="Cell igcell">
-           <AccessAlarmIcon className="mr-3"/> <p>St. Edmondsbury, Lucan, Co.Dublin, K78 Y892</p>
+           <LocationOnIcon className="mr-3"/> <p>St. Edmondsbury, Lucan, Co.Dublin, K78 Y892</p>
         </div>
     </div></div>
         

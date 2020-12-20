@@ -9,7 +9,7 @@ const Result = () => {
         <Link to="/">
                        <p className="home">Choose customer</p></Link>
            </div>
-           <Nav className="mr-3 pb-3" activeKey="/home">
+           {/*<Nav className="mr-3 pb-3" activeKey="/home">
              <Nav.Item className="ml-3 nav-location">
                <p><strong>25 Merchants</strong> delivering to your area: <strong>35 Parnell street, D09 H45</strong> </p>
                <Link className="pl-nav mb-3" to="/">change address</Link>
@@ -22,7 +22,9 @@ const Result = () => {
                  
                  </div>
              </Nav>
+    **/}
              </>
+             
    
     )
 }

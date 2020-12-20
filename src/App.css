@@ -354,6 +354,9 @@ img.dot-stroke {
   width: 40%;
   
 }
+hr.c {
+  margin-top: 0rem !important;
+}
 @media only screen and (min-width:2453px){
   .dds{
     width:38%
@@ -439,4 +442,24 @@ img.sos {
      padding: 1rem 12rem;
      
 }
+}
+.adapt {
+  border: 1px solid transparent;
+  background-color: transparent;
+  display: inline-block;
+  text-decoration: none !important;
+  cursor: pointer;
+  padding: 5px 20px;
+  
+}
+@media (min-width:992px){
+ .adapt{
+   padding: 20px;
+ } 
+ .overwrite-nav {
+  padding: 0rem 1rem;
+}
+}
+.dollar {
+  background-color: #FFE01B;
 }

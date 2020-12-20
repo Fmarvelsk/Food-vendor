@@ -10,7 +10,7 @@ import FoodMenu from './Components/FoodMenu';
 import {useDispatch} from 'react-redux';
 import {loadData} from "./store";
 import Order from './Components/Order'
-import Foodmenu from './Components/FoodMenu';
+import Success from './Components/Success'
 import SignupBuss from './Components/SignupBusiness'
 import axios from 'axios'
 import AuthPage from './Components/AuthPage'
@@ -61,6 +61,9 @@ function App() {
   </Route>
   <Route exact path='/Resturant'>
     <Resturant/>
+  </Route>
+  <Route exact path="/Success">
+<Success/>
   </Route>
      </Switch>
      

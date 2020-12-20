@@ -92,7 +92,7 @@ button:active {
     font-weight: bold;
 }
 .remove{
-    font-size: 12;
+    font-size: 12px;
     text-decoration: underline;
     cursor: pointer;
 }

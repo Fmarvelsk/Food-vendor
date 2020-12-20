@@ -1,4 +1,4 @@
-
+import Card from '../Image/credit-cards-payment.svg'
 const Checkout = () => {
     const DecreaseQuantity = () => {
             console.log('Decrese')
@@ -65,12 +65,14 @@ const Checkout = () => {
                     </div>
                  </div>
                  <hr/>
+
                  <div>
                         <p>Select payment method</p>
-                        <div>
+                          <div className="my-row">
+                            <img src={Card} alt="payment"/>
+                          </div>
                             <input className="checkout-btn" type='button' value="Checkout" /> 
-                        </div>
-                 </div>
+                      </div>
              
        </>
     )

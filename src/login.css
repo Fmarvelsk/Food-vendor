@@ -110,3 +110,10 @@ div#form-group-login-password {
  p.logo {
      margin-bottom: 8px !important;
  }
+ .cancel {
+     margin-bottom: 0rem !important;
+ }
+ .opac {
+    font: normal normal normal 14px/17px Roboto;
+
+}

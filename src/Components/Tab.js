@@ -54,7 +54,32 @@ export default function LabTabs() {
           </div>
           </div>
         </TabPanel>
-        <TabPanel value="2">Item Two</TabPanel>
+        <TabPanel value="2">
+      <h5>About Heritage Kitchen</h5>
+      <p className="f-15">St. Edmondsbury, Lucan, Co.Dublin, K78 Y892</p>
+      <div className="row mt-3 opac">
+        <div className="col-md-12 col-sm-12 col-xl-6">
+            <h5 className="f-15">Opening hours</h5>
+            <hr/>
+            <div className='item-order'>
+              <p>Monday</p>
+              <p >10.00 - 12.00</p>
+            </div>
+            <hr className="cancel c"/>
+        </div>
+        <div className="col-md-12 col-sm-12 col-xl-6 ">
+          <h5 className="f-15">Delivery areas</h5>
+          <hr/>
+            <div className='item-order'>
+              <p>Monday</p>
+              <p>Minimum</p>
+              <p> Delievry</p>
+            </div>
+            <hr className="cancel c"/>
+        
+        </div>
+      </div>
+        </TabPanel>
         </TabContext>
     </div>
   );
