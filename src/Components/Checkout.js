@@ -1,11 +1,18 @@
 import Card from '../Image/credit-cards-payment.svg'
+import payPal from '../Image/Group 203.svg'
+import { useHistory } from 'react-router-dom'
 const Checkout = () => {
+  const history = useHistory()
     const DecreaseQuantity = () => {
             console.log('Decrese')
     }
     const IncreaseQuantity = () => {
         console.log('increase')
     }
+    const OrderSucess = (e) =>{
+      e.preventDefault()
+      history.push('/Success')
+    } 
     return(
         <>
         <p className="order-p"><b>Order no: 2345473854</b></p>
@@ -68,10 +75,17 @@ const Checkout = () => {
 
                  <div>
                         <p>Select payment method</p>
-                          <div className="my-row">
+                          <div className="item-order pb-5">
+                            <div>
+                              <input className="radio-payment" type="radio" value='1'/>
                             <img src={Card} alt="payment"/>
+                            </div>
+                            <div>
+                            <input className="radio-payment" type="radio" value='1'/>
+                            <img src={payPal} alt="payPal"/>
+                            </div>
                           </div>
-                            <input className="checkout-btn" type='button' value="Checkout" /> 
+                            <input className="checkout-btn" type='button' value="Checkout" onClick={OrderSucess}/> 
                       </div>
              
        </>

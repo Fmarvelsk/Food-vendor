@@ -310,3 +310,10 @@ height: 174px;
     margin-left: 2rem;
  }
 }
+.radio-payment{
+	margin-right: 10px;
+	cursor: pointer;
+}
+.radio-payment:focus{
+color: #FFE01B;
+}

@@ -1,4 +1,5 @@
 import Rating from './ClickRating'
+import Logo from '../Image/Group 88@2x.png'
 const MerchantRating = () => {
     return(
         <>
@@ -8,8 +9,8 @@ const MerchantRating = () => {
             
           </div>
           <div className="panel">
-              <div className="rate-star">
-                  <p>Logo</p>
+              <div className="rate-star pt-3">
+              <img className='merchant-logo pb-3' src={Logo} alt="logomerchant"/>
                   <p>Heritage Kitchen</p>
                   <p>(African Cuisine)</p>
                   <Rating/>
