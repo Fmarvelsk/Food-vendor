@@ -22,6 +22,36 @@ export default function LabTabs() {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+  const daysOfWeek = [{
+    day : 'Monday',
+    time : '10.00 - 12.00'
+  },
+  {
+    day : 'Tuesday',
+    time : '10.00 - 12.00'
+  },
+  {
+    day : 'Wednesday',
+    time : '10.00 - 12.00'
+  },
+  {
+    day : 'Thursday',
+    time : '10.00 - 12.00'
+  },
+  {
+    day : 'Friday',
+    time : '10.00 - 12.00'
+  },
+  {
+    day : 'Saturday',
+    time : '10.00 - 12.00'
+  },
+  {
+    day : 'Sunday',
+    time : '10.00 - 12.00'
+  },
+
+]
 
   return (
     <div className={classes.root}>
@@ -61,11 +91,16 @@ export default function LabTabs() {
         <div className="col-md-12 col-sm-12 col-xl-6">
             <h5 className="f-15">Opening hours</h5>
             <hr/>
-            <div className='item-order'>
-              <p>Monday</p>
-              <p >10.00 - 12.00</p>
+            {daysOfWeek.map( (day, i) => (
+            <>
+              <div className='item-order mt-3' key={i}>
+              <p>{day.day}</p>
+              <p >{day.time}</p>
             </div>
             <hr className="cancel c"/>
+            </>)
+            )}
+            
         </div>
         <div className="col-md-12 col-sm-12 col-xl-6 mobli-c">
           <h5 className="f-15">Delivery areas</h5>
