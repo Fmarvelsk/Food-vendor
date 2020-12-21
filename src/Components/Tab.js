@@ -67,7 +67,7 @@ export default function LabTabs() {
             </div>
             <hr className="cancel c"/>
         </div>
-        <div className="col-md-12 col-sm-12 col-xl-6 ">
+        <div className="col-md-12 col-sm-12 col-xl-6 mobli-c">
           <h5 className="f-15">Delivery areas</h5>
           <hr/>
             <div className='item-order'>

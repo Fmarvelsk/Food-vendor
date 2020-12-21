@@ -1,7 +1,7 @@
 import React from 'react';
 import {Navbar, Nav } from 'react-bootstrap'
 import { useDispatch } from 'react-redux'
-import { showModalLogin, showModalSignup } from '../store/actionTypes'
+import { showModalLogin, showModalSignup } from '../../store/actionTypes'
 
 const NavBus = () => {
     //const logo = [V, E, N, D, R, Dot]

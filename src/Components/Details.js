@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import AccessAlarmIcon from '@material-ui/icons/AccessAlarm';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import HomeDelivery from '../Image/Group 137.svg'
+import Logo from '../Image/Group 88@2x.png'
+import Rating from './Rating'
 
 const Details = () => {
     const imageStyle = {
@@ -26,11 +28,11 @@ const Details = () => {
         <div className="item-order wrap-logo mr-5 ml-5">
 
             <div className="logo-flex"> 
-            <div><img className='merchant-logo' src='https://foodhive.com.ng/wp-content/uploads/2020/09/snackland-foodhive-nigeria-logo.jpg' alt="logomerchant"/>
+            <div><img className='merchant-logo' src={Logo} alt="logomerchant"/>
             </div>
             <div>
               <p className="logo">Heritage Kitchen</p>
-              <p className="logo">Rating</p>
+              <Rating/>
               <p className="logo">(African Cuisine)</p>
             </div>
             </div>

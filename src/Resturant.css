@@ -87,17 +87,17 @@ button:focus {
 .MuiTabs-root{
     min-height: 45px !important;
 }
-.PrivateTabIndicator-colorSecondary-4 {
+.PrivateTabIndicator-colorSecondary-6 {
     background-color: #FFE01B !important;
    }
 @media(min-width:600px){
-    .PrivateTabIndicator-colorSecondary-4{
+    .PrivateTabIndicator-colorSecondary-6{
         
     width: 90px !important
     }
 }
 @media(max-width:599px){
-    .PrivateTabIndicator-colorSecondary-4{
+    .PrivateTabIndicator-colorSecondary-6{
         width: 63px !important;
     }
 }
@@ -107,7 +107,7 @@ button:focus {
 .MuiTabs-flexContainer {
    justify-content: flex-start ;
 }
-.PrivateTabIndicator-root-2{
+.PrivateTabIndicator-root-4{
     margin: 13px 0px
 }
 .done{
@@ -139,4 +139,10 @@ height: 90px;
 .wde4 {
     display: flex;
     align-items: center;
+}
+@media (max-width:1024px){
+
+.mobli-c {
+    margin-top: 3rem
+}
 }

@@ -4,17 +4,17 @@ import Navbar from './Components/Navbar'
 import Header from './Components/Header'
 import Footer from './Components/Footer'
 import Landing from './Components/Landing'
-import NavBus from './Components/NavBus'
+import NavBus from './Components/Business/NavBus'
 import './App.css';
 import FoodMenu from './Components/FoodMenu';
 import {useDispatch} from 'react-redux';
 import {loadData} from "./store";
 import Order from './Components/Order'
 import Success from './Components/Success'
-import SignupBuss from './Components/SignupBusiness'
+import SignupBuss from './Components/Business/SignupBusiness'
 import axios from 'axios'
 import AuthPage from './Components/AuthPage'
-import BusinessLanding from './Components/BusinessLandingPage';
+import BusinessLanding from './Components/Business/BusinessLandingPage';
 import Resturant from './Components/Resturants';
 function App() {
   const wrapper = createRef()

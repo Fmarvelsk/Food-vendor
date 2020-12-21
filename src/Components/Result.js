@@ -1,14 +1,16 @@
 import SearchOutlinedIcon from '@material-ui/icons/SearchOutlined';
 import { Form, Nav} from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-const Result = () => {
+const Result = (props) => {
     return(
         <>
-        <div className="nav-home mt-4 mb-4">
-        <Link to="/home">   <p className="home">Home</p></Link> {`${'>'}`}
-        <Link to="/">
-                       <p className="home">Choose customer</p></Link>
-           </div>
+           <div className="nav-home mt-4 mb-4">
+        
+        {props.result ? props.result.map((navlink, i) => (
+           <div key={i}>
+           <Link to={navlink.url}>   <p className="home">{`${navlink.link}${'>'}`}</p></Link> 
+       </div>    
+        )) : <div></div>  }
            {/*<Nav className="mr-3 pb-3" activeKey="/home">
              <Nav.Item className="ml-3 nav-location">
                <p><strong>25 Merchants</strong> delivering to your area: <strong>35 Parnell street, D09 H45</strong> </p>
@@ -23,6 +25,7 @@ const Result = () => {
                  </div>
              </Nav>
     **/}
+    </div>
              </>
              
    

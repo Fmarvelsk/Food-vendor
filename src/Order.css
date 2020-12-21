@@ -96,3 +96,6 @@ button:active {
     text-decoration: underline;
     cursor: pointer;
 }
+.vendr-color {
+    color: #FFE01B;
+}

@@ -43,7 +43,7 @@ return(<Container className="pb-5 mb-5 pt-5 my-container-lg my-container">
  
 <div className="mt-3 mb-3">
 <div>
-<Tab sd={check}/>
+<Tab/>
     </div>
 
 </div>

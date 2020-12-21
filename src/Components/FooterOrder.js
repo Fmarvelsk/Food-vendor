@@ -1,3 +1,4 @@
+
 const FooterOrder = () => {
     return(
         <footer className="page-footer elegant-color pb-5">
@@ -8,7 +9,7 @@ const FooterOrder = () => {
             <p>Privacy</p>
         </div>
         <div>
-            <p>© Copyright 2020 Vendr. registered trademark</p>
+            <p className="vendr-color">© Copyright 2020 Vendr. registered trademark</p>
         </div>
 </div>
 </div>

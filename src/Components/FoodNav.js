@@ -55,7 +55,7 @@ const FoodNav = (props) => {
 </Navbar.Collapse>
 </Navbar>
           {( props.details ? (
-      <Details/>   ) : (<Result/>))}
+      <Details/>   ) : (<Result result={props.orderLink} /> ))}
       
             </>
         )
