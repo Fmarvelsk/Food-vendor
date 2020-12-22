@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { Col, Form, Button } from "react-bootstrap"
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import VisibilityOffIcon from '@material-ui/icons/VisibilityOff';
-import Drinks from '../../Image/assests/Group 265.svg'
-import Plate from '../../Image/assests/Group 264.svg' 
-import Carts from '../../Image/assests/Group 267.svg'
-import Meats from '../../Image/assests/Group 266.svg'
-import Ramen from '../../Image/assests/Group 268.svg'
-import Juice from '../../Image/assests/Group 269.svg'
+import Drinks from '../../Image/assests/Drink.png'
+import Plate from '../../Image/assests/Plate.png' 
+import Carts from '../../Image/assests/Shopping.png'
+import Meats from '../../Image/assests/Meats.png'
+import Ramen from '../../Image/assests/Ramen.png'
+import Juice from '../../Image/assests/Juice.png'
 
 const LoginBus = () => {
 	const SignupLogo = [{Food : Drinks, Food2 : Plate},
@@ -30,8 +30,8 @@ const LoginBus = () => {
                 <Col lg={6} sm={12} className="moblie">
 					{SignupLogo.map( (logo, i) => 
 							<div className="item-order" key={i}>
-							<img src={logo.Food} alt={logo.Food}/>
-							<img src={logo.Food2} alt={logo.Food2}/>
+							<img className="logo-width" src={logo.Food} alt={logo.Food}/>
+							<img className="logo-width"src={logo.Food2} alt={logo.Food2}/>
 						</div>
 						
 					)}

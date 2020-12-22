@@ -126,3 +126,7 @@ top: 8px;
     display: flex;
     flex-wrap: wrap;
 }
+.logo-width{
+    width: 206px;
+height: 184px;
+}
