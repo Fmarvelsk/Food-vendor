@@ -1,10 +1,11 @@
 import React from 'react';
 import {Navbar, Nav } from 'react-bootstrap'
 import { useDispatch } from 'react-redux'
+import Logo from '../../Image/vendr..svg'
 import { showModalLogin, showModalSignup } from '../../store/actionTypes'
 
+
 const NavBus = () => {
-    //const logo = [V, E, N, D, R, Dot]
     const dispatch = useDispatch()
 
 	const LoginHandler = () => {
@@ -19,7 +20,7 @@ const NavBus = () => {
 			<Navbar collapseOnSelect className="nav-bus" variant="light" expand="lg">
 				
                 <Navbar.Brand className="navbrand mb-3 nav-bus-brand" href="/">
-               Vendr.     </Navbar.Brand>
+               <img src={Logo} alt="vendr"/>  </Navbar.Brand>
                     
 				<Navbar.Toggle  aria-controls="basic-navbar-nav" />
 				<Navbar.Collapse id="basic-navbar-nav">

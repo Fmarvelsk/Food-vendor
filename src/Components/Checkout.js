@@ -1,5 +1,5 @@
 import Card from '../Image/credit-cards-payment.svg'
-import payPal from '../Image/Group 203.svg'
+import payPal from '../Image/assests/Group 203.svg'
 import { useHistory } from 'react-router-dom'
 const Checkout = () => {
   const history = useHistory()

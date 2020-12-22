@@ -32,6 +32,7 @@
     background-color: #FFE01B;
     color: #000000;
     border: 1px solid #FFE01B;
+    border-radius: 0px !important;
 }
 .p-btn:hover {
 background: #FFE01B;
@@ -79,7 +80,7 @@ border: 1px solid #FFE01B;
     }
 }
 .change-input{
-    border-radius: 28px;
+    border-radius: 4px;
     opacity: 0.8;
 }
 .pos-relative{
@@ -99,13 +100,25 @@ top: 8px;
     padding-right: 1rem;
 }
 .change-input{
-    padding-right: 1.3rem;
-    padding-left: 1.3rem;
+    padding: 1.3rem;
+
 }
 }
 .logo-flex {
     display: flex;
 }
+@media (max-width:475px){
+    .moblie{
+        display: none;
+    }
+    .home-2-content {
+        padding: 1rem;
+    }
+}
 .igcell{
     border-bottom: 0px !important;
+}
+.merchant-row {
+    display: flex;
+    flex-wrap: wrap;
 }

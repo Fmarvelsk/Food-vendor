@@ -2,9 +2,18 @@ import React, { useState } from "react";
 import { Col, Form, Button } from "react-bootstrap"
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import VisibilityOffIcon from '@material-ui/icons/VisibilityOff';
-
+import Drinks from '../../Image/assests/Group 265.svg'
+import Plate from '../../Image/assests/Group 264.svg' 
+import Carts from '../../Image/assests/Group 267.svg'
+import Meats from '../../Image/assests/Group 266.svg'
+import Ramen from '../../Image/assests/Group 268.svg'
+import Juice from '../../Image/assests/Group 269.svg'
 
 const LoginBus = () => {
+	const SignupLogo = [{Food : Drinks, Food2 : Plate},
+{Food : Carts, Food2 : Meats},
+{Food : Ramen, Food2 : Juice}
+]
 	const [hide, show] = useState(true)
 	const [type, showType] = useState('Password')
 	const visiblity = (e) => (
@@ -17,15 +26,23 @@ const LoginBus = () => {
 	}
 	
     return(
-            <div className="my-row">
-                <Col lg={6}>
-
+            <div className="nav-location">
+                <Col lg={6} sm={12} className="moblie">
+					{SignupLogo.map( (logo, i) => 
+							<div className="item-order" key={i}>
+							<img src={logo.Food} alt={logo.Food}/>
+							<img src={logo.Food2} alt={logo.Food2}/>
+						</div>
+						
+					)}
+						
+						
                     </Col>
-                    <Col lg={6}>
+                    <Col lg={6} sm={12}>
 						<h3>Sell on vendr.</h3>
 						<p className="f-15">Reach new customers, deliver exceptional customer service</p>
                     <Form className="log-form" >
-				<Form.Row className="align-items-center">
+				<Form.Row className="">
 					
 					<Col xs={12} sm={6} md={6} className="mt-3">
 						<Form.Group>
@@ -85,7 +102,7 @@ const LoginBus = () => {
 					</Col>
 				</Form.Row>
 				<div className="buss-sign-btn mt-3">
-					<Button variant="primary" className="p-btn login-btn" type="submit">
+					<Button variant="primary" className="w-100 p-btn login-btn" type="submit">
 						Sign Up
 					</Button>
 				</div>
