@@ -41,11 +41,15 @@ border: 1px solid #FFE01B;
 
 
 }
+.change-font {
+    font: normal normal normal 20px/24px Roboto;
+    letter-spacing: 0.6px;
+}
 .home-center {
-    animation: fadein 2s;
-    -moz-animation: fadein 2s; /* Firefox */
+    animation: fadein 3s;
+    -moz-animation: fadein 3s; /* Firefox */
     -webkit-animation: fadein 3s; /* Safari and Chrome */
-    -o-animation: fadein 2s; /* Opera */
+    -o-animation: fadein 3s; /* Opera */
 }
 @keyframes fadein {
     from {

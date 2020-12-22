@@ -19,7 +19,7 @@ const NavBus = () => {
 		<>
 			<Navbar collapseOnSelect className="nav-bus" variant="light" expand="lg">
 				
-                <Navbar.Brand className="navbrand mb-3 nav-bus-brand" href="/">
+                <Navbar.Brand className="navbrand mb-3 nav-bus-brand" href="/merchant">
                <img src={Logo} alt="vendr"/>  </Navbar.Brand>
                     
 				<Navbar.Toggle  aria-controls="basic-navbar-nav" />
