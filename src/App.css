@@ -290,11 +290,21 @@ img.img-change {
 .platform {
  font-style: normal;
 font-weight: normal;
-font-size: 20px;
-line-height: 23px;
+font-size: medium;
 
 color: #FFE01B;
 
+}
+@media (max-width:552px){
+  input.btn-cls {
+    flex: 0 ;
+    padding: .75rem 1.2rem ;
+    margin-left: 0;
+  }
+  .footer-signup-btn {
+    justify-content: center;
+    width: 100% !important;
+  }
 }
 .w-60 {
   width: 40%;
@@ -412,9 +422,6 @@ img.sos {
 @media only screen and (max-width:540px){
   div#my-carousel {
   display: none !important
-  }
-  .bg-height {
-    height: 84vh;
   }
 }
 @media only screen and (min-width :1024px){
