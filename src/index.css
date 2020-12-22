@@ -312,3 +312,9 @@ height: 174px;
 .radio-payment:focus{
 color: #FFE01B;
 }
+.nav-location.nav-item {
+    margin-left: 20px;
+}
+.home-m {
+	margin-left: 25px;
+}

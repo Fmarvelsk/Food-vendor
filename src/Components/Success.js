@@ -4,9 +4,11 @@ import Succeed from '../Image/assests/Group 207.svg'
 import FoodNav from './FoodNav'
 import Footer from './FooterOrder'
 const Success = () => {
+    const sucess = true
+
     return(
         <>
-        <FoodNav/>
+        <FoodNav Succeeded={sucess}/>
         <div className="success-message">
 
                 <img src={Succeed} alt="sucess"/>
