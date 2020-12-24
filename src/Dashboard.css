@@ -1,0 +1,45 @@
+.sidebar {
+  position: fixed;
+    top: 90px;
+    bottom: 0; 
+     left: 0;
+    width: 280px;
+    background: #F9F9F9 0% 0% no-repeat padding-box;
+    opacity: 1;
+    display: block;
+     z-index: 1;
+    color:black !important;
+    background-size: cover;
+    background-position: center center;
+}
+.dashboard-tab{
+    margin: 0 3rem;
+
+}
+.main-panel {
+    position: relative;
+    float: right;
+    
+    width: calc(100% - 280px);
+}
+.new-menu {
+    padding: 10px 18px
+}
+
+.nav-dash {
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+.hurt {
+ padding: 30px 15px;
+ min-height: calc(100% - 123px);   
+}
+.stats {
+    padding: 15px;
+}
+.green {
+    color: #20E862;
+}

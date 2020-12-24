@@ -309,12 +309,43 @@ height: 174px;
 	margin-right: 10px;
 	cursor: pointer;
 }
-.radio-payment:focus{
-color: #FFE01B;
+input:checked{
+background-color: #FFE01B;
 }
 .nav-location.nav-item {
     margin-left: 20px;
 }
 .home-m {
 	margin-left: 25px;
+}
+
+input[type='checkbox']:checked:after {
+	content: '✔';
+	color:#ffffff;
+	background-color: #FFE01B;
+	border: 1px solid #FFE01B;
+  }
+  input[type='checkbox']{
+	width: 14px !important;
+	height: 14px !important;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+	box-shadow: none;
+	font-size: 0.8em;
+	text-align: center;
+	background: #ffffff;
+	line-height: 1em;
+	cursor: pointer;
+	
+  }
+li.active {
+	background-color: #ffffff;
+;
+}  
+.dark-color {
+margin-top: 3px;
+	color: black;
+padding: .3rem 1rem;
 }

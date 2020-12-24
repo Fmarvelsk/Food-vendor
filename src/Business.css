@@ -1,5 +1,6 @@
 .nav-bus {
     padding: 10px;
+    background-color: #ffffff;
 }
 @media (min-width:768px){
 
@@ -129,4 +130,7 @@ top: 8px;
 .logo-width{
     width: 206px;
 height: 184px;
+}
+li.active > .dash-icon{
+    color: #FFE01B;
 }

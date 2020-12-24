@@ -16,6 +16,9 @@ import axios from 'axios'
 import AuthPage from './Components/AuthPage'
 import BusinessLanding from './Components/Business/BusinessLandingPage';
 import Resturant from './Components/Resturants';
+import Dashboard from './Components/Business/Dashboard'
+import Sidebar from './Components/Business/Sidebar'
+
 function App() {
   const wrapper = createRef()
   const dispatch = useDispatch()
@@ -64,6 +67,13 @@ function App() {
   </Route>
   <Route exact path="/Success">
 <Success/>
+  </Route>
+  <Route path="/merchant/dashboard">
+  <NavBus/>
+    <Dashboard/>
+  </Route>
+  <Route path="/admin/user">
+    <Sidebar/>
   </Route>
      </Switch>
      

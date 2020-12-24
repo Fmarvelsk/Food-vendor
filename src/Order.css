@@ -99,3 +99,7 @@ button:active {
 .vendr-color {
     color: #FFE01B;
 }
+.dash-icon {
+    margin-top: 0.5rem;
+    margin-left: 5px;
+}
