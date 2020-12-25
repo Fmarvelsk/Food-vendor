@@ -42,7 +42,7 @@ const LoginBus = () => {
 						<h3>Sell on vendr.</h3>
 						<p className="f-15">Reach new customers, deliver exceptional customer service</p>
                     <Form className="log-form" >
-				<Form.Row className="">
+				<Form.Row>
 					
 					<Col xs={12} sm={6} md={6} className="mt-3">
 						<Form.Group>

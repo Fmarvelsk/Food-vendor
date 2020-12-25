@@ -1,5 +1,5 @@
 import React from 'react'
-import Google from '../Image/googleplayfooter.png'
+import Google from '../../Image/googleplayfooter.png'
 const Footer = () => {
   const FooterName = [{
    title:"Popular Dishes",

@@ -39,7 +39,7 @@ text-transform: uppercase
 }
 .foodnav {
     background-color: #FFFFFF;
-    padding-bottom: 3rem;
+    padding-bottom: 1rem;
 }
 .font-est{
     font-size: 12px;
@@ -102,4 +102,7 @@ button:active {
 .dash-icon {
     margin-top: 0.5rem;
     margin-left: 5px;
+}
+.MuiStepLabel-iconContainer > div {
+    color: #FFFFFF;
 }

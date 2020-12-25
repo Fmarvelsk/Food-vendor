@@ -1,6 +1,6 @@
 import {Container, Form } from 'react-bootstrap'
-import Arrow from '../Image/arrow.png'
-import Jollof from '../Image/jollof2.png'
+import Arrow from '../../Image/arrow.png'
+import Jollof from '../../Image/jollof2.png'
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 const FooterHeader = () => {
     return(

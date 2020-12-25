@@ -11,25 +11,25 @@ const dashboardRoutes =  [
       path: "/dashboard",
       name: "Dashboard",
       icon: <DashboardIcon className="dash-icon"/>,
-      layout: "/merchant"
+      layout: "/merchant/user"
     },
     {
       path: "/orders",
       name: "Manage orders",
       icon: <ShoppingCartOutlinedIcon className="dash-icon"/>,
-      layout: "/merchant"
+      layout: "/merchant/user"
     },
     {
       path: "/transaction-histroy",
       name: "Transaction report",
       icon: <ReceiptIcon className="dash-icon"/> ,
-      layout: "/merchant"
+      layout: "/merchant/user"
     },
     {
       path: "/merchant-menu",
       name: "Manage Menu",
       icon: <RoomServiceIcon className="dash-icon"/>,
-      layout: "/merchant"
+      layout: "/merchant/user"
     }
   ]  
   const activeRoute = (routeName) => {
@@ -42,7 +42,7 @@ return(
     <h4>Femi</h4>
   <p className="f-15">Heritage Kitchen</p>
   <div className="mb-5 pt-3">
-  <a class=" p-btn login-btn new-menu" href="/">Create new menu +</a>
+  <a class=" p-btn login-btn new-menu" href="/merchant/user/create-menu">Create new menu +</a>
   </div>
   <hr/>
   <div>

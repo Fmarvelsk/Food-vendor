@@ -19,11 +19,13 @@
 .main-panel {
     position: relative;
     float: right;
-    
+    margin-top: 5.45rem;
+    padding-top: 3rem;
     width: calc(100% - 280px);
+    overflow-y: hidden;
 }
 .new-menu {
-    padding: 10px 18px
+    padding: 10px 16px
 }
 
 .nav-dash {
@@ -38,8 +40,66 @@
  min-height: calc(100% - 123px);   
 }
 .stats {
-    padding: 15px;
+    padding: 10px;
 }
 .green {
     color: #20E862;
+}
+@media (max-width: 991px){
+.sidebar {
+    position: fixed;
+    display: block;
+    top: 0;
+    height: 100%;
+    width: 260px;
+    right: 0;
+    left: auto;
+    z-index: 1032;
+    visibility: visible;
+    background-color: #999;
+    overflow-y: visible;
+    border-top: none;
+    text-align: left;
+    padding: 0;
+    transform: translate3d(260px, 0, 0);
+    transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
+}
+.main-panel {
+    transform: translate3d(0px, 0, 0);
+    transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
+    left: 0;
+    width: 100%;
+}
+.table-responsive {
+    width: 100%;
+    margin-bottom: 15px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    -webkit-overflow-scrolling: touch;
+}
+}
+@media(max-width:1100px){
+.d{
+    background-attachment: fixed;
+}
+}
+.dashboard-style {
+    font: normal normal 300 30px/37px Roboto;
+letter-spacing: 0.09px;
+}
+.menu-form {
+padding: 0 2rem;
+}
+.form-row > .mt-3 {
+    padding: 0px 10px;
+}
+.currency-svg {
+    position: absolute;
+    right: -3px;
+    top: 32px;
+}
+.change-textarea{
+height: 216px !important;
+opacity: 0.8;
 }

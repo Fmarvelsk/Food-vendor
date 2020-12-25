@@ -1,5 +1,5 @@
 import Rating from './ClickRating'
-import Logo from '../Image/Group 88@2x.png'
+import Logo from '../../Image/Group 88@2x.png'
 const MerchantRating = () => {
     return(
         <>

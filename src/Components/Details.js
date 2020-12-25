@@ -5,7 +5,7 @@ import LocationOnIcon from '@material-ui/icons/LocationOn';
 import HomeDelivery from '../Image/assests/Group 137.svg'
 import Mask from '../Image/Mask Group 2.png'
 import Logo from '../Image/Group 88@2x.png'
-import Rating from './Rating'
+import Rating from './Order/Rating'
 
 const Details = () => {
     const imageStyle = {

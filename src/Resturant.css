@@ -74,7 +74,8 @@ span.b {
     background-color: transparent !important
 }
 button:focus {
-  outline: none !important
+  outline: none !important;
+  box-shadow: none !important;
 }
 .MuiTab-root{
     display: -webkit-inline-box !important;
@@ -87,18 +88,22 @@ button:focus {
 .MuiTabs-root{
     min-height: 45px !important;
 }
-.PrivateTabIndicator-colorSecondary-6 {
+.MuiTabs-fixed > .MuiTabs-indicator {
     background-color: #FFE01B !important;
+    margin: 13px 0px
    }
 @media(min-width:600px){
-    .PrivateTabIndicator-colorSecondary-6{
+    .MuiTabs-fixed > .MuiTabs-indicator{
         
     width: 90px !important
     }
 }
 @media(max-width:599px){
-    .PrivateTabIndicator-colorSecondary-6{
+    .MuiTabs-fixed > .MuiTabs-indicator{
         width: 63px !important;
+    }
+    .MuiTabs-flexContainer {
+        justify-content: space-between !important;
     }
 }
 .MuiTab-wrapper {
@@ -107,14 +112,11 @@ button:focus {
 .MuiTabs-flexContainer {
    justify-content: flex-start ;
 }
-.PrivateTabIndicator-root-4{
-    margin: 13px 0px
-}
 .done{
     padding-top: 7px;
 }
 .search-food{
-    padding: 1.1rem 1.2rem;
+    padding:1.2rem;
     margin-left: 0;
     border-radius: 0;
     background-color: #FFE01B;

@@ -5,7 +5,7 @@ import Logo from '../../Image/vendr..svg'
 import { showModalLogin, showModalSignup } from '../../store/actionTypes'
 
 
-const NavBus = () => {
+const NavBus = (props) => {
     const dispatch = useDispatch()
 
 	const LoginHandler = () => {
@@ -17,8 +17,7 @@ const NavBus = () => {
 	}    
     return (
 		<>
-			<Navbar collapseOnSelect className="nav-bus" variant="light" expand="lg">
-				
+			<Navbar collapseOnSelect className={props.style ? props.style : "nav-bus"} variant="light" expand="lg">
                 <Navbar.Brand className="navbrand mb-3 nav-bus-brand" href="/merchant">
                <img src={Logo} alt="vendr"/>  </Navbar.Brand>
                     

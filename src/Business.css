@@ -1,6 +1,8 @@
 .nav-bus {
     padding: 10px;
     background-color: #ffffff;
+    width: 100%;
+    z-index: 1;
 }
 @media (min-width:768px){
 
@@ -87,6 +89,8 @@ border: 1px solid #FFE01B;
 .change-input{
     border-radius: 4px;
     opacity: 0.8;
+    height: calc(1.5em + .75rem + 5px);
+    position: relative;
 }
 .pos-relative{
     position: relative;
@@ -104,10 +108,10 @@ top: 8px;
     .log-form{
     padding-right: 1rem;
 }
-.change-input{
+/*.change-input{
     padding: 1.3rem;
 
-}
+}*/
 }
 .logo-flex {
     display: flex;
@@ -133,4 +137,18 @@ height: 184px;
 }
 li.active > .dash-icon{
     color: #FFE01B;
+}
+.position {
+    position: fixed;
+    padding: 10px;
+    background-color: #ffffff;
+    width: 100%;
+    z-index: 1;
+
+}
+.w-80{
+    width: 50%;
+}
+button.p-btn{
+    font-weight: bold;
 }
