@@ -6,10 +6,14 @@ import TabContext from '@material-ui/lab/TabContext';
 import TabList from '@material-ui/lab/TabList';
 import TabPanel from '@material-ui/lab/TabPanel';
 import Orders from "./OrderDetails";
+import Step from './Stepper'
+import MerchantRating from './MerchantRating'
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    padding: '5rem 10rem'
   },
+    
 }));
 
 export default function LabTabs() {
@@ -36,6 +40,10 @@ export default function LabTabs() {
           <Orders/>
          </TabPanel>
         <TabPanel value="2">
+          <Step/>
+        </TabPanel>
+        <TabPanel value="3">
+          <MerchantRating/>
         </TabPanel>
         </TabContext>
     </div>

@@ -1,7 +1,7 @@
 import { Row, Container, Col} from 'react-bootstrap'
 import MerchantRating from './MerchantRating'
 import Logo from '../../Image/Group 88@2x.png'
-import Ex from './Ex'
+import Ex from './VendrStepper'
 const Orders = () => {
     return(
         <Container className="pb-5 mb-5 pt-5">

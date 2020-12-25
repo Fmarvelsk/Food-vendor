@@ -2,11 +2,6 @@ import Logo from '../../Image/Group 88@2x.png'
 const OrderDetails = () => {
     return(
         <>
-        <div className="mt-3 mb-3 setspacing">
-        <p>Order details</p>
-        <div className="underline-order"></div>
-        </div>
-        <div className="panel">
             <div className="padding-order">
             <div className="merchant-header">
                 <img src={Logo} className="mr-3" width="75px" height ="75px"/>
@@ -78,7 +73,7 @@ const OrderDetails = () => {
             </div>
            
             </div>
-        </div>
+        
   </>
     )
 }
