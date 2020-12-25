@@ -9,12 +9,9 @@ const NavBus = (props) => {
     const dispatch = useDispatch()
 
 	const LoginHandler = () => {
-       console.log('loading')
+       dispatch(showModalLogin())
 	}
 
-	const SignupHandler = () => {
-		console.log('working')
-	}    
     return (
 		<>
 			<Navbar collapseOnSelect className={props.style ? props.style : "nav-bus"} variant="light" expand="lg">
@@ -33,7 +30,7 @@ const NavBus = (props) => {
 					</div>
 					<br />
                     <div>
-					<Nav.Item className=" mr-5 log-btn " onClick={SignupHandler}>
+					<Nav.Item className=" mr-5 log-btn ">
 						Help
 					</Nav.Item>
                     </div>
