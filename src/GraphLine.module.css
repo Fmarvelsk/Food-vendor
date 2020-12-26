@@ -1,0 +1,38 @@
+.graphContainer{
+    padding-bottom: 2rem;
+    margin: 15px;
+}
+.graphPopular{
+    margin: 15px;
+}
+.pbtn {
+    padding: 0 10px;
+    background-color: #FFE01B;
+    margin-top: 1rem;
+    color: #000000;
+    border: 1px solid #FFE01B;
+    border-radius: 0px !important;
+}
+@media (max-width:575px){
+    .graphContainer{
+        margin: 5px;
+    }
+    
+.graphPopular{
+    margin: 5px;
+}
+}
+
+.popular {
+    padding: 0 10px;
+    background-color: #FFE01B;
+    margin-top: 1rem;
+    width: 60%;
+    color: #000000;
+    border: 1px solid #FFE01B;
+    border-radius: 0px !important;
+}
+.Name {
+    font : normal normal medium 14px/17px Roboto;
+    letter-spacing: 0.04px;
+}

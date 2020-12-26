@@ -80,7 +80,7 @@ export default function LabTabs() {
           </div>
           <div className="wde4">
             <span>£10.00</span>
-          <span class="span-btn">+</span>
+          <span className="span-btn">+</span>
           </div>
           </div>
         </TabPanel>
@@ -92,13 +92,13 @@ export default function LabTabs() {
             <h5 className="f-15">Opening hours</h5>
             <hr/>
             {daysOfWeek.map( (day, i) => (
-            <>
-              <div className='item-order mt-3' key={i}>
+            <div key={i}>
+              <div className='item-order mt-3'>
               <p>{day.day}</p>
               <p >{day.time}</p>
             </div>
             <hr className="cancel c"/>
-            </>)
+            </div>)
             )}
             
         </div>

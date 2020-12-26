@@ -106,3 +106,8 @@ button:active {
 .MuiStepLabel-iconContainer > div {
     color: #FFFFFF;
 }
+li.active-pro.my-row {
+    position: absolute;
+    bottom: 10px;
+    width: 50%;
+}

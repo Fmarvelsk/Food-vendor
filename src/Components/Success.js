@@ -14,7 +14,7 @@ const Success = () => {
                 <img src={Succeed} alt="sucess"/>
                 
       <Link to="/orders"> 
-      <input class="check-btn mt-5" type="button" value="View order details"></input>
+      <input className="check-btn mt-5" type="button" value="View order details"></input>
       </Link>
         </div>
         <Footer/>

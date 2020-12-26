@@ -69,11 +69,14 @@ function App() {
   <Route path="/merchant/user">
     <Dashboard/>
   </Route>
+  <Route exact path="/*">
+    <h3>404 Found</h3>
+    </Route>
+
      </Switch>
      
      <AuthPage/>
-    
-</Router>
+  </Router>
      
 
     );

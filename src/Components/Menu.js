@@ -16,7 +16,7 @@ const Menu = () => {
     const loadData = useSelector( state => state.filterStore)
     return(
         <Container className="jumbotron jumbocolor">
-            <div class="header-row">
+            <div className="header-row">
              </div>
             <Row className="create-menu">
             <Col md={2} className="content nav">

@@ -1,34 +1,19 @@
 import { Dropdown } from 'react-bootstrap'
-const DropDown = () => {
+
+const DropDown = (props) => {
     return(
-        <div >
+        <div>
           <Dropdown className="search-m">
 							<Dropdown.Toggle id="dropdown-basic">
-								Catergories: 
+							{props.drop.Type}
 							</Dropdown.Toggle>
 							<Dropdown.Menu>
-								<Dropdown.Item >
-									Soup
-								</Dropdown.Item>
-								<Dropdown.Item >
-									Swallow
-								</Dropdown.Item>
-								<Dropdown.Item >
-									Rice
-								</Dropdown.Item>
-                                <Dropdown.Item >
-									Slides
-								</Dropdown.Item>
-                                <Dropdown.Item >
-									Breads
-								</Dropdown.Item>
-                                <Dropdown.Item >
-									Beans
-								</Dropdown.Item>
-                                <Dropdown.Item >
-                                    Others
-								</Dropdown.Item>
-							
+				{props.drop.item.map( (dropdown, i) =>(
+						<Dropdown.Item >
+						{dropdown.title}
+					</Dropdown.Item>
+					
+				))}			
 							</Dropdown.Menu>
 						</Dropdown> 
           </div>

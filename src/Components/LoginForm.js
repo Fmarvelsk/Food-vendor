@@ -62,7 +62,7 @@ export default function LoginForm() {
 		<>
 			<Modal.Title className="text-center mb-3" id="login-modal-title"><span>Sign in with</span></Modal.Title>
 			<div className="red text-center">{error}</div>
-			<div class="google-facebook pb-3">
+			<div className="google-facebook pb-3">
 			<Button variant="primary" type="submit" className="login-button-google">
 						<div className="google-button-text">
 							<img src='https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg' alt="google" />

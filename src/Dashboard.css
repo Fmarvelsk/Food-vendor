@@ -6,6 +6,7 @@
     width: 280px;
     background: #F9F9F9 0% 0% no-repeat padding-box;
     opacity: 1;
+    
     display: block;
      z-index: 1;
     color:black !important;
@@ -102,4 +103,7 @@ padding: 0 2rem;
 .change-textarea{
 height: 216px !important;
 opacity: 0.8;
+}
+.orders-data-font{
+    font-size: 12px;
 }

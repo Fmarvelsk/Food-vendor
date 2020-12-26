@@ -2,7 +2,6 @@ import { NavLink, Button } from 'react-bootstrap'
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
 import ReceiptIcon from '@material-ui/icons/Receipt';
 import RoomServiceIcon from '@material-ui/icons/RoomService';
-import AccessAlarmIcon from '@material-ui/icons/AccessAlarm';
 import DashboardIcon from '@material-ui/icons/Dashboard';
 
 const Sidebar = (props) => {
@@ -14,13 +13,13 @@ const dashboardRoutes =  [
       layout: "/merchant/user"
     },
     {
-      path: "/orders",
+      path: "/manage-orders",
       name: "Manage orders",
       icon: <ShoppingCartOutlinedIcon className="dash-icon"/>,
       layout: "/merchant/user"
     },
     {
-      path: "/transaction-histroy",
+      path: "/transaction-history",
       name: "Transaction report",
       icon: <ReceiptIcon className="dash-icon"/> ,
       layout: "/merchant/user"
@@ -30,19 +29,27 @@ const dashboardRoutes =  [
       name: "Manage Menu",
       icon: <RoomServiceIcon className="dash-icon"/>,
       layout: "/merchant/user"
-    }
+    },
+    {
+      logout : true,
+      path: "/",
+      name: "Logout",
+      icon: <RoomServiceIcon className="dash-icon"/>,
+      layout: "/merchant"
+    },
+    
   ]  
   const activeRoute = (routeName) => {
   return window.location.pathname.indexOf(routeName) > -1 ? "active my-row" : "my-row"
   }
 return(
 <div className="sidebar">
-  <div className="ml-5 mt-5 mr-5">
+  <div className="ml-5 mr-5">
     <img src='' />
     <h4>Femi</h4>
   <p className="f-15">Heritage Kitchen</p>
   <div className="mb-5 pt-3">
-  <a class=" p-btn login-btn new-menu" href="/merchant/user/create-menu">Create new menu +</a>
+  <a className=" p-btn login-btn new-menu" href="/merchant/user/create-menu">Create new menu +</a>
   </div>
   <hr/>
   <div>
@@ -54,8 +61,8 @@ return(
                 return (
                   <li
                     className={
-                      prop.upgrade
-                        ? "active active-pro"
+                      prop.logout
+                        ? "mr-0 active-pro my-row"
                         : activeRoute(prop.layout + prop.path)
                     }
                                         key={key}
@@ -65,7 +72,6 @@ return(
                       href={prop.layout + prop.path}
                       className="nav-link dark-color"
                     >
-                      <i className={prop.icon} />
                       <p>{prop.name}</p>
                     </NavLink>
                   </li>
