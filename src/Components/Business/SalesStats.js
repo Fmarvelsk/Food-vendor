@@ -54,7 +54,7 @@ const SalesStats = (props) => {
                   <p className={classes.popular}>Most popular Order</p>
                 
                {Popular.map((prop, i) => (
-                  <div className="item-order mb-3" key={i}>
+                  <div className="my-row mb-3" key={i}>
                  <img src={Food} alt="Egusi" width= "50px" height="50px"/>
                  <div className="ml-3">
                 

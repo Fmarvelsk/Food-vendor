@@ -148,3 +148,26 @@ height: 90px;
     margin-top: 3rem
 }
 }
+.toggle-menu {
+    flex-direction: row;
+    position: relative;
+    display: flex;
+    min-width: 0;
+    word-wrap: break-word;
+  }
+.manage-menu {
+    background-color: #fff; 
+    padding: 20px;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+   
+}
+@media (max-width:475px){
+    .toggle-menu{
+    flex-wrap: wrap;
+}
+.w-toggle {
+    width: 100%;
+}
+}

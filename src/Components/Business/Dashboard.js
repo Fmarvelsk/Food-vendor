@@ -30,6 +30,7 @@ const Dashboard = () => {
       <Container fluid className="hurt">
         <div>
         <h3>Overview</h3>
+        <p className="f-15"><span>Heritage Kitchen restaurant</span> overview and dashboard.</p>
         </div>
         <Row>
           <Col lg={3} sm={6}>
@@ -77,10 +78,6 @@ const Dashboard = () => {
   </Route>
   <Route path={`${path}/merchant-menu`}>
     <ManageMenu/>
-  </Route>
-  <Route path={`${path}/*`}>
-    {console.log(path)}
-    <h3>404 Not Found</h3>
   </Route>
         </div>
         </>

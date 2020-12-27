@@ -22,8 +22,8 @@ const TableList = (props) =>  {
       <div className="main-panel">
         <Container fluid className="hurt">
             <div>
-                <h3>{props.h3}</h3>
-                <div className="item-order">
+                <h3 className="mb-3">{props.h3}</h3>
+                <div className="table-cat">
                 <Form className="form-btn w-80">
             <Form.Control placeholder="search orders" className="change-input"/>
             <div className="svg-btn">

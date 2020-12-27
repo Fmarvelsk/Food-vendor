@@ -20,7 +20,7 @@ const CreateMenu =  () => {
 					<Col xs={12} sm={6} md={6} className="mt-3">
 						<Form.Group>
 							<label>Menu name</label>
-							<Form.Control type="text"  className="change-input" placeholder="First name" />
+							<Form.Control type="text"  className="change-input" placeholder="Name" />
 						</Form.Group>
 					</Col>
 					<Col xs={12} sm={6} md={6} className="mt-3" >
@@ -43,7 +43,7 @@ const CreateMenu =  () => {
                     <Col md={12} className="mt-3">
                     <Form.Group>
                         <label>Set Price</label>
-                        <Form.Control placeholder="search orders" className="change-input"/>
+                        <Form.Control placeholder="Set Price" className="change-input"/>
             <div className="currency-svg">
             <img src={CurrencySvg} alt="Currency" width="83%"/>
            {/*<SearchOutlinedIcon className="outline"/>*/}

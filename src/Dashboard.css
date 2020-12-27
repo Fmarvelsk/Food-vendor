@@ -26,7 +26,7 @@
     overflow-y: hidden;
 }
 .new-menu {
-    padding: 10px 16px
+    padding: 10px 13px
 }
 
 .nav-dash {
@@ -97,8 +97,8 @@ padding: 0 2rem;
 }
 .currency-svg {
     position: absolute;
-    right: -3px;
-    top: 32px;
+    right: 2px;
+    top: 30px;
 }
 .change-textarea{
 height: 216px !important;
@@ -107,3 +107,44 @@ opacity: 0.8;
 .orders-data-font{
     font-size: 12px;
 }
+.mt {
+    margin-top: 7px;
+}
+.toggle-container {
+    width: 70px;
+    background-color: #20E862;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 15px;
+    height: 32px;
+    position: relative;
+  }
+  .abled {
+    background-color: #20E862;
+  }
+  .t-disabled {
+    background-color: #c4c4c4;
+    
+  }
+  .dialog-button {
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #ffffff;
+    padding: 8px 12px;
+    border-radius: 25px;
+    min-width: 46px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 32px;
+    min-width: unset;
+    height: 100%;
+    left: 38px;
+    transition: all 0.3s ease;
+  }
+  
+  .disabled {
+    background-color: #707070;
+    left: 0px;
+  }
