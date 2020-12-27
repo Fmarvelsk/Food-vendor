@@ -2,7 +2,6 @@ import Logo from '../../Image/Group 88@2x.png'
 const OrderDetails = () => {
     return(
         <>
-            <div className="padding-order">
             <div className="merchant-header">
                 <img src={Logo} className="mr-3" width="75px" height ="75px"/>
                 <div className="setspacing">
@@ -72,7 +71,6 @@ const OrderDetails = () => {
            
             </div>
            
-            </div>
         
   </>
     )

@@ -20,7 +20,7 @@ const ManageMenu = () => {
         <h3>Manage Menu</h3>
            </div>
     { Popular.map( (menu,  i) => (
-        <div className="mt-3 manage-menu">
+        <div className="mt-3 manage-menu" key={i}>
         <div className="toggle-menu">
                 <div>
                   <img className="menu-img" src={Meats} alt="menu"/>

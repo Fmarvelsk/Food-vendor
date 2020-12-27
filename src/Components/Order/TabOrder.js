@@ -13,6 +13,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     padding: '5rem 10rem'
   },
+
     
 }));
 
@@ -25,7 +26,7 @@ export default function LabTabs() {
   };
  
   return (
-    <div className={classes.root}>
+    <div className={`order-moblie ${classes.root}`}>
       <TabContext value={value}>
         <AppBar position="static">
           <TabList onChange={handleChange} className="jub" aria-label="simple tabs example">

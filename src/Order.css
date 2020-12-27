@@ -117,3 +117,12 @@ li.active-pro.my-row {
     transform: translate3d(0px, 0, 0);
 }
 }
+
+@media (max-width: 552px){
+    .order-moblie {
+        padding: 2rem !important;
+    }
+    .merchant-header > .setspacing {
+        font-size: 12px;
+    }
+}
