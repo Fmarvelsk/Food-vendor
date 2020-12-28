@@ -6,8 +6,9 @@ import SalesStats from './SalesStats'
 import Transaction from './Transaction'
 import Sidebar from './Sidebar'
 import NavBus from './NavBus'
+import NotFound from './NotFound'
 import CreateMenu from './CreateMenu'
-import { Route, useRouteMatch } from 'react-router-dom'
+import { Route, useRouteMatch, Redirect, Switch } from 'react-router-dom'
 import ManageOrder from './ManageOrder'
 import ManageMenu from './ManageMenu'
 import { managerData, yearLabels } from "./Data";
@@ -21,11 +22,12 @@ const Dashboard = () => {
   })
     return(
       <>
+      <Switch>
+        <Route exact path={`${path}/dashboard`}>
         <NavBus style={{position:'fixed'}}/>
         <div>
         <Sidebar/>
-
-        <Route path={`${path}/dashboard`}>
+        
                     <div className="main-panel">
       <Container fluid className="hurt">
         <div>
@@ -65,21 +67,47 @@ const Dashboard = () => {
         <SalesStats data={managerData} labels={yearLabels}/>
         </Container>
         </div>
+        </div>
         </Route>
 
-        <Route path={`${path}/create-menu`}>
+        <Route exact path={`${path}/create-menu`}>
+        <NavBus style={{position:'fixed'}}/>
+        <div>
+        <Sidebar/>
+        </div>
           <CreateMenu/>
         </Route>
-        <Route path={`${path}/transaction-history`}>
+  
+        <Route  exact path={`${path}/transaction-history`}>
+        <NavBus style={{position:'fixed'}}/>
+        <div>
+        <Sidebar/>
+        </div>
     <Transaction/>
   </Route>
-  <Route path={`${path}/manage-orders`}>
+  
+  <Route exact path={`${path}/manage-orders`}>
+  <NavBus style={{position:'fixed'}}/>
+        <div>
+        <Sidebar/>
+</div>
     <ManageOrder/>
   </Route>
-  <Route path={`${path}/merchant-menu`}>
+  
+  <Route exact path={`${path}/merchant-menu`}>
+  <NavBus style={{position:'fixed'}}/>
+        <div>
+        <Sidebar/>
+        </div>
     <ManageMenu/>
   </Route>
-        </div>
+
+  <Route exact path={`${window.location.pathname}*`}>
+    <NotFound/>
+        </Route>
+
+</Switch>
+        
         </>
     )
 }

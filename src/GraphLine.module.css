@@ -22,7 +22,12 @@
     margin: 5px;
 }
 }
-
+.link {
+    font: normal normal normal 12px/13px Roboto;
+    color: #FF2121;
+    text-decoration: underline;
+    cursor: pointer;
+}
 .popular {
     padding: 0 10px;
     background-color: #FFE01B;
@@ -35,4 +40,45 @@
 .Name {
     font : normal normal medium 14px/17px Roboto;
     letter-spacing: 0.04px;
+}
+.header_row {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    width: 100%;
+ }
+.buyer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@media (min-width :575px){
+    .buyer {
+        padding-top: 5rem;
+    }
+    /*.orderNo {
+        padding: 15px !important;
+    }*/
+}
+/*.orderNo{
+    padding: 15px 0;
+}*/
+.location {
+    text-align: center;
+font: normal normal normal 12px/14px Roboto;
+}
+@media (min-width : 662px){
+    
+    .size{
+        width: 25%;
+        flex: 0 0 18%;
+    }
+}
+.color {
+    background-color: #FFFFFF;
+    padding: 0px;
+}
+.header_order {
+    background-color: #F9F9F9;
 }

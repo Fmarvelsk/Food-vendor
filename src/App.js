@@ -1,5 +1,5 @@
 import React, {useEffect, createRef} from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Redirect, useLocation } from 'react-router-dom';
 import Navbar from './Components/Navbar'
 import Header from './Components/Header'
 import Footer from './Components/Footer/Footer'
@@ -9,6 +9,7 @@ import './App.css';
 import FoodMenu from './Components/FoodMenu';
 import {useDispatch} from 'react-redux';
 import {loadData} from "./store";
+import Error404 from './Components/404'
 import Order from './Components/Order/Order'
 import Success from './Components/Success'
 import SignupBuss from './Components/Business/SignupBusiness'
@@ -20,6 +21,8 @@ import Dashboard from './Components/Business/Dashboard'
 
 function App() {
   const wrapper = createRef()
+  const path = useLocation()
+{console.log(path)}
   const dispatch = useDispatch()
   useEffect(() => {
     // eslint-disable-next-line
@@ -68,11 +71,11 @@ function App() {
   </Route>
   <Route path="/merchant/user">
     <Dashboard/>
-  </Route>
-  <Route exact path="/*">
-    <h3>404 Found</h3>
     </Route>
-
+    
+  <Route exact path="/*">
+    <Error404/>
+    </Route>
      </Switch>
      
      <AuthPage/>

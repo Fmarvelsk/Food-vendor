@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import {
 Container, 
 Row,
@@ -9,19 +9,23 @@ Button,
 Form } from "react-bootstrap";
 import DropDown from './DropDown'
 import SearchOutlinedIcon from '@material-ui/icons/SearchOutlined'
+import EditMenu from "./EditMenu";
 
 const TableList = (props) =>  {
-  
-    useEffect( () => {
-        document.body.style.background= '#F3F3F3 0% 0% no-repeat padding-box'
-       })
-       
+  const [menuDetails, useMenuDetails] = useState(true)
+  const ViewMenu = () => (
+    useMenuDetails(false)
+  )    
     return (
         <>
      
       <div className="main-panel">
+      {console.log(props.link)}
+                         
         <Container fluid className="hurt">
-            <div>
+          {menuDetails ? (
+          <>
+          <div>
                 <h3 className="mb-3">{props.h3}</h3>
                 <div className="table-cat">
                 <Form className="form-btn w-80">
@@ -32,7 +36,7 @@ const TableList = (props) =>  {
             </div>
           </Form>
          {props.open.map( (items, i) =>(
-              <DropDown drop={items}/>
+              <DropDown drop={items} key={i}/>
             
          ))}
               </div>
@@ -50,12 +54,13 @@ const TableList = (props) =>  {
                       </tr>
                     </thead>
                     <tbody>
-                      {props.col.map((props, key) => {
+                      {props.col.map((prop, key) => {
                         return (
                           <tr key={key}>
-                            {props.map((props, key) => {
-                              return <td key={key}>{props}</td>;
+                            {prop.map((prop, key) => {
+                              return <td key={key}>{prop}</td>;
                             })}
+                            {props.link ? (<td className="link-data" onClick={ViewMenu}>{props.link}</td>) : ''}
                           </tr>
                         );
                       })}
@@ -64,8 +69,10 @@ const TableList = (props) =>  {
                   </Table>
                   </div>
                   </Card>
+
                               </Col>
-</Row>
+</Row> </>) : <EditMenu/>}
+            
 </Container>
 </div>
 </>

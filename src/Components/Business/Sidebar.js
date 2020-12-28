@@ -5,7 +5,6 @@ import RoomServiceIcon from '@material-ui/icons/RoomService';
 import DashboardIcon from '@material-ui/icons/Dashboard';
 import PowerSettingsNewIcon from '@material-ui/icons/PowerSettingsNew';
 import Blank from '../../Image/assests/blank-profile-picture.png'
-
 const Sidebar = (props) => {
 const dashboardRoutes =  [
     {
@@ -42,9 +41,12 @@ const dashboardRoutes =  [
     
   ]  
   const activeRoute = (routeName) => {
+    console.log(window.location.pathname)
   return window.location.pathname.indexOf(routeName) > -1 ? "active my-row" : "my-row"
   }
 return(
+  <>
+  
 <div className="sidebar open-nav">
   <div className="ml-5 mr-5 mt-3">
     <img src={Blank} className="profile-pic" alt="profile" />
@@ -84,7 +86,7 @@ return(
         </div>
         </div>
         </div>
-      
+         </>   
 )
 }
 export default Sidebar

@@ -62,17 +62,6 @@ padding: 7px;
 	color: black;
 	font-size: 1.8rem !important;
 }
-/*.carts-brand {
-	display: flex;
-padding-top: .3125rem;
-padding-bottom: .3125rem;
-margin-right: 1rem;
-align-items: center;
-font-size: 1.25rem;
-line-height: inherit;
-white-space: nowrap;
-
-}
 @media only screen and (max-width:320px){
 	.d-whole {
 		flex-wrap: nowrap !important;
@@ -257,6 +246,11 @@ height: 174px;
 }
 .wrap-logo {
 	flex-wrap: wrap;
+}
+.form-toogle {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 .Heading {
     display: flex;

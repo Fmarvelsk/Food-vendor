@@ -311,10 +311,12 @@ color: #FFE01B;
     margin-left: 0;
   }
  */
- 
+ .logo-flex{
+   margin-bottom: 1rem;
+ }
 
  .underline-order {
-  width: 24%;
+  width: 24% !important;
  }
  .underline-details{
    width: 24% !important;

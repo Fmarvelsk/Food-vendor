@@ -9,7 +9,7 @@ const DropDown = (props) => {
 							</Dropdown.Toggle>
 							<Dropdown.Menu>
 				{props.drop.item.map( (dropdown, i) =>(
-						<Dropdown.Item >
+						<Dropdown.Item key={i}>
 						{dropdown.title}
 					</Dropdown.Item>
 					

@@ -123,7 +123,7 @@ opacity: 0.8;
     background-color: #20E862;
   }
   .t-disabled {
-    background-color: #c4c4c4;
+    background-color: #FF212166;
     
   }
   .dialog-button {
@@ -145,6 +145,6 @@ opacity: 0.8;
   }
   
   .disabled {
-    background-color: #707070;
+    background-color: #ffffff;
     left: 0px;
   }

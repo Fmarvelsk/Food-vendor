@@ -126,3 +126,12 @@ li.active-pro.my-row {
         font-size: 12px;
     }
 }
+.link-data {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.link-data:hover {
+    text-decoration: underline;
+}
