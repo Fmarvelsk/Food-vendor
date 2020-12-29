@@ -1,16 +1,17 @@
 import { useState } from 'react'
-import { Card, Container, Form } from 'react-bootstrap'
-import { Menu } from './Data'
+import { Card, Container, Form, Button } from 'react-bootstrap'
+import SearchOutlinedIcon from '@material-ui/icons/SearchOutlined'
+import { Menu, Managefilter } from './Data'
 import Meats from '../../Image/Meats.jpeg'
+import DropDown from './DropDown'
+
 //import FormCalender from './CalenderForm'
 const ManageMenu = () => {
   const [hide, useShow] = useState(false)
   const [setDate, UseData] = useState('')
-  const ToogleMenu = (e) => {
-    console.log(e)
-    useShow(!hide)
-
-}
+  const ToogleMenu = () => {
+  useShow(!hide) 
+  }
   const SuspendMeal = () => {
     console.log(setDate)
     useShow(false)
@@ -22,6 +23,20 @@ const ManageMenu = () => {
         <div>
         <h3>Manage Menu</h3>
            </div>
+           <div className="table-cat">
+                <Form className="form-btn w-80">
+            <Form.Control placeholder="search orders" className="change-input"/>
+            <div className="svg-btn">
+            <Button className="search-food"/>
+            <SearchOutlinedIcon className="outline"/>
+            </div>
+          </Form>
+          {Managefilter.map( (items, i) =>(
+              <DropDown drop={items} key={i}/>
+            
+         ))}
+        
+          </div>
     { Menu.map( (name,  i) => (
         <div className="mt-3 manage-menu" key={i}>
         <div className="toggle-menu">
@@ -38,12 +53,16 @@ const ManageMenu = () => {
                   <span className="ml-5 bold">£10.00</span>
                   </div>
                 <div className="scssc">
-                  <div className={`toggle-container ${!hide ? 'abled' : 't-disabled'}`}>
-                  <span className={`dialog-button ${!hide ? '' :"disabled"}`} onClick={()=>ToogleMenu(name.id) /*(value)=> value.id === name.id ? ToogleMenu : console.log(value)*/}></span>
-                    </div>
-                  <p className="mt">toogle to suspend menu</p>
+                 {/* <div className={`toggle-container ${!hide ? 'abled' : 't-disabled'}`}>
+                  <span className={`dialog-button ${!hide ? '' :"disabled"}`} checked={name.id} onClick={ToogleMenu /*(value)=> value.id === name.id ? ToogleMenu : console.log(value)}></span>
+                    </div> */}
+                    <label class="switch">
+  <input type="checkbox" onChange={ToogleMenu}/>
+  <span class="slider round"></span>
+</label>                
+                                      <p className="mt">toogle to suspend menu</p>
                   </div>
-      
+                      
                   
                 </div>
                 </div>

@@ -1,5 +1,6 @@
 import { Col, Row, Container, Card, Form, Button } from 'react-bootstrap';
 import CurrencySvg from '../../Image/assests/Group 270.svg'
+import SvgPhoto from '../../Image/assests/Group 230.svg'
 //import SideBar from "./Sidebar";
 const CreateMenu =  () => {
     return(
@@ -62,9 +63,10 @@ const CreateMenu =  () => {
 						<Form.Group>
                         <label>Upload picture</label>
 							
-							<Form.Control as="textarea" className="change-textarea">
-                            </Form.Control>
-						
+							<Form.File className="change-textarea upload-form">
+                            
+                            </Form.File>
+                            <img src={SvgPhoto} className="svg-photos" alt/>
 						</Form.Group>
 					</Col>
                     

@@ -62,6 +62,9 @@ padding: 7px;
 	color: black;
 	font-size: 1.8rem !important;
 }
+.search-svg {
+    position: absolute;
+}
 @media only screen and (max-width:320px){
 	.d-whole {
 		flex-wrap: nowrap !important;
@@ -71,10 +74,8 @@ padding: 7px;
 	.carts-brand{
 		margin-right: 0 !important;
 	}
-}*/
-.search-svg{
-	position: absolute;
 }
+
 p.dw {
 	position: relative;
 }
