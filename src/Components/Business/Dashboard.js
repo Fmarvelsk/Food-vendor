@@ -1,27 +1,42 @@
 import StatsCard from './StatsCard'
-import Sidebar from './Sidebar'
 import { Col, Container, Row } from 'react-bootstrap'
 import '../../Dashboard.css'
 import { useEffect } from 'react'
 import SalesStats from './SalesStats'
+import Transaction from './Transaction'
+import Sidebar from './Sidebar'
+import NavBus from './NavBus'
+import NotFound from './NotFound'
+import CreateMenu from './CreateMenu'
+import { Route, useRouteMatch, Redirect, Switch } from 'react-router-dom'
+import ManageOrder from './ManageOrder'
+import ManageMenu from './ManageMenu'
+import { managerData, yearLabels } from "./Data";
 const Dashboard = () => {
+  const {path, url} = useRouteMatch()
+
+  
   useEffect( () => {
    document.body.style.background= '#F3F3F3 0% 0% no-repeat padding-box'
+   document.body.style.fontSize = "15px"
   })
     return(
+      <>
+      <Switch>
+        <Route exact path={`${path}/dashboard`}>
+        <NavBus style={{position:'fixed'}}/>
+        <div>
+        <Sidebar/>
         
-      <div>
-          
-  <Sidebar/>
-        <div className="main-panel">
+                    <div className="main-panel">
       <Container fluid className="hurt">
-        <div className="pt-3">
+        <div>
         <h3>Overview</h3>
+        <p className="f-15"><span>Heritage Kitchen restaurant</span> overview and dashboard.</p>
         </div>
         <Row>
           <Col lg={3} sm={6}>
             <StatsCard
-              bigIcon={<i className="pe-7s-server text-warning" />}
               statsText="Orders"
               statsValue="£35,485"
               statsInfo="+2.8%"
@@ -29,15 +44,13 @@ const Dashboard = () => {
           </Col>
           <Col lg={3} sm={6}>
             <StatsCard
-              bigIcon={<i className="pe-7s-wallet text-success" />}
-              statsText="Avg. Order amounte"
+              statsText="Avg.Order amount"
               statsValue="£31,345"
               statsInfo="-2.8%"
             />
           </Col>
           <Col lg={3} sm={6}>
             <StatsCard
-              bigIcon={<i className="pe-7s-graph1 text-danger" />}
               statsText="Unique customer"
               statsValue="33,785"
               statsInfo="+2.8%"
@@ -45,17 +58,57 @@ const Dashboard = () => {
           </Col>
           <Col lg={3} sm={6}>
             <StatsCard
-              bigIcon={<i className="fa fa-twitter text-info" />}
               statsText="Net Sales"
               statsValue="+2.8%"
               statsInfo=" £35,485"
             />
           </Col>
         </Row>
-        <SalesStats/>
+        <SalesStats data={managerData} labels={yearLabels}/>
         </Container>
         </div>
         </div>
+        </Route>
+
+        <Route exact path={`${path}/create-menu`}>
+        <NavBus style={{position:'fixed'}}/>
+        <div>
+        <Sidebar/>
+        </div>
+          <CreateMenu/>
+        </Route>
+  
+        <Route  exact path={`${path}/transaction-history`}>
+        <NavBus style={{position:'fixed'}}/>
+        <div>
+        <Sidebar/>
+        </div>
+    <Transaction/>
+  </Route>
+  
+  <Route exact path={`${path}/manage-orders`}>
+  <NavBus style={{position:'fixed'}}/>
+        <div>
+        <Sidebar/>
+</div>
+    <ManageOrder/>
+  </Route>
+  
+  <Route exact path={`${path}/merchant-menu`}>
+  <NavBus style={{position:'fixed'}}/>
+        <div>
+        <Sidebar/>
+        </div>
+    <ManageMenu/>
+  </Route>
+
+  <Route exact path={`${window.location.pathname}*`}>
+    <NotFound/>
+        </Route>
+
+</Switch>
+        
+        </>
     )
 }
 export default Dashboard

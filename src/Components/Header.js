@@ -12,10 +12,10 @@ const Header = () => {
     
                     </div>
                    
-                    <div class="order-food">
+                    <div className="order-food">
                     <p>Order food, drinks and more from African Vendors</p>
                     </div>
-                    <div class="form-field">
+                    <div className="form-field">
                     <Form />
                     </div>
                 </div>

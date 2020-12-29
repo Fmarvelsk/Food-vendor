@@ -2,13 +2,13 @@ import React from 'react';
 import { Modal } from 'react-bootstrap';
 import { Form } from 'react-bootstrap';
 import SignUpForm from './SignupForm'
-//import Logo from './Logo'
+import Logo from '../Image/vendr..svg'
 
 function Signup(props) {
 	
 	return (
 		<Modal show={props.show} onHide={props.handleClose}>
-			<h3 className="logo-modal">Vendr</h3>
+			<div className="logo-modal"><img src={Logo} alt="logo"/></div>
 		<Modal.Dialog style={{margin: 0}}>
 			<Modal.Header closeButton>
 				

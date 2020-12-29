@@ -44,7 +44,7 @@ const FoodNav = (props) => {
     </Nav.Item>
   </div>
   <div >
-    <Nav.Item className="adapt dollar">
+    <Nav.Item className="adapt total">
       Carts
     </Nav.Item>
   </div>

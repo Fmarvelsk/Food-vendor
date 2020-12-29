@@ -1,7 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap"
 import Phone from '../Image/phone.png'
 import SVG from './Svg.js'
-import FooterHeader from './FooterHead'
+import FooterHeader from './Footer/FooterHead'
 import Bulk from './Bulk'
 const Landing = () => {
     const stateFav = [{

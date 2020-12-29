@@ -61,7 +61,7 @@ span.b {
 
 }
 .MuiTabPanel-root {
-    padding: 24px;
+    padding: 15px !important;
     flex: 1;
     background: #FFFFFF 0% 0% no-repeat padding-box !important;
     box-shadow: 0px 2px 4px #C5C5C52B
@@ -74,7 +74,8 @@ span.b {
     background-color: transparent !important
 }
 button:focus {
-  outline: none !important
+  outline: none !important;
+  box-shadow: none !important;
 }
 .MuiTab-root{
     display: -webkit-inline-box !important;
@@ -87,18 +88,22 @@ button:focus {
 .MuiTabs-root{
     min-height: 45px !important;
 }
-.PrivateTabIndicator-colorSecondary-6 {
+.MuiTabs-fixed > .MuiTabs-indicator {
     background-color: #FFE01B !important;
+    margin: 13px 0px
    }
 @media(min-width:600px){
-    .PrivateTabIndicator-colorSecondary-6{
+    .MuiTabs-fixed > .MuiTabs-indicator{
         
     width: 90px !important
     }
 }
 @media(max-width:599px){
-    .PrivateTabIndicator-colorSecondary-6{
+    .MuiTabs-fixed > .MuiTabs-indicator{
         width: 63px !important;
+    }
+    .MuiTabs-flexContainer {
+        justify-content: space-between !important;
     }
 }
 .MuiTab-wrapper {
@@ -107,14 +112,11 @@ button:focus {
 .MuiTabs-flexContainer {
    justify-content: flex-start ;
 }
-.PrivateTabIndicator-root-4{
-    margin: 13px 0px
-}
 .done{
     padding-top: 7px;
 }
 .search-food{
-    padding: 1.1rem 1.2rem;
+    padding:1.2rem;
     margin-left: 0;
     border-radius: 0;
     background-color: #FFE01B;
@@ -144,5 +146,28 @@ height: 90px;
 
 .mobli-c {
     margin-top: 3rem
+}
+}
+.toggle-menu {
+    flex-direction: row;
+    position: relative;
+    display: flex;
+    min-width: 0;
+    word-wrap: break-word;
+  }
+.manage-menu {
+    background-color: #fff; 
+    padding: 20px;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+   
+}
+@media (max-width:475px){
+    .toggle-menu{
+    flex-wrap: wrap;
+}
+.w-toggle {
+    width: 100%;
 }
 }

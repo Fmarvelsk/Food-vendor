@@ -5,7 +5,7 @@ import LocationOnIcon from '@material-ui/icons/LocationOn';
 import HomeDelivery from '../Image/assests/Group 137.svg'
 import Mask from '../Image/Mask Group 2.png'
 import Logo from '../Image/Group 88@2x.png'
-import Rating from './Rating'
+import Rating from './Order/Rating'
 
 const Details = () => {
     const imageStyle = {
@@ -39,20 +39,20 @@ const Details = () => {
             </div>
             <div className="border-delivery">
            
-    <div class="Heading">
-        <div class="Cell">
+    <div className="Heading">
+        <div className="Cell">
            <RoomServiceIcon className="mr-3"/> <p className="mr-3">Minimum order:</p><b><p>£ 5.00</p></b>
         </div>
-        <div class="Cell igcell">   
+        <div className="Cell igcell">   
         <img src={HomeDelivery} alt="Delivery" className="mr-3"/><p className="mr-3">Delivery fee:</p><b><p>12 noon</p></b>
        
         </div>
        </div>
-       <div class="Heading">
-        <div class="Cell">
+       <div className="Heading">
+        <div className="Cell">
         <AccessAlarmIcon className="mr-3"/> <p className="mr-3">Starting from:</p><b><p>£ 20.00</p></b>
         </div>
-        <div class="Cell igcell">
+        <div className="Cell igcell">
            <LocationOnIcon className="mr-3"/> <p>St. Edmondsbury, Lucan, Co.Dublin, K78 Y892</p>
         </div>
     </div></div>

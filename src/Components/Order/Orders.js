@@ -1,5 +1,7 @@
 import { Row, Container, Col} from 'react-bootstrap'
 import MerchantRating from './MerchantRating'
+import Logo from '../../Image/Group 88@2x.png'
+import Ex from './VendrStepper'
 const Orders = () => {
     return(
         <Container className="pb-5 mb-5 pt-5">
@@ -12,7 +14,7 @@ const Orders = () => {
             <div className="panel">
                 <div className="padding-order">
                 <div className="merchant-header">
-                    <p>Logo</p>
+                    <img src={Logo} className="mr-3" width="75px" height ="75px"/>
                     <div className="setspacing">
                         <p>Heritage Kitchen (African Cuisine)</p>
                         <p className="f-15">St. Edmondsbury, Lucan, Co.Dublin, K78 Y892</p>
@@ -92,11 +94,12 @@ const Orders = () => {
         <div className="underline-order"></div>
             
         </div>
-        <div className="panel">
+        <div className="panel padding-order">
                <div className="text-center">
                    <p className="f-15">EST. DELIVERY TIME</p>
                 <h3>17:35</h3>
                 </div>
+                <Ex/>
             </div>
         
            

@@ -1,5 +1,5 @@
 import {Col, Row } from 'react-bootstrap'
-import Rating from './Rating'
+import Rating from './Order/Rating'
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
 import LocalShippingOutlinedIcon from '@material-ui/icons/LocalShippingOutlined';
 import TocOutlinedIcon from '@material-ui/icons/TocOutlined';

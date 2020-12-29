@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Row, Col } from "react-bootstrap";
 import UpArrow from '../../Image/assests/Path 741.svg'
 import DownArrow from '../../Image/assests/Path 742.svg'
 
@@ -11,7 +10,7 @@ export class StatsCard extends Component {
         <div className="content stats">
                <div className="numbers">
                 <p>{this.props.statsText}</p>
-               <p> {this.props.statsValue}</p>
+               <p className="bold"> {this.props.statsValue}</p>
                 <p className={Info?.includes('+') ? 'green' : 'red'} >{this.props.statsInfo} 
                 <img src={Info?.includes('+') ? UpArrow : DownArrow } className="ml-3" alt="arrow"/> </p>
               </div>

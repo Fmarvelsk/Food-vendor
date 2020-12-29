@@ -1,5 +1,6 @@
 import React from 'react'
-import Google from '../Image/googleplayfooter.png'
+import Google from '../../Image/googleplayfooter.png'
+import { Link } from 'react-router-dom'
 const Footer = () => {
   const FooterName = [{
    title:"Popular Dishes",
@@ -99,8 +100,11 @@ const Footer = () => {
         <div className="col-md-6 col-lg-6 ">
     <p className="platform">We have Over 100 restuarants and deliveries on</p> <p className="platform"> our plartform
 sign up today to  partner with  us </p>
-<div className="footer-signup-btn mb-5">
-  <input className="btn-cls" type="button" value="Sign up"/>
+<div className="mt-3 mb-3">
+                    <Link to="/merchant" className=" p-btn login-btn ">
+                        
+                Signup
+            </Link>
 </div>
 </div>
 <div className="col-md-6 col-lg-6">

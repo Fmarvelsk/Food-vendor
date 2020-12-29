@@ -4,8 +4,8 @@ const BusinessLanding = () => {
     return(
         <>
         
-        <div class="home-center">
-    <div class="home-desc-center">
+        <div className="home-center">
+    <div className="home-desc-center">
 <BussHome/>
           </div>
              </div>

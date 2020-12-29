@@ -5,26 +5,29 @@ import Group2 from '../Image/Snacks.jpeg'
 import Chicken from '../Image/Chicken.jpeg'
 import ChooseMenu from './ChooseMenu'
 import RestaurantMenuIcon from '@material-ui/icons/RestaurantMenu';
-import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
+import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
 import {useSelector} from 'react-redux'
 import style from '../moblie.module.css'
 import { useState } from 'react'
 const Menu = () => {
-    const [block, setBlock] = useState(style.cod)
+    const [block, setBlock] = useState(true)
     const [sorting, setSorting] = useState('Rating');
-    const filterArrow = ( e => e.preventDefault(), console.log(block))
     const loadData = useSelector( state => state.filterStore)
+
+    const Showfilter = () => {
+        setBlock(!block)
+    }
     return(
         <Container className="jumbotron jumbocolor">
-            <div class="header-row">
+            <div className="header-row">
              </div>
             <Row className="create-menu">
             <Col md={2} className="content nav">
-    			<div className={style.filter}>
+    			<div className={style.filter} onClick={Showfilter}>
                 <span className="filter-toggle-text">Filters By</span>
-              <i className={style.try} onClick={filterArrow} > <ArrowDropDownIcon /></i>
+              <i className={block ? style.down : style.up} > <ArrowDropUpIcon/></i>
 		</div>
-        <div className={block}>
+        <div className={block ? style.cod : style.show}>
         <div className="my-row">
             <RestaurantMenuIcon className="rescolor"/>
                     <p>Menu</p>

@@ -1,15 +1,16 @@
 import React, {useEffect, createRef} from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Redirect, useLocation } from 'react-router-dom';
 import Navbar from './Components/Navbar'
 import Header from './Components/Header'
-import Footer from './Components/Footer'
+import Footer from './Components/Footer/Footer'
 import Landing from './Components/Landing'
 import NavBus from './Components/Business/NavBus'
 import './App.css';
 import FoodMenu from './Components/FoodMenu';
 import {useDispatch} from 'react-redux';
 import {loadData} from "./store";
-import Order from './Components/Order'
+import Error404 from './Components/404'
+import Order from './Components/Order/Order'
 import Success from './Components/Success'
 import SignupBuss from './Components/Business/SignupBusiness'
 import axios from 'axios'
@@ -17,10 +18,11 @@ import AuthPage from './Components/AuthPage'
 import BusinessLanding from './Components/Business/BusinessLandingPage';
 import Resturant from './Components/Resturants';
 import Dashboard from './Components/Business/Dashboard'
-import Sidebar from './Components/Business/Sidebar'
 
 function App() {
   const wrapper = createRef()
+  const path = useLocation()
+{console.log(path)}
   const dispatch = useDispatch()
   useEffect(() => {
     // eslint-disable-next-line
@@ -36,7 +38,6 @@ function App() {
   })
  
   return (
-   <div ref={wrapper}>
 
 <Router>
   <Switch>
@@ -68,20 +69,19 @@ function App() {
   <Route exact path="/Success">
 <Success/>
   </Route>
-  <Route path="/merchant/dashboard">
-  <NavBus/>
+  <Route path="/merchant/user">
     <Dashboard/>
-  </Route>
-  <Route path="/admin/user">
-    <Sidebar/>
-  </Route>
+    </Route>
+    
+  <Route exact path="/*">
+    <Error404/>
+    </Route>
      </Switch>
      
      <AuthPage/>
-    
-</Router>
+  </Router>
      
-   </div>
+
     );
 }
 export default App;

@@ -113,7 +113,7 @@ const emailValidate = (e) => {
 		<>
 			<Modal.Title className="text-center mb-3" id="login-modal-title"><span>Sign up with</span></Modal.Title>
 			<Form id="login-form" onSubmit={SigninBtn}>
-			<div class="google-facebook pb-3">
+			<div className="google-facebook pb-3">
 			<Button variant="primary" type="submit" className="login-button-google">
 						<div className="google-button-text">
 							<img src='https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg' alt="google" />
