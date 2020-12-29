@@ -4,10 +4,9 @@ import Menu from './Menu'
 
  const Foodmenu = () => {
     return( <>
-    <div className="bg-height bg-height-nav">
-        <div className="nav-adjust">
+    <div className="bg-height">
+        
           <Foodnav/>
-        </div>
       </div>
       <Menu/>
       </>

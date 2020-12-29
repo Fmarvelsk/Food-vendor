@@ -1,4 +1,4 @@
-import '../Business.css'
+import '../../Business.css'
 import BussHome from './BussHome'
 const BusinessLanding = () => {
     return(

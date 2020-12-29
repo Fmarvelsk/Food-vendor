@@ -78,6 +78,13 @@ const emailValidate = (e) => {
 			email : email,
 			password : password
 		};
+		if (!info.email || info.password){
+			setUserError('Details is required')
+		}
+		else{
+			console.log(info)
+		history.push('/home')
+		}
 		
 					/*const dbUrl = async() => {
 						const response = await axios({
@@ -105,7 +112,6 @@ const emailValidate = (e) => {
 	return (
 		<>
 			<Modal.Title className="text-center mb-3" id="login-modal-title"><span>Sign up with</span></Modal.Title>
-			<div className="red text-align">{userError}</div>
 			<Form id="login-form" onSubmit={SigninBtn}>
 			<div class="google-facebook pb-3">
 			<Button variant="primary" type="submit" className="login-button-google">
@@ -130,7 +136,8 @@ const emailValidate = (e) => {
 			<div className="text-center">OR</div>
 			<div className="border-or"><hr/></div>
 			</div>
-			
+			<div className="red text-center">{userError}</div>
+		
 				<Form.Row className="align-items-center">
 					<Col xs={12}>
 						<Form.Group controlId="formBasicEmail" id="form-group-signup-email">

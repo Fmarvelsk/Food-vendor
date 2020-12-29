@@ -1,29 +1,23 @@
-import { Container, Col, Row, Navbar, Form } from 'react-bootstrap'
+import { Container, Col, Row, Navbar, Form, Dropdown } from 'react-bootstrap'
 import MenuTab from './MenuTab'
 import Group1 from '../Image/Pounded.jpeg'
 import Group2 from '../Image/Snacks.jpeg'
 import Chicken from '../Image/Chicken.jpeg'
 import ChooseMenu from './ChooseMenu'
+import RestaurantMenuIcon from '@material-ui/icons/RestaurantMenu';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import {useSelector} from 'react-redux'
 import style from '../moblie.module.css'
 import { useState } from 'react'
-import { Collapse } from 'bootstrap'
 const Menu = () => {
     const [block, setBlock] = useState(style.cod)
+    const [sorting, setSorting] = useState('Rating');
     const filterArrow = ( e => e.preventDefault(), console.log(block))
     const loadData = useSelector( state => state.filterStore)
     return(
         <Container className="jumbotron jumbocolor">
             <div class="header-row">
-                <div>
-                    <p>Menu</p>
-                </div>
-                <div>
-                    <p>Sort by Popular</p>
-                </div>
-            
-            </div>
+             </div>
             <Row className="create-menu">
             <Col md={2} className="content nav">
     			<div className={style.filter}>
@@ -31,6 +25,11 @@ const Menu = () => {
               <i className={style.try} onClick={filterArrow} > <ArrowDropDownIcon /></i>
 		</div>
         <div className={block}>
+        <div className="my-row">
+            <RestaurantMenuIcon className="rescolor"/>
+                    <p>Menu</p>
+                </div>
+            
 			    <ChooseMenu
               Title='Soup'
               l1='Egusi'
@@ -58,6 +57,25 @@ const Menu = () => {
                          </Col>
             
             <Col md={9}>
+            <div className="dropdown-sort">
+                <Dropdown>
+							<Dropdown.Toggle variant="success" id="dropdown-basic">
+								Sort by: {sorting}
+							</Dropdown.Toggle>
+							<Dropdown.Menu>
+								<Dropdown.Item onClick={() => setSorting('Lowest Rating')}>
+									Lowest Rating
+								</Dropdown.Item>
+								<Dropdown.Item onClick={() => setSorting('Highest Rating')}>
+									Highest Rating
+								</Dropdown.Item>
+								<Dropdown.Item onClick={() => setSorting('Latest Rating')}>
+									Latest
+								</Dropdown.Item>
+							</Dropdown.Menu>
+						</Dropdown> </div>
+            
+            
                 <div className="color-menu pb-3">
                 <MenuTab 
                 Image={Group1}

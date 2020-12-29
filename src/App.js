@@ -4,17 +4,21 @@ import Navbar from './Components/Navbar'
 import Header from './Components/Header'
 import Footer from './Components/Footer'
 import Landing from './Components/Landing'
-import NavBus from './Components/NavBus'
+import NavBus from './Components/Business/NavBus'
 import './App.css';
 import FoodMenu from './Components/FoodMenu';
 import {useDispatch} from 'react-redux';
 import {loadData} from "./store";
 import Order from './Components/Order'
-import Foodmenu from './Components/FoodMenu';
-import SignupBuss from './Components/SignupBusiness'
+import Success from './Components/Success'
+import SignupBuss from './Components/Business/SignupBusiness'
 import axios from 'axios'
 import AuthPage from './Components/AuthPage'
-import BusinessLanding from './Components/BusinessLandingPage';
+import BusinessLanding from './Components/Business/BusinessLandingPage';
+import Resturant from './Components/Resturants';
+import Dashboard from './Components/Business/Dashboard'
+import Sidebar from './Components/Business/Sidebar'
+
 function App() {
   const wrapper = createRef()
   const dispatch = useDispatch()
@@ -56,10 +60,25 @@ function App() {
      </Route>
   <Route exact path="/orders">
     <Order/>
+    <Footer/>
+  </Route>
+  <Route exact path='/Resturant'>
+    <Resturant/>
+  </Route>
+  <Route exact path="/Success">
+<Success/>
+  </Route>
+  <Route path="/merchant/dashboard">
+  <NavBus/>
+    <Dashboard/>
+  </Route>
+  <Route path="/admin/user">
+    <Sidebar/>
   </Route>
      </Switch>
      
      <AuthPage/>
+    
 </Router>
      
    </div>

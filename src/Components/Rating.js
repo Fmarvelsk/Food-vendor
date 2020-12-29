@@ -8,7 +8,7 @@ export default function SimpleRating() {
 
   return (
     <div>
-      <Box component="fieldset" mb={3} borderColor="transparent">
+      <Box component="fieldset" mb={3}  className='cancel' borderColor="transparent">
         <Rating
           name="read-only"
           precision={0.5}

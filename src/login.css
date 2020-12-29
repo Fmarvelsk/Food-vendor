@@ -8,7 +8,7 @@ border: 1px solid rgba(0,0,0,0);
 .logo-modal{
     display: flex;
     justify-content: center;
-    color: #FFE01B;
+    
 }
 .google-facebook{
     display: flex;
@@ -37,7 +37,7 @@ border: 1px solid rgba(0,0,0,0);
     font-weight: bold;
 }
 .link-color {
-    color: #FFE01B;
+    color: rgba(19, 80, 83, 1);
     cursor: pointer;
 }
 .login-button-google {
@@ -102,3 +102,18 @@ div#form-group-login-password {
  .red {
      color: red;
  }
+ .merchant-logo{
+    width: 90px;
+    height: 95px;
+    margin-right: 1rem;
+ }
+ p.logo {
+     margin-bottom: 8px !important;
+ }
+ .cancel {
+     margin-bottom: 0rem !important;
+ }
+ .opac {
+    font: normal normal normal 14px/17px Roboto;
+
+}
