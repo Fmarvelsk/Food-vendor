@@ -1,6 +1,6 @@
 import Resturant from './Resturant'
 import Navbar from './FoodNav'
-import '../Resturant.css'
+import '../../styles/Resturant.css'
 
 export default function Resturants() {
     const Navdetails = {

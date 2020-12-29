@@ -11,7 +11,7 @@
     .file-upload{
   
       height:200px;
-      width:200px;
+      width:100%;
       position:relative;
       flex-direction: column;
       display:flex;
@@ -20,8 +20,7 @@
   
       overflow:hidden;
       transition: all 1s;
-      color: #FFFFFF;
-  
+
       input[type='file']{
   
         height:200px;

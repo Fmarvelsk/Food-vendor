@@ -149,3 +149,14 @@ padding: 10px;
     background-color: #ffffff;
     left: 0px;
   }
+  p.rf4 {
+    position: inherit;
+    font-size: 12px;
+    bottom: -20px;
+    padding: 0 15px;
+}
+@media (max-width:475px){
+    p.rf4 {
+        display: none;
+    }
+}

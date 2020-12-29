@@ -1,13 +1,13 @@
 import { Container, Col, Row, Navbar, Form, Dropdown } from 'react-bootstrap'
 import MenuTab from './MenuTab'
-import Group1 from '../Image/Pounded.jpeg'
-import Group2 from '../Image/Snacks.jpeg'
-import Chicken from '../Image/Chicken.jpeg'
+import Group1 from '../../Image/Pounded.jpeg'
+import Group2 from '../../Image/Snacks.jpeg'
+import Chicken from '../../Image/Chicken.jpeg'
 import ChooseMenu from './ChooseMenu'
 import RestaurantMenuIcon from '@material-ui/icons/RestaurantMenu';
 import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
 import {useSelector} from 'react-redux'
-import style from '../moblie.module.css'
+import style from '../../styles/moblie.module.css'
 import { useState } from 'react'
 const Menu = () => {
     const [block, setBlock] = useState(true)

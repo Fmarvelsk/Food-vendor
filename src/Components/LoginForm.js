@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Form, Button, Modal } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import FacebookIcon from '@material-ui/icons/Facebook'
-import '../login.css'
+import '../styles/login.css'
 import { useDispatch } from 'react-redux'
 //import axios from 'axios'
 import { showModalSignup } from '../store/actionTypes'

@@ -1,6 +1,6 @@
 import Blank from '../../Image/assests/blank-profile-picture.png'
 import { Row, Col, Container } from 'react-bootstrap'
-import  GraphLine from "../../GraphLine.module.css";
+import  GraphLine from "../../styles/GraphLine.module.css";
 import {Popular} from './Data'
 const EditMenu = () => {
     const classes = GraphLine

@@ -1,7 +1,7 @@
-import StatsCard from './StatsCard'
-import { Col, Container, Row } from 'react-bootstrap'
-import '../../Dashboard.css'
+import { Container} from 'react-bootstrap'
+import '../../styles/Dashboard.css'
 import { useEffect } from 'react'
+import StatsData from './StatsData'
 import SalesStats from './SalesStats'
 import Transaction from './Transaction'
 import Sidebar from './Sidebar'
@@ -30,41 +30,10 @@ const Dashboard = () => {
         
                     <div className="main-panel">
       <Container fluid className="hurt">
-        <div>
-        <h3>Overview</h3>
-        <p className="f-15"><span>Heritage Kitchen restaurant</span> overview and dashboard.</p>
-        </div>
-        <Row>
-          <Col lg={3} sm={6}>
-            <StatsCard
-              statsText="Orders"
-              statsValue="£35,485"
-              statsInfo="+2.8%"
-            />
-          </Col>
-          <Col lg={3} sm={6}>
-            <StatsCard
-              statsText="Avg.Order amount"
-              statsValue="£31,345"
-              statsInfo="-2.8%"
-            />
-          </Col>
-          <Col lg={3} sm={6}>
-            <StatsCard
-              statsText="Unique customer"
-              statsValue="33,785"
-              statsInfo="+2.8%"
-            />
-          </Col>
-          <Col lg={3} sm={6}>
-            <StatsCard
-              statsText="Net Sales"
-              statsValue="+2.8%"
-              statsInfo=" £35,485"
-            />
-          </Col>
-        </Row>
-        <SalesStats data={managerData} labels={yearLabels}/>
+        <StatsData/>
+        <SalesStats 
+        data={managerData} 
+        labels={yearLabels}/>
         </Container>
         </div>
         </div>

@@ -1,8 +1,8 @@
 import { Nav, Navbar } from 'react-bootstrap'
 import Result from './Result'
 import { useDispatch } from 'react-redux'
-import { showModalLogin, showModalSignup } from '../store/actionTypes'
-import Logo from '../Image/vendr..svg'
+import { showModalLogin, showModalSignup } from '../../store/actionTypes'
+import Logo from '../../Image/vendr..svg'
 import Details from './Details'
 const FoodNav = (props) => {
   const dispatch = useDispatch()

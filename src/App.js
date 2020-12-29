@@ -5,18 +5,18 @@ import Header from './Components/Header'
 import Footer from './Components/Footer/Footer'
 import Landing from './Components/Landing'
 import NavBus from './Components/Business/NavBus'
-import './App.css';
-import FoodMenu from './Components/FoodMenu';
+import './styles/App.css';
+import FoodMenu from './Components/FoodMenu/FoodMenu';
 import {useDispatch} from 'react-redux';
 import {loadData} from "./store";
 import Error404 from './Components/404'
 import Order from './Components/Order/Order'
-import Success from './Components/Success'
+import Success from './Components/FoodMenu/Success'
 import SignupBuss from './Components/Business/SignupBusiness'
 import axios from 'axios'
 import AuthPage from './Components/AuthPage'
 import BusinessLanding from './Components/Business/BusinessLandingPage';
-import Resturant from './Components/Resturants';
+import Resturant from './Components/FoodMenu/Resturants';
 import Dashboard from './Components/Business/Dashboard'
 
 function App() {

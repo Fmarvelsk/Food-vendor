@@ -180,3 +180,9 @@ div#form-group-login-password {
   .svg-photos {
 cursor: pointer;    
 }
+.nav-path {
+    margin-top: 5px;
+    color: black;
+    padding: .3rem .7rem;
+    
+}

@@ -2,10 +2,10 @@ import RoomServiceIcon from '@material-ui/icons/RoomService';
 import { Link } from 'react-router-dom'
 import AccessAlarmIcon from '@material-ui/icons/AccessAlarm';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
-import HomeDelivery from '../Image/assests/Group 137.svg'
-import Mask from '../Image/Mask Group 2.png'
-import Logo from '../Image/Group 88@2x.png'
-import Rating from './Order/Rating'
+import HomeDelivery from '../../Image/assests/Group 137.svg'
+import Mask from '../../Image/Mask Group 2.png'
+import Logo from '../../Image/Group 88@2x.png'
+import Rating from '../Order/Rating'
 
 const Details = () => {
     const imageStyle = {

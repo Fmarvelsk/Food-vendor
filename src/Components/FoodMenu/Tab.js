@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Tab from '@material-ui/core/Tab';
 import TabContext from '@material-ui/lab/TabContext';
-import Meats from '../Image/Meats.jpeg'
+import Meats from '../../Image/Meats.jpeg'
 import TabList from '@material-ui/lab/TabList';
 import TabPanel from '@material-ui/lab/TabPanel';
 import SearchOutlinedIcon from '@material-ui/icons/SearchOutlined';

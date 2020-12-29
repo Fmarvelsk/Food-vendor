@@ -1,6 +1,6 @@
 import Orders from './TabOrder'
-import FoodNav from '../FoodNav'
-import '../../Order.css'
+import FoodNav from '../FoodMenu/FoodNav'
+import '../../styles/Order.css'
 import React,{ useEffect } from 'react'
 const Order = () => {
     useEffect( () => {

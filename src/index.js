@@ -5,7 +5,7 @@ import $ from 'jquery';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import {Provider} from 'react-redux'
 import configureStore from './store/configureStore';
-import './index.css';
+import './styles/index.css';
 import App from './App';
 import {BrowserRouter} from 'react-router-dom'
 

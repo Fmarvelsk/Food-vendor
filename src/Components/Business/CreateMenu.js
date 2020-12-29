@@ -2,7 +2,7 @@ import { Col, Row, Container, Card, Form, Button } from 'react-bootstrap';
 import CurrencySvg from '../../Image/assests/Group 270.svg'
 import SvgPhoto from '../../Image/assests/Group 230.svg'
 //import SideBar from "./Sidebar";
-import '../../upload.scss'
+import '../../styles/upload.scss'
 import { useState } from 'react';
 const CreateMenu =  () => {
     const [file, showUpload] = useState()
@@ -75,7 +75,7 @@ const CreateMenu =  () => {
   {file}
     <input type="file" onChange={fileUpload}/>
     <img src={SvgPhoto} className="svg-photos" alt="upload"/>
-
+        <p className="rf4">Drag and drop, or click to upload 240 x 240px minimum (JPG or PNG file, up to 10 MB)</p>
   </div>
   
   </div>

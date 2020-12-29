@@ -69,12 +69,12 @@ return(
                         ? "mr-0 active-pro my-row"
                         : activeRoute(prop.layout + prop.path)
                     }
-                                        key={key}
+                key={key}
                   >
                     {prop.icon}
                     <NavLink
                       href={prop.layout + prop.path}
-                      className="nav-link dark-color"
+                      className="nav-link nav-path"
                     >
                       <p>{prop.name}</p>
                     </NavLink>

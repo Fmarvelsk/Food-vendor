@@ -1,7 +1,7 @@
 import  React, {createRef, useEffect} from 'react'
 import Chart from 'chart.js'
 import { Col, Row, Card } from 'react-bootstrap'
-import classes from '../../GraphLine.module.css'
+import classes from '../../styles/GraphLine.module.css'
 import Food from '../../Image/Food.jpeg'
 import { Popular } from './Data'
 
@@ -47,7 +47,7 @@ const SalesStats = (props) => {
             </div>
               </Card>
             </Col>
-            {/* <Col md={4}>
+             <Col md={4}>
               <Card>
                 <div className={classes.graphPopular}>
                   <p className={classes.popular}>Most popular Order</p>
@@ -66,7 +66,7 @@ const SalesStats = (props) => {
               ))}
             </div>
               </Card>
-            </Col> */}
+            </Col> 
           </Row>
 
           
