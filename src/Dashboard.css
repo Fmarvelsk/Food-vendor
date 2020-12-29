@@ -103,6 +103,7 @@ padding: 0 2rem;
 .change-textarea{
 height: 216px !important;
 opacity: 0.8;
+padding: 10px;
 }
 .orders-data-font{
     font-size: 12px;

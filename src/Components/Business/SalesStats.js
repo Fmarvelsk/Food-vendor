@@ -10,7 +10,7 @@ const SalesStats = (props) => {
   useEffect( ()=> {
     const myChartRef = chartRef.current.getContext("2d");
 
-    new Chart(myChartRef, {
+     new Chart(myChartRef, {
       type: "line",
       data: {
           //Bring in data
