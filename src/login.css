@@ -177,18 +177,6 @@ div#form-group-login-password {
     border-radius: 50%;
   }
 
-  .upload-form {
-      border: 1px solid black;
-      
-      
-  }
   .svg-photos {
-      position: absolute;
-    top: 28%;
-    left: 38%;
-  }
-  .form-file > input {
-      overflow: hidden;
-      cursor: pointer;
-      height: 216px;
-  } 
+cursor: pointer;    
+}
