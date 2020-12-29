@@ -10,7 +10,7 @@ const SalesStats = (props) => {
   useEffect( ()=> {
     const myChartRef = chartRef.current.getContext("2d");
 
-    new Chart(myChartRef, {
+     new Chart(myChartRef, {
       type: "line",
       data: {
           //Bring in data
@@ -45,10 +45,9 @@ const SalesStats = (props) => {
                     ref={chartRef}
                 />
             </div>
-
               </Card>
             </Col>
-            <Col md={4}>
+            {/* <Col md={4}>
               <Card>
                 <div className={classes.graphPopular}>
                   <p className={classes.popular}>Most popular Order</p>
@@ -67,7 +66,7 @@ const SalesStats = (props) => {
               ))}
             </div>
               </Card>
-            </Col>
+            </Col> */}
           </Row>
 
           
