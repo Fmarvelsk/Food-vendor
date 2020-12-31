@@ -21,7 +21,7 @@ const CreateMenu =  () => {
            <p className="f-15">Add you new menu here</p>
             <Row>
             <Col xl={12}>
-                <Card>
+                <Card className="pb-5">
                 <Form className="menu-form" >
 				<Form.Row>
 					

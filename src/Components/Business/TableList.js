@@ -10,20 +10,21 @@ Form } from "react-bootstrap";
 import DropDown from './DropDown'
 import SearchOutlinedIcon from '@material-ui/icons/SearchOutlined'
 import EditMenu from "./EditMenu";
+import { useDispatch, useSelector } from 'react-redux'
+import { showMealOrder } from '../../store/actionTypes'
 
 const TableList = (props) =>  {
-  const [menuDetails, useMenuDetails] = useState(true)
+  const menuDetails = useSelector(state => state.filterStore)
+  const dispatch = useDispatch()
   const ViewMenu = () => (
-    useMenuDetails(false)
-  )    
+    dispatch(showMealOrder(false))
+   
+  )   
     return (
         <>
-     
       <div className="main-panel">
-      {console.log(props.link)}
-                         
         <Container fluid className="hurt">
-          {menuDetails ? (
+          {menuDetails.order ? (
           <>
           <div>
                 <h3 className="mb-3">{props.h3}</h3>
@@ -60,7 +61,7 @@ const TableList = (props) =>  {
                             {prop.map((prop, key) => {
                               return <td key={key}>{prop}</td>;
                             })}
-                            {props.link ? (<td className="link-data" onClick={ViewMenu}>{props.link}</td>) : ''}
+                            {props.link ? (<td className="link-data" onClick={ViewMenu}>{props.link}</td>) : null}
                           </tr>
                         );
                       })}
@@ -72,6 +73,7 @@ const TableList = (props) =>  {
 
                               </Col>
 </Row> </>) : <EditMenu/>}
+
             
 </Container>
 </div>

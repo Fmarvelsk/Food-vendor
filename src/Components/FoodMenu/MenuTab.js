@@ -3,6 +3,7 @@ import Rating from '../Order/Rating'
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
 import LocalShippingOutlinedIcon from '@material-ui/icons/LocalShippingOutlined';
 import TocOutlinedIcon from '@material-ui/icons/TocOutlined';
+import style from '../../styles/moblie.module.css'
 const MenuTab = (props) => {
     return(<>
                 
@@ -20,16 +21,16 @@ const MenuTab = (props) => {
                         </div>
 
                     </Col>
-                    <Col md={4} sm={8} className="mk-border mt-3">
+                    <Col md={4} sm={12} className="mk-border mt-3">
                         <div className="ktchen details"> 
-                        <div className="checkbox-menu">                     
-                        <AccessTimeIcon/> <p>Starting from: 12 noon </p>
+                        <div className={style.checkbox_menu}>                     
+                        <AccessTimeIcon/> <p>Starting from: 12noon </p>
                         </div>
-                        <div className="checkbox-menu">                     
+                        <div className={style.checkbox_menu}>                     
                         <LocalShippingOutlinedIcon/> <p>Delieverly fee : £20 </p>
                         </div>
-                        <div className="checkbox-menu">                     
-                        <TocOutlinedIcon/> <p>Minimum Order : £ 20   </p>
+                        <div className={style.checkbox_menu}>                     
+                        <TocOutlinedIcon/> <p>Minimum Order : £20 </p>
                         </div>
                       
                       

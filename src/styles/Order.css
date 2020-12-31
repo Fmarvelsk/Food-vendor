@@ -128,7 +128,7 @@ li.active-pro.my-row {
 }
 .link-data {
     color: #007bff;
-    text-decoration: none;
+    text-decoration: underline;
     background-color: transparent;
     cursor: pointer;
 }

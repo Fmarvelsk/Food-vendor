@@ -5,9 +5,9 @@ const ResturantCheck = (props) => {
         
         {props.box.map( (check, i) =>{
             return(
-                            <div className="checkbox-menu" key={i}>
+                            <div className="checkbox-menu form-check" key={i}>
                     
-                            <Form.Check /> <p>{check.Title}</p>
+                    <input type="checkbox" class=" box-color form-check-input position-static "/> <p className="mg">{check.Title}</p>
                             </div>
             )
                             

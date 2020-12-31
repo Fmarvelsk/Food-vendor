@@ -2,8 +2,8 @@ import React from 'react';
 import {Navbar, Nav } from 'react-bootstrap'
 import { useDispatch } from 'react-redux'
 import Logo from '../../Image/vendr..svg'
-import { showModalLogin, showModalSignup } from '../../store/actionTypes'
-
+import { showModalLogin } from '../../store/actionTypes'
+import NotificationsIcon from '@material-ui/icons/Notifications';
 
 const NavBus = (props) => {
     const dispatch = useDispatch()
@@ -18,12 +18,18 @@ const NavBus = (props) => {
                 <Navbar.Brand className="navbrand mb-3 nav-bus-brand" href="/merchant">
                <img src={Logo} alt="vendr"/>  </Navbar.Brand>
                     
-				<Navbar.Toggle  aria-controls="basic-navbar-nav" />
+			   {props.notification ? 
+			   (<div className="ml-auto mr-3 pos-relative">
+        <NotificationsIcon fontSize="large" cursor="pointer" marginRight="10px"/>
+        <b className="caret" />
+        <span className="notification">5</span>
+	  </div>) :
+	   (<><Navbar.Toggle  aria-controls="basic-navbar-nav" />
 				<Navbar.Collapse id="basic-navbar-nav">
 					<Nav className="ml-auto">
 				
 
-				<div >
+			  <div>
 						<Nav.Item className="log-btn mr-3" onClick={LoginHandler}>
 							Login
 						</Nav.Item>
@@ -37,6 +43,7 @@ const NavBus = (props) => {
                     </Nav>
     
 				</Navbar.Collapse>
+				</>)}
 			</Navbar>
 </>
     )

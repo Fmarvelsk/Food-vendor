@@ -24,7 +24,7 @@ const Dashboard = () => {
       <>
       <Switch>
         <Route exact path={`${path}/dashboard`}>
-        <NavBus style={{position:'fixed'}}/>
+        <NavBus notification={true} style={{position:'fixed'}}/>
         <div>
         <Sidebar/>
         
@@ -40,7 +40,7 @@ const Dashboard = () => {
         </Route>
 
         <Route exact path={`${path}/create-menu`}>
-        <NavBus style={{position:'fixed'}}/>
+        <NavBus notification={true} style={{position:'fixed'}}/>
         <div>
         <Sidebar/>
         </div>
@@ -48,7 +48,7 @@ const Dashboard = () => {
         </Route>
   
         <Route  exact path={`${path}/transaction-history`}>
-        <NavBus style={{position:'fixed'}}/>
+        <NavBus notification={true} style={{position:'fixed'}}/>
         <div>
         <Sidebar/>
         </div>
@@ -56,7 +56,7 @@ const Dashboard = () => {
   </Route>
   
   <Route exact path={`${path}/manage-orders`}>
-  <NavBus style={{position:'fixed'}}/>
+  <NavBus notification={true} style={{position:'fixed'}}/>
         <div>
         <Sidebar/>
 </div>
@@ -64,7 +64,7 @@ const Dashboard = () => {
   </Route>
   
   <Route exact path={`${path}/merchant-menu`}>
-  <NavBus style={{position:'fixed'}}/>
+  <NavBus notification={true} style={{position:'fixed'}}/>
         <div>
         <Sidebar/>
         </div>

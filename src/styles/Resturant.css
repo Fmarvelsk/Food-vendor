@@ -20,7 +20,7 @@
     user-select: none;
     background-color: #C5C5C5;
     border: 1px solid #C5C5C5;
-    padding: 0.175rem .55rem;
+    padding: 0.375rem .55rem;
     border-radius: .25rem;
     cursor: pointer;
 }
@@ -166,8 +166,5 @@ height: 90px;
 @media (max-width:475px){
     .toggle-menu{
     flex-wrap: wrap;
-}
-.w-toggle {
-    width: 100%;
 }
 }

@@ -1,9 +1,10 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
+import { Popular } from '../Business/Data'
 import Tab from '@material-ui/core/Tab';
 import TabContext from '@material-ui/lab/TabContext';
-import Meats from '../../Image/Meats.jpeg'
+import FoodList from './FoodList'
 import TabList from '@material-ui/lab/TabList';
 import TabPanel from '@material-ui/lab/TabPanel';
 import SearchOutlinedIcon from '@material-ui/icons/SearchOutlined';
@@ -64,25 +65,16 @@ export default function LabTabs() {
         </AppBar>
         <TabPanel value="1">
           <Form className="form-btn">
-            <Form.Control placeholder="search for your favourite menu"/>
+            <Form.Control placeholder="search for your favourite menu" className="change-input"/>
             <div className="svg-btn">
             <Button className="search-food"/>
             <SearchOutlinedIcon className="outline"/>
             </div>
           </Form>
-          <div className="mt-3 merchant-header">
-          <div className="">
-            <img className="menu-img" src={Meats} alt="menu"/>
-          </div>
-          <div className="ml-3 weatr">
-            <h5>Egusi soup</h5>
-            <p>Served with choice of swallow (e.g poundo, eba, etc), and choice of protein (e.g goat meat, fish, assorted, etc)</p>
-          </div>
-          <div className="wde4">
-            <span>£10.00</span>
-          <span className="span-btn">+</span>
-          </div>
-          </div>
+      {Popular.map((Food, i) => (
+          
+  <FoodList menu={Food} key={i}/>
+      ))}
         </TabPanel>
         <TabPanel value="2">
       <h5>About Heritage Kitchen</h5>

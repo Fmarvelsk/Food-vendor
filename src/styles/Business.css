@@ -148,8 +148,9 @@ li.active > .dash-icon{
 
 }
 .w-80{
-    width: 70%;
+    width: 100%;
     margin-right: 1rem;
+    margin-bottom: 1rem;
 }
 button.p-btn{
     font-weight: bold;

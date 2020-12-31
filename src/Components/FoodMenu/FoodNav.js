@@ -3,10 +3,13 @@ import Result from './Result'
 import { useDispatch } from 'react-redux'
 import { showModalLogin, showModalSignup } from '../../store/actionTypes'
 import Logo from '../../Image/vendr..svg'
+import { useSelector } from 'react-redux'
 import Details from './Details'
 const FoodNav = (props) => {
+const userValidate = useSelector((state) => state.filterStore)
+	
   const dispatch = useDispatch()
-
+const user = false
 	const showModalLoginHandler = () => {
         dispatch(showModalLogin())
 	}
@@ -17,6 +20,7 @@ const FoodNav = (props) => {
     
         return (
             <>
+            {console.log(userValidate.user)}
             <Navbar collapseOnSelect variant="light" expand="lg" className="overwrite-nav">
 				
         <Navbar.Brand className="navbrand mb-3" href="/">
@@ -27,9 +31,15 @@ const FoodNav = (props) => {
 <Navbar.Collapse id="basic-navbar-nav">
   <Nav className="ml-auto">
 
+{ userValidate.user ? (<div>
 
-<div >
-    <Nav.Item className="adapt" onClick={showModalLoginHandler}>
+  {userValidate.user.email}
+</div>) : 
+(<>
+<div>
+  <Nav.Item 
+  className="adapt"
+   onClick={showModalLoginHandler}>
       Login
     </Nav.Item>
   </div>
@@ -37,7 +47,8 @@ const FoodNav = (props) => {
   <Nav.Item className="adapt" onClick={showModalSignupHandler}>
     Sign Up
   </Nav.Item>
-            </div>
+            </div></>
+    )}
             <div >
     <Nav.Item className="adapt">
           Help

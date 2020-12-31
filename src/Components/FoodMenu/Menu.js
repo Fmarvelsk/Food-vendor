@@ -1,8 +1,8 @@
 import { Container, Col, Row, Navbar, Form, Dropdown } from 'react-bootstrap'
 import MenuTab from './MenuTab'
-import Group1 from '../../Image/Pounded.jpeg'
-import Group2 from '../../Image/Snacks.jpeg'
-import Chicken from '../../Image/Chicken.jpeg'
+import Group1 from '../../Image/kitchen (1).jpeg'
+import Group2 from '../../Image/kitchen (2).jpeg'
+import Chicken from '../../Image/kitchen (3).jpeg'
 import ChooseMenu from './ChooseMenu'
 import RestaurantMenuIcon from '@material-ui/icons/RestaurantMenu';
 import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
@@ -18,10 +18,10 @@ const Menu = () => {
         setBlock(!block)
     }
     return(
-        <Container className="jumbotron jumbocolor">
+        <Container className={`${style.jumbocolor} jumbotron`}>
             <div className="header-row">
              </div>
-            <Row className="create-menu">
+            <Row className={style.create_menu}>
             <Col md={2} className="content nav">
     			<div className={style.filter} onClick={Showfilter}>
                 <span className="filter-toggle-text">Filters By</span>

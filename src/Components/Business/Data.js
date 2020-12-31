@@ -23,6 +23,17 @@ const thArray = ["SN", "Order no.", "Email", "Order type", "Amount", "Order stat
     ["8",   "2345473856", "Masoter@gmail.com", "Multiple", "$10,615", "Confirmed", "12/10/2020",'3:00pm']
   ];
   
+  const SuspendMenu = [{
+    Type : 'Catergories',
+    item : [{title:'Soup'},{title: 'Swallow'},{title :'Rice'},{title : 'slides'},{title : 'Bread'},{title : 'Beans'  },{title : 'Others'}] 
+  },
+
+  {
+    Type : 'Status',
+    item : [{title : 'Suspended'}, {title : 'Active'}]
+  }
+]
+
   const DropDownInfo =[{
     Type : 'Catergories',
     item : [{title:'Soup'},{title: 'Swallow'},{title :'Rice'},{title : 'slides'},{title : 'Bread'},{title : 'Beans'  },{title : 'Others'}] 
@@ -78,6 +89,7 @@ item : [{title: "Single"}, {title : "Mutiple"}]
     tdData,
     thData,
     Menu,
+    SuspendMenu,
     DropDownInfo,
     Managefilter,
     Popular

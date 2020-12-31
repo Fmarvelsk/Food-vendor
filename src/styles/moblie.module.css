@@ -39,4 +39,34 @@
     transform: rotate(180deg);
 
 }
+@media (max-width:768px){
+.create_menu {
+	font-size: 13px;
+}
+}
+.create_menu {
+	justify-content: space-between;
+	
+}
+.jumbocolor {
+    background-color: #ffffff !important;
+}
+@media (max-width:426px){
+    .jumbocolor {
+       width: 350px;
+    }
+}
 
+@media ( max-width:350px){
+    .jumbocolor{
+        width: 100%;
+    }
+}
+.checkbox_menu {
+    display: flex;
+}
+@media (min-width:992px){
+    .checkbox_menu{
+        padding-bottom: 1rem;
+    }
+}

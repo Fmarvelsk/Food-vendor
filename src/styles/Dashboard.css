@@ -30,8 +30,6 @@
 }
 
 .nav-dash {
-    /* display: flex; */
-    /* flex-wrap: wrap; */
     padding-left: 0;
     margin-bottom: 0;
     list-style: none;
@@ -111,7 +109,7 @@ padding: 10px;
 .mt {
     margin-top: 7px;
 }
-.toggle-container {
+/*.toggle-container {
     width: 70px;
     background-color: #20E862;
     cursor: pointer;
@@ -148,7 +146,7 @@ padding: 10px;
   .disabled {
     background-color: #ffffff;
     left: 0px;
-  }
+  }*/
   p.rf4 {
     position: inherit;
     font-size: 12px;

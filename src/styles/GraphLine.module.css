@@ -32,7 +32,6 @@
     padding: 0 10px;
     background-color: #FFE01B;
     margin-top: 1rem;
-    width: 60%;
     color: #000000;
     border: 1px solid #FFE01B;
     border-radius: 0px !important;
@@ -81,4 +80,20 @@ font: normal normal normal 12px/14px Roboto;
 }
 .header_order {
     background-color: #F9F9F9;
+}
+.orderNoBtn {
+    background-color: #20E862;
+    margin-top: 10px;
+    width: 60%;
+    cursor: pointer;
+    border: 1px solid #20E862;
+    color: #FFFFFF;
+}
+@media (max-width:768px){
+    .popular{
+        width: 60%;
+    }
+    .y_axis{
+        margin-top: 1rem;
+    }
 }

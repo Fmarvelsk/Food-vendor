@@ -50,7 +50,7 @@ return(
 <div className="sidebar open-nav">
   <div className="ml-5 mr-5 mt-3">
     <img src={Blank} className="profile-pic" alt="profile" />
-    <h4 className="mt">Femi</h4>
+    <h4 className="mt">Hello Femi</h4>
   <p className="f-15">Heritage Kitchen</p>
   <div className="mb-3 pt-3">
   <a className=" p-btn login-btn new-menu" href="/merchant/user/create-menu">Create new menu +</a>

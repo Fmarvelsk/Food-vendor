@@ -2,19 +2,18 @@ import React, { useState } from 'react';
 import { Form, Button, Modal } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import FacebookIcon from '@material-ui/icons/Facebook'
-import '../styles/login.css'
+import '../../styles/login.css'
 import { useDispatch } from 'react-redux'
 //import axios from 'axios'
-import { showModalSignup, signedUser } from '../store/actionTypes'
+import { showModalSignup, signedMerchant } from '../../store/actionTypes'
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import VisibilityOffIcon from '@material-ui/icons/VisibilityOff';
 import { useHistory } from 'react-router-dom';
 export default function LoginForm() {
-
 	const [hide, show] = useState(true),
 		 history = useHistory (),
 		 [type, showType] = useState('Password'),
-		 [email, setEmail] = useState(),
+		 [businessId, setBusinessId] = useState(),
 		 [password, setPassword] = useState(),
 		 [error, setError] = useState(),
 		 dispatch = useDispatch()
@@ -36,14 +35,13 @@ export default function LoginForm() {
 
     
 	const Signin = (e) => {
-		const info = {
-			email: email,
+		const LoginId = {
+			businessId : businessId,
 			password: password
 		}
-		console.log(info)
+		console.log(LoginId)
 		e.preventDefault()
-		dispatch(signedUser(true))
-		history.push('/home')
+		history.push('/merchant/user/dashboard')
 
 		/*const dbUser = async() => {
 				const response = await axios({
@@ -89,9 +87,9 @@ export default function LoginForm() {
 			<div className="border-or"><hr/></div>
 			</div>
 				<Form.Group controlId="formBasicEmail">
-					<Form.Label>Email</Form.Label>
-					<Form.Control type="email" placeholder="Enter email" 
-					onChange = { e => setEmail(e.target.value)}
+					<Form.Label>Business Id</Form.Label>
+					<Form.Control type="text" placeholder="Enter Id" 
+					onChange = { e => setBusinessId(e.target.value)}
 					required/>
 				</Form.Group>
 

@@ -48,7 +48,7 @@ const SalesStats = (props) => {
               </Card>
             </Col>
              <Col md={4}>
-              <Card>
+              <Card className={classes.y_axis}>
                 <div className={classes.graphPopular}>
                   <p className={classes.popular}>Most popular Order</p>
                 

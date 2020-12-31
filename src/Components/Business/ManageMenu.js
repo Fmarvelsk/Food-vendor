@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Form, Button } from "react-bootstrap";
 import SearchOutlinedIcon from "@material-ui/icons/SearchOutlined";
-import { Menu, Managefilter } from "./Data";
+import { Menu, SuspendMenu } from "./Data";
 import DropDown from "./DropDown";
 import ManageMenuItem from "./ManageMenuItem";
 
@@ -24,7 +24,7 @@ const ManageMenu = () => {
               <SearchOutlinedIcon className="outline" />
             </div>
           </Form>
-          {Managefilter.map((items, i) => (
+          {SuspendMenu.map((items, i) => (
             <DropDown drop={items} key={i} />
           ))}
         </div>

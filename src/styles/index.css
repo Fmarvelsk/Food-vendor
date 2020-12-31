@@ -86,10 +86,6 @@ p.dw {
     display: flex;
     justify-content: flex-end;
 }
-.create-menu {
-	justify-content: space-between;
-	
-}
 .jumbocolor {
 	background-color: #ffffff !important;
 }
@@ -144,6 +140,7 @@ p.dw {
 }
 .img-food-menu{
 	width: 224px;
+	margin: 5px;
 height: 174px;
 	border-radius: 19px;
 }
@@ -164,6 +161,7 @@ height: 174px;
 @media (max-width:992px){
 	.img-food-menu{
 		width: 157px;
+		height: 130px;
 	}
 	.mk-border.mt-3.col-md-4.col-sm-8 {
 		margin-top: 0px !important;
@@ -276,7 +274,9 @@ height: 174px;
 .border-delivery{
 	display:block
 }
-
+.w-toggle{
+	width: 100% !important;
+}
 }
 .success-message {
     display: flex;
@@ -348,4 +348,15 @@ padding: .3rem 1rem;
 	background-color: #ffffff;
 	padding: .5rem;
 	margin-right: 1rem;
+}
+@media (max-width:992px){
+.moblie-tab {
+	flex-wrap: wrap;
+}
+}
+.box-color {
+    background: #eceef0 !important;
+}
+p.mg {
+	margin-left: 5px;
 }

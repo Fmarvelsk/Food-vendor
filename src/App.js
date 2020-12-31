@@ -18,6 +18,7 @@ import AuthPage from './Components/AuthPage'
 import BusinessLanding from './Components/Business/BusinessLandingPage';
 import Resturant from './Components/FoodMenu/Resturants';
 import Dashboard from './Components/Business/Dashboard'
+import BussAuth from './Components/Business/BussAuth';
 
 function App() {
   const wrapper = createRef()
@@ -46,17 +47,22 @@ function App() {
      <Header/>
      <Landing/>
      <Footer/>
+     <AuthPage/>
+      
      </Route>
      <Route exact path="/home">
        <FoodMenu/>
+       <AuthPage/>
        <Footer/>
      </Route>
      <Route exact path="/merchant">
      <NavBus/>
        <BusinessLanding/>
+       <BussAuth/>
      </Route>
      <Route exact path="/merchant/signup">
      <NavBus/>
+     <BussAuth/>
        <SignupBuss/>
      </Route>
   <Route exact path="/orders">
@@ -65,6 +71,8 @@ function App() {
   </Route>
   <Route exact path='/Resturant'>
     <Resturant/>
+    <AuthPage/>
+      
   </Route>
   <Route exact path="/Success">
 <Success/>
@@ -77,8 +85,7 @@ function App() {
     <Error404/>
     </Route>
      </Switch>
-     
-     <AuthPage/>
+
   </Router>
      
 
