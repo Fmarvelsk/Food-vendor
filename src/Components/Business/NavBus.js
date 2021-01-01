@@ -22,7 +22,7 @@ const NavBus = (props) => {
 			   (<div className="ml-auto mr-3 pos-relative">
         <NotificationsIcon fontSize="large" cursor="pointer" marginRight="10px"/>
         <b className="caret" />
-        <span className="notification">5</span>
+        <span className="notification"></span>
 	  </div>) :
 	   (<><Navbar.Toggle  aria-controls="basic-navbar-nav" />
 				<Navbar.Collapse id="basic-navbar-nav">

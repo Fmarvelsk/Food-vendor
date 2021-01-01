@@ -13,6 +13,14 @@ import EditMenu from "./EditMenu";
 import { useDispatch, useSelector } from 'react-redux'
 import { showMealOrder } from '../../store/actionTypes'
 
+
+const Status = (prop) => (
+prop === 'Confirmed' || prop === 'Sucessful' ? 'confirmed-cls' :
+prop==='Pending' || prop=='Waiting'? 'pending-cls' :
+prop === 'Cancelled' || prop === 'Failed' ? 'warn-cls' :
+''
+)
+
 const TableList = (props) =>  {
   const menuDetails = useSelector(state => state.filterStore)
   const dispatch = useDispatch()
@@ -42,7 +50,7 @@ const TableList = (props) =>  {
          ))}
               </div>
             </div>
-          <Row className="mt-5">
+          <Row className="mt-3">
             <Col md={12}>
               <Card>
                   <div className="table-responsive">
@@ -59,9 +67,10 @@ const TableList = (props) =>  {
                         return (
                           <tr key={key}>
                             {prop.map((prop, key) => {
-                              return <td key={key}>{prop}</td>;
+                              
+                              return <td key={key} className={Status(prop)}>{prop}</td>;
                             })}
-                            {props.link ? (<td className="link-data" onClick={ViewMenu}>{props.link}</td>) : null}
+                            {props.link ? (<td className='link-data' onClick={ViewMenu}>{props.link}</td>) : null}
                           </tr>
                         );
                       })}

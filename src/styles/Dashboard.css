@@ -158,3 +158,12 @@ padding: 10px;
         display: none;
     }
 }
+.confirmed-cls {
+    color: #20E862;
+}
+.pending-cls {
+    color: #e4c91f;;
+}
+.warn-cls {
+    color: #FF2121;
+}

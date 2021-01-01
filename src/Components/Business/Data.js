@@ -1,12 +1,12 @@
 
 const thArray = ["SN", "Order no.", "Email", "Order type", "Amount", "Order status", "Date", 'Time'];
   const tdArray = [
-    ["1",  "2345473856", "DakotaRice@gmail.com", "Multiple", "$36,738", "Confirmed", "12/10/2020", '3:00pm'],
-    ["2",  "2345473856", "MinervaHooper@gmail.com", "Multiple", "$23,789", "Confirmed", "12/10/2020",'3:00pm'],
+    ["1",  "2345473856", "DakotaRice@gmail.com", "Multiple", "$36,738", "Sucessful", "12/10/2020", '3:00pm'],
+    ["2",  "2345473856", "MinervaHooper@gmail.com", "Multiple", "$23,789", "Sucessful", "12/10/2020",'3:00pm'],
     ["3",  "2345473856", "SageRodriguez@gmail.com",  "Single", "$56,142", "Pending", "12/10/2020", '3:00pm'],
-    ["4",   "2345473856", "PhilipChaney@gmail.com",  "Single", "$38,735", "Cancelled", "12/10/2020",'3:00pm'],
-    ["5",   "2345473856",  "DorisGreene@gmail.com",  "Multiple", "$63,542", "Cancelled", "12/10/2020",'3:00pm'],
-    ["6",   "2345473856", "MasonPorter@gmail.com", "Single", "$78,615", "Cancelled", "12/10/2020",'3:00pm'], 
+    ["4",   "2345473856", "PhilipChaney@gmail.com",  "Single", "$38,735", "Failed", "12/10/2020",'3:00pm'],
+    ["5",   "2345473856",  "DorisGreene@gmail.com",  "Multiple", "$63,542", "Failed", "12/10/2020",'3:00pm'],
+    ["6",   "2345473856", "MasonPorter@gmail.com", "Single", "$78,615", "Failed", "12/10/2020",'3:00pm'], 
     ["7",   "2345473856", "Jasonter@gmail.com", "Single", "$78,615", "Confirmed", "12/10/2020",'3:00pm'],
     ["8",   "2345473856", "Masoter@gmail.com", "Multiple", "$10,615", "Confirmed", "12/10/2020",'3:00pm']
   ];
@@ -15,7 +15,7 @@ const thArray = ["SN", "Order no.", "Email", "Order type", "Amount", "Order stat
   const tdData = [
     ["1",  "2345473856", "DakotaRice@gmail.com", "Multiple", "$36,738", "Confirmed", "12/10/2020", '3:00pm'],
     ["2",  "2345473856", "MinervaHooper@gmail.com", "Multiple", "$23,789", "Confirmed", "12/10/2020",'3:00pm'],
-    ["3",  "2345473856", "SageRodriguez@gmail.com",  "Single", "$56,142", "Pending", "12/10/2020", '3:00pm'],
+    ["3",  "2345473856", "SageRodriguez@gmail.com",  "Single", "$56,142", "Waiting", "12/10/2020", '3:00pm'],
     ["4",   "2345473856", "PhilipChaney@gmail.com",  "Single", "$38,735", "Cancelled", "12/10/2020",'3:00pm'],
     ["5",   "2345473856",  "DorisGreene@gmail.com",  "Multiple", "$63,542", "Cancelled", "12/10/2020",'3:00pm'],
     ["6",   "2345473856", "MasonPorter@gmail.com", "Single", "$78,615", "Cancelled", "12/10/2020",'3:00pm'], 
@@ -44,7 +44,7 @@ const thArray = ["SN", "Order no.", "Email", "Order type", "Amount", "Order stat
   },
 {
   Type : 'Status',
-  item : [{title : 'Completed'}, {title : 'Pending'}, {title : 'Cancelled'}]
+  item : [{title : 'Successful'}, {title : 'Pending'}, {title : 'Failed'}]
 }
 ]
 const managerData = [
@@ -79,7 +79,7 @@ item : [{title: "Single"}, {title : "Mutiple"}]
 },
 {
   Type : 'Status',
-  item : [{title : 'Completed'}, {title : 'Pending'}, {title : 'Cancelled'}]
+  item : [{title : 'Confirmed'}, {title : 'Waiting'}, {title : 'Cancelled'}]
 }]
   module.exports = {
     managerData,

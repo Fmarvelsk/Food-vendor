@@ -30,7 +30,7 @@ const SalesStats = (props) => {
       }
   });
 
-  })
+  }, [props])
     return(
         <Row>
             <Col md={8}>
