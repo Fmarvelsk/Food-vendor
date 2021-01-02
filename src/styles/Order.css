@@ -112,12 +112,6 @@ li.active-pro.my-row {
     bottom: 10px;
     width: 50%;
 }
-@media (max-width: 991px){
-.open-nav {
-    transform: translate3d(0px, 0, 0);
-}
-}
-
 @media (max-width: 552px){
     .order-moblie {
         padding: 2rem !important;

@@ -1,3 +1,4 @@
+import React,{ useState } from 'react';
 import { NavLink, Button } from 'react-bootstrap'
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
 import ReceiptIcon from '@material-ui/icons/Receipt';
@@ -5,7 +6,13 @@ import RoomServiceIcon from '@material-ui/icons/RoomService';
 import DashboardIcon from '@material-ui/icons/Dashboard';
 import PowerSettingsNewIcon from '@material-ui/icons/PowerSettingsNew';
 import Blank from '../../Image/assests/blank-profile-picture.png'
+import DehazeIcon from '@material-ui/icons/Dehaze';
 const Sidebar = (props) => {
+  const [showBar, hideBar] = useState()
+  const showSidebar = () => {
+    hideBar(!showBar)
+    console.log('clicked')
+  }
 const dashboardRoutes =  [
     {
       path: "/dashboard",
@@ -46,9 +53,10 @@ const dashboardRoutes =  [
   }
 return(
   <>
+<div className={showBar ? "sidebar open-nav" : "sidebar"}>
   
-<div className="sidebar open-nav">
-  <div className="ml-5 mr-5 mt-3">
+<div className="togl"><span className="navbar-toggler-icon" onClick={showSidebar}><DehazeIcon/></span></div>
+  <div className="ml-5 mr-5 mt-3 moblie-sidebar">
     <img src={Blank} className="profile-pic" alt="profile" />
     <h4 className="mt">Hello Femi</h4>
   <p className="f-15">Heritage Kitchen</p>
