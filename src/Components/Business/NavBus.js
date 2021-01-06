@@ -20,7 +20,7 @@ const NavBus = (props) => {
                     
 			   {props.notification ? 
 			   (<div className="ml-auto mr-3 pos-relative">
-        <NotificationsIcon fontSize="large" cursor="pointer" marginRight="10px"/>
+        <NotificationsIcon fontSize="large" cursor="pointer" marginright="10px"/>
         <b className="caret" />
         <span className="notification"></span>
 	  </div>) :

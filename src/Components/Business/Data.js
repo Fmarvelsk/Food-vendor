@@ -1,4 +1,3 @@
-
 const thArray = ["SN", "Order no.", "Email", "Order type", "Amount", "Order status", "Date", 'Time'];
   const tdArray = [
     ["1",  "2345473856", "DakotaRice@gmail.com", "Multiple", "$36,738", "Sucessful", "12/10/2020", '3:00pm'],
@@ -47,12 +46,24 @@ const thArray = ["SN", "Order no.", "Email", "Order type", "Amount", "Order stat
   item : [{title : 'Successful'}, {title : 'Pending'}, {title : 'Failed'}]
 }
 ]
-const managerData = [
-  3910, 3706, 2850, 4005, 3750, 2912, 3200, 3645, 4205, 3211, 3354, 4000
-];
+
+const driverFilter =[{
+  Type : 'Merchant',
+  item : [{title:'Soup'},{title: 'Swallow'},{title :'Rice'},{title : 'slides'},{title : 'Bread'},{title : 'Beans'},{title : 'Others'}] 
+},
+{
+  Type : 'Date',
+  item : [{title:'24 hours'},{title: '2 days'},{title :'1 week'},{title : '1 months'},{title : '3 month'}] 
+}
+]
+const managerData = [3910, 3706, 2850, 4005, 3750, 2912, 3200, 3645, 4205, 3211, 3354, 4000];
+
 const yearLabels = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
 const Popular = ["Efo Riro", "Egusi Soup", "Bangana Soup", "Jollof Rice", "Fried Rice"]
+
+const DeliveryTable = ["SN", "", "Merchant", "Order no.", "Earning", "Tips", "Date", 'Time']
+
 
 const Menu = [{
   id :1,
@@ -81,6 +92,96 @@ item : [{title: "Single"}, {title : "Mutiple"}]
   Type : 'Status',
   item : [{title : 'Confirmed'}, {title : 'Waiting'}, {title : 'Cancelled'}]
 }]
+
+const dashTopic = { h3:"Overview", span:'Heritage Kitchen restaurant'}
+const driveTopic = { h3:"Dashboard", span:'Your' }
+
+const StatsNumber = [{
+  statsText :"Orders",
+  statsValue:"£35,485",
+  statsInfo:"+2.8%"
+},
+{
+  statsText:"Avg.Order amount",
+  statsValue:"£31,345",
+  statsInfo:"-2.8%"
+            
+},
+{statsText:"Unique customer",
+statsValue:"£33,785",
+statsInfo:"+2.8%"
+},
+{
+  statsText:"Net Sales",
+              statsValue:"£35,485",
+              statsInfo:"+2.8%"
+}
+
+]
+
+const driverStats = [{
+  statsText :"Total Earnings",
+  statsValue:"£35,485",
+  statsInfo:"+2.8%"
+},
+{
+  statsText:"Total Withdraw",
+  statsValue:"£31,345",
+  statsInfo:"-2.8%"
+            
+},
+{statsText:"Total Delivery",
+statsValue:"£33,785",
+statsInfo:"+2.8%"
+},
+{
+  statsText:"Available Balance",
+  statsValue:"£35,485",
+  statsInfo:"+2.8%"
+}
+
+]
+
+
+
+const Maplocations = [
+  {
+    name: "Location 1",
+    location: { 
+      lat: 41.3954,
+      lng: 2.162 
+    },
+  },
+  {
+    name: "Location 2",
+    location: { 
+      lat: 41.3917,
+      lng: 2.1649
+    },
+  },
+  {
+    name: "Location 3",
+    location: { 
+      lat: 41.3773,
+      lng: 2.1585
+    },
+  },
+  {
+    name: "Location 4",
+    location: { 
+      lat: 41.3797,
+      lng: 2.1682
+    },
+  },
+  {
+    name: "Location 5",
+    location: { 
+      lat: 41.4055,
+      lng: 2.1915
+    },
+  }
+];
+
   module.exports = {
     managerData,
     yearLabels,
@@ -92,5 +193,12 @@ item : [{title: "Single"}, {title : "Mutiple"}]
     SuspendMenu,
     DropDownInfo,
     Managefilter,
-    Popular
-}
+    Popular,
+    StatsNumber,
+    dashTopic,
+    driveTopic,
+    driverStats,
+    driverFilter,
+    DeliveryTable,
+    Maplocations
+  }

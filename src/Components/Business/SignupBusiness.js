@@ -8,12 +8,14 @@ import Carts from '../../Image/assests/Shopping.png'
 import Meats from '../../Image/assests/Meats.png'
 import Ramen from '../../Image/assests/Ramen.png'
 import Juice from '../../Image/assests/Juice.png'
+import { useHistory } from "react-router-dom";
 
 const LoginBus = () => {
 	const SignupLogo = [{Food : Drinks, Food2 : Plate},
 {Food : Carts, Food2 : Meats},
 {Food : Ramen, Food2 : Juice}
 ]
+	const history = useHistory()
 	const [hide, show] = useState(true)
 	const [type, showType] = useState('Password')
 	const visiblity = (e) => (
@@ -25,6 +27,10 @@ const LoginBus = () => {
 		show(true)
 	}
 	
+	const businessSignup = (e) => {
+		e.preventDefault()
+		history.push('/merchant/user/dashboard')
+	}
     return(
             <div className="nav-location">
                 <Col lg={6} sm={12} className="moblie">
@@ -41,7 +47,7 @@ const LoginBus = () => {
                     <Col lg={6} sm={12}>
 						<h3>Sell on vendr.</h3>
 						<p className="f-15">Reach new customers, deliver exceptional customer service</p>
-                    <Form className="log-form" >
+                    <Form className="log-form" onClick={businessSignup}>
 				<Form.Row>
 					
 					<Col xs={12} sm={6} md={6} className="mt-3">
@@ -109,7 +115,7 @@ const LoginBus = () => {
 			
 			</Form>
 			<div className="mt-3">
-			<p className="f-15">By clicking "Sign Up" you agree to the Postmates Privacy Policy and Terms of Service. This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.</p>
+			<p className="f-15 orders-data-font">By clicking "Sign Up" you agree to the vendr. Privacy Policy and Terms of Service. This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.</p>
                     </div>
 					</Col>
 					

@@ -19,6 +19,8 @@ import BusinessLanding from './Components/Business/BusinessLandingPage';
 import Resturant from './Components/FoodMenu/Resturants';
 import Dashboard from './Components/Business/Dashboard'
 import BussAuth from './Components/Business/BussAuth';
+import DriverLanding from './Components/Driver/DriverLanding';
+import DriverBoard from './Components/Driver/DriverDashboard'
 
 function App() {
   const wrapper = createRef()
@@ -80,7 +82,14 @@ function App() {
   <Route path="/merchant/user">
     <Dashboard/>
     </Route>
-    
+    <Route path="/driver/user">
+    <DriverBoard/>
+  </Route>
+ 
+  <Route exact path="/driver">
+    <NavBus/>
+    <DriverLanding/>
+  </Route>
   <Route exact path="/*">
     <Error404/>
     </Route>

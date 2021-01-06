@@ -32,6 +32,7 @@ const TableList = (props) =>  {
         <>
       <div className="main-panel">
         <Container fluid className="hurt">
+          
           {menuDetails.order ? (
           <>
           <div>
@@ -68,7 +69,13 @@ const TableList = (props) =>  {
                           <tr key={key}>
                             {prop.map((prop, key) => {
                               
-                              return <td key={key} className={Status(prop)}>{prop}</td>;
+                              return <td key={key} className={Status(prop)}>{prop.includes('.png') ?
+                               (<img src={prop} alt="avatar" width="21px" height="21px"/>)
+                              : prop
+                              }
+                               
+                               </td>
+                              
                             })}
                             {props.link ? (<td className='link-data' onClick={ViewMenu}>{props.link}</td>) : null}
                           </tr>

@@ -130,8 +130,7 @@ top: 8px;
 }
 .merchant-row {
     display: flex;
-    flex-wrap: wrap;
-}
+    flex-wrap: wrap;}
 .logo-width{
     width: 206px;
 height: 184px;

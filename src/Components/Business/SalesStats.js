@@ -26,18 +26,26 @@ const SalesStats = (props) => {
       },
       options: {
           //Customize chart options,
-          
+          responsive :true,
+          scales : {
+            yAxes : [{
+              scaleLabel: {
+                display: true,
+                labelString: 'Quantity'
+              },
+            }]
+          }
       }
   });
 
   }, [props])
     return(
         <Row>
-            <Col md={8}>
+            <Col className={props.driver ? 'col-md-12' : 'col-md-8'}>
               <Card> 
                  <div className={classes.graphContainer}>
                    <div className="item-order">
-                     <p className={classes.pbtn}>Sales analysis</p>
+                     <p className={classes.pbtn}>{props.driver ? 'Graphical Analysis ' : 'Sales analysis'}</p>
 
                    </div>
                 <canvas
@@ -47,7 +55,7 @@ const SalesStats = (props) => {
             </div>
               </Card>
             </Col>
-             <Col md={4}>
+            {props.driver ? null :  <Col md={4}>
               <Card className={classes.y_axis}>
                 <div className={classes.graphPopular}>
                   <p className={classes.popular}>Most popular Order</p>
@@ -66,7 +74,7 @@ const SalesStats = (props) => {
               ))}
             </div>
               </Card>
-            </Col> 
+            </Col> }
           </Row>
 
           

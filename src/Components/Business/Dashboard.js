@@ -4,14 +4,14 @@ import { useEffect } from 'react'
 import StatsData from './StatsData'
 import SalesStats from './SalesStats'
 import Transaction from './Transaction'
-import Sidebar from './Sidebar'
+import Sidebar from './SidebarMerc'
 import NavBus from './NavBus'
 import NotFound from './NotFound'
 import CreateMenu from './CreateMenu'
 import { Route, useRouteMatch, Redirect, Switch } from 'react-router-dom'
 import ManageOrder from './ManageOrder'
 import ManageMenu from './ManageMenu'
-import { managerData, yearLabels } from "./Data";
+import { managerData, yearLabels, StatsNumber, dashTopic } from "./Data";
 const Dashboard = () => {
   const {path, url} = useRouteMatch()
 
@@ -30,7 +30,8 @@ const Dashboard = () => {
         
                     <div className="main-panel">
       <Container fluid className="hurt">
-        <StatsData/>
+        <StatsData data={StatsNumber} topic={dashTopic}/>
+        
         <SalesStats 
         data={managerData} 
         labels={yearLabels}/>

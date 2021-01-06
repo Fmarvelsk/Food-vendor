@@ -11,7 +11,10 @@ import MerchantRating from './MerchantRating'
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    padding: '5rem 10rem'
+    padding: '5rem 10rem',
+    '& span': {
+      backgroundcolor: '#FFE01B',
+    }
   },
 
     

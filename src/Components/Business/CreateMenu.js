@@ -6,7 +6,7 @@ import '../../styles/upload.scss'
 import { useState } from 'react';
 const CreateMenu =  () => {
     const [file, showUpload] = useState()
-    const fileUpload = (e) => {
+    var fileUpload = (e) => {
         const files = e.target.files[0]?.name
             showUpload(files)
     }

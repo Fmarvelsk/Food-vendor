@@ -99,6 +99,11 @@ button:active {
 }
 .vendr-color {
     color: #FFE01B;
+    cursor: pointer;
+}
+span.vendr-color:hover {
+color: rgb(40, 40, 182);
+text-decoration: underline;
 }
 .dash-icon {
     margin-top: 0.5rem;
