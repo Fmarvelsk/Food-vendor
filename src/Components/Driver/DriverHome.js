@@ -1,5 +1,5 @@
 import {Col, Form, Button} from 'react-bootstrap'
-//import GrowVendr from '../../Image/vendrmerc.png'
+import DeliverVendr from '../../Image/driver.svg'
 const DriverHome = () => {
     return(
         <div className="merchant-row">
@@ -39,7 +39,7 @@ const DriverHome = () => {
                 <Col md={6} lg={7} sm={12}>
                     <div className="mt-40">
                         
-                        <img src="https://comps.gograph.com/flat-street-food-kiosk_gg99591684.jpg" alt="" className="img-fluid mx-auto d-block home-2-img mover-img"/>
+                        <img src={DeliverVendr} alt="Driver" className="img-fluid mx-auto d-block home-2-img mover-img"/>
                         <div className="home-2-bottom-img">
                             <img src="images/homr-2-bg-bottom.png" alt="" className="img-fluid d-block mx-auto"/>
                                 </div>
