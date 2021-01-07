@@ -182,6 +182,31 @@ const Maplocations = [
   }
 ];
 
+const CheckMenu=[{
+  Title: 'Soup',
+  l1 : 'Egusi',
+  l2: 'Efo riro',
+  l3: 'Okro',
+  l4: 'Ogbono',
+  l5: 'Stew'
+},
+{
+  Title: 'Slides',
+  l1 : 'Fried rice',
+  l2: 'Jollof rice',
+  l3: 'White rice',
+  l4: 'Plantain rice',
+  l5: 'Yam and Egg'
+}, 
+ { 
+  Title: 'Others',
+  l1: 'Small chops',
+  l2:'Agege bread',
+  l3:'Groundnut',
+  l4:'Gizdodo',
+  l5:'Grilled fish'
+}]
+
   module.exports = {
     managerData,
     yearLabels,
@@ -200,5 +225,6 @@ const Maplocations = [
     driverStats,
     driverFilter,
     DeliveryTable,
-    Maplocations
+    Maplocations,
+    CheckMenu
   }

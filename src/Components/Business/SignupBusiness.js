@@ -18,10 +18,10 @@ const LoginBus = () => {
 	const history = useHistory()
 	const [hide, show] = useState(true)
 	const [type, showType] = useState('Password')
-	const visiblity = (e) => (
-		showType('Text'),
+	const visiblity = (e) =>{
+		showType('Text')
 		   show(false)
-	)
+}
 	const hideVisbilty = (e) => {
 		showType('Password')
 		show(true)

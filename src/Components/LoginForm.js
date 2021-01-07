@@ -9,6 +9,7 @@ import { showModalSignup, signedUser } from '../store/actionTypes'
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import VisibilityOffIcon from '@material-ui/icons/VisibilityOff';
 import { useHistory } from 'react-router-dom';
+
 export default function LoginForm() {
 
 	const [hide, show] = useState(true),
@@ -20,11 +21,11 @@ export default function LoginForm() {
 		 dispatch = useDispatch()
 		
 		
-		 const visiblity = (e) => (
-			 e.preventDefault(),
-			 showType('Text'),
+		 const visiblity = (e) => {
+			 e.preventDefault()
+			 showType('Text')
 				show(false)
-		 )
+}
 		 const hideVisbilty = (e) => {
 			 e.preventDefault()
 			 showType('Password')
@@ -81,8 +82,11 @@ export default function LoginForm() {
 				</div>
 			
 			<Form id="login-form" onSubmit={Signin} >
-				<Form.Text className="pb-3 text-center">By logging in, you agree to <a className="link-color">vendr</a> Terms of Service and acknowledge vendr. <a className="link-color">Privacy Policy.</a>
+				<Form.Text className="pb-3 text-center">
+					By logging in, you agree to <span className="link-color">vendr</span> 
+					Terms of Service and acknowledge vendr. <a className="link-color" href="/vendr-policies">Privacy Policy.</a>
 				</Form.Text>	
+
 				<div className="pos-or mb-3">
 		<div className="border-or"><hr/></div>
 			<div className="text-center">OR</div>
@@ -107,6 +111,7 @@ export default function LoginForm() {
 					))
 					}
 				</Form.Group>
+
 				<Form.Text id="forgot-password" className="text-align-test pb-3"><Link className="link-color" to="/">Forgot Password?</Link></Form.Text>
 				<div id="login-button-container">
 					<Button variant="primary" className="w-100 clor-black" type="submit" id="login-button">
@@ -115,7 +120,7 @@ export default function LoginForm() {
 				</div>
 				</Form>
 				<Form.Text className="text-center" id="no-account">
-					New to vendr? <a onClick={showModalSignupHandler} className="link-color" ><span>Sign Up</span></a>
+					New to vendr? <span onClick={showModalSignupHandler} className="link-color" ><span>Sign Up</span></span>
 				</Form.Text>	
 		</>
 	);

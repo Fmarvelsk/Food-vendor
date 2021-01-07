@@ -284,6 +284,9 @@ img.img-change {
   .table-cat {
     flex-wrap: wrap;
   }
+  .line {
+    display: none;
+  }
 }
 .footer-copyright {
   text-transform: uppercase;

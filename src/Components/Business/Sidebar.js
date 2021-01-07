@@ -1,7 +1,9 @@
 import React,{ useState } from 'react';
-import { NavLink, Button } from 'react-bootstrap'
+import { NavLink } from 'react-bootstrap'
 import Blank from '../../Image/assests/blank-profile-picture.png'
 import DehazeIcon from '@material-ui/icons/Dehaze';
+import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
+
 const Sidebar = (props) => {
   const [showBar, hideBar] = useState()
   const showSidebar = () => {
@@ -28,7 +30,7 @@ return(
   
   (<> <p className="f-15">Fast-track Delivery</p>
   <div className="mb-3 pt-3">
-  <a className=" p-btn login-btn new-menu" href="/driver/user/map">Go online now +</a>
+  <a className=" p-btn login-btn new-menu" href="/driver/user/map">Go online now <ArrowRightAltIcon/></a>
   </div></>) }
   
   <hr/>
@@ -56,7 +58,6 @@ return(
                     </NavLink>
                   </li>
                 );
-              return null;
             })}
           </ul>
         </div>

@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import {Col, Card} from 'react-bootstrap'
-import { propTypes } from 'react-bootstrap/esm/Image'
 import SvgPhoto from '../../Image/assests/Group 230.svg'
 const DriversPassport = (props) => {
     const [file, showFile] = useState()

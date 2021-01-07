@@ -3,8 +3,8 @@ import Login from './Login';
 import { useSelector, useDispatch } from 'react-redux';
 import { hideModal } from '../../store/actionTypes'
 
-export default function BussAuth() {
-
+export default function BussAuth(props) {
+	
 	const showModal = useSelector((state) => state.filterStore);
 	const dispatch = useDispatch();
 
@@ -13,7 +13,7 @@ export default function BussAuth() {
 	};
 	return (
 		(showModal.loginPage ? (
-			<Login show={showModal.loginPage && showModal.show} handleClose={handleClose} />
+			<Login show={showModal.loginPage && showModal.show} handleClose={handleClose} idLabel={props.label}/>
 		) : null )
 	
 	);

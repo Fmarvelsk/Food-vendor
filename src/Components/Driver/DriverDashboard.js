@@ -1,30 +1,36 @@
 import { Container} from 'react-bootstrap'
 import '../../styles/Dashboard.css'
-import { useEffect } from 'react'
+import React, { useEffect } from 'react'
 import StatsData from '../Business/StatsData'
 import SalesStats from '../Business/SalesStats'
 //import Transaction from './Transaction'
 import Sidebar from './Driverbar'
 import NavBus from '../Business/NavBus'
-import NotFound from '../Business/NotFound'
-import { Route, useRouteMatch, Redirect, Switch } from 'react-router-dom'
+import NotFound from '../404'
+import { Route, useRouteMatch, Switch } from 'react-router-dom'
 import { managerData, yearLabels, driveTopic, driverStats } from "../Business/Data";
 import DriverTable from './DriverTable'
 import Settings from './Setting'
 import WithDrawal from './WithDrawal'
 import MapContainer from './Map'
+
 const Dashboard = () => {
+  //eslint-ignore-next-line
   const {path, url} = useRouteMatch()
 
   
   useEffect( () => {
    document.body.style.background= '#F3F3F3 0% 0% no-repeat padding-box'
    document.body.style.fontSize = "15px"
-  })
+
+   return () => {
+     document.body.style.background=""
+     document.body.style.fontSize=""
+   }
+  }, [])
     return(
       <>
       <Switch>
-          {console.log(path)}
         <Route exact path={`${path}/dashboard`}>
         <NavBus 
         notification={true} 

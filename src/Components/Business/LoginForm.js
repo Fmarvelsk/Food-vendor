@@ -5,11 +5,11 @@ import FacebookIcon from '@material-ui/icons/Facebook'
 import '../../styles/login.css'
 import { useDispatch } from 'react-redux'
 //import axios from 'axios'
-import { showModalSignup, signedMerchant } from '../../store/actionTypes'
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import VisibilityOffIcon from '@material-ui/icons/VisibilityOff';
 import { useHistory } from 'react-router-dom';
-export default function LoginForm() {
+
+export default function LoginForm(props) {
 	const [hide, show] = useState(true),
 		 history = useHistory (),
 		 [type, showType] = useState('Password'),
@@ -19,30 +19,27 @@ export default function LoginForm() {
 		 dispatch = useDispatch()
 		
 		
-		 const visiblity = (e) => (
-			 e.preventDefault(),
-			 showType('Text'),
+		 const visiblity = (e) => {
+			 e.preventDefault()
+			 showType('Text')
 				show(false)
-		 )
+		 }
 		 const hideVisbilty = (e) => {
 			 e.preventDefault()
 			 showType('Password')
 			 show(true)
 		 }
-	const showModalSignupHandler = () => {
-		dispatch(showModalSignup())
-	}    
 
     
 	const Signin = (e) => {
+		e.preventDefault()
 		const LoginId = {
-			businessId : businessId,
+			userId : businessId,
 			password: password
 		}
 		console.log(LoginId)
-		e.preventDefault()
-		history.push('/merchant/user/dashboard')
-
+		history.push(`/${props.label ? 'driver' : 'merchant'}/user/dashboard`)
+		
 		/*const dbUser = async() => {
 				const response = await axios({
 					method: "post",
@@ -59,6 +56,7 @@ export default function LoginForm() {
 	}
 	return (
 		<>
+		{console.log(props.label)}
 			<Modal.Title className="text-center mb-3" id="login-modal-title"><span>Sign in with</span></Modal.Title>
 			<div className="red text-center">{error}</div>
 			<div className="google-facebook pb-3">
@@ -79,15 +77,19 @@ export default function LoginForm() {
 				</div>
 			
 			<Form id="login-form" onSubmit={Signin} >
-				<Form.Text className="pb-3 text-center">By logging in, you agree to <a className="link-color">vendr</a> Terms of Service and acknowledge vendr. <a className="link-color">Privacy Policy.</a>
+				<Form.Text className="pb-3 text-center">By logging in, you agree to <span className="link-color">vendr</span> 
+				Terms of Service and acknowledge vendr.
+				 <a className="link-color" href="/vendr-policies">Privacy Policy.</a>
 				</Form.Text>	
+
 				<div className="pos-or mb-3">
 		<div className="border-or"><hr/></div>
 			<div className="text-center">OR</div>
 			<div className="border-or"><hr/></div>
 			</div>
+
 				<Form.Group controlId="formBasicEmail">
-					<Form.Label>Business Id</Form.Label>
+					<Form.Label>{props.label ? 'Drivers Id' : 'Business Id'}</Form.Label>
 					<Form.Control type="text" placeholder="Enter Id" 
 					onChange = { e => setBusinessId(e.target.value)}
 					required/>
@@ -113,7 +115,7 @@ export default function LoginForm() {
 				</div>
 				</Form>
 				<Form.Text className="text-center" id="no-account">
-					New to vendr? <a onClick={showModalSignupHandler} className="link-color" ><span>Sign Up</span></a>
+					Dont have an account ? <a href="/merchant/signup" className="link-color" ><span>Sign Up</span></a>
 				</Form.Text>	
 		</>
 	);

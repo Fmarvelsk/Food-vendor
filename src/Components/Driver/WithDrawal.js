@@ -1,11 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {Row, Col } from 'react-bootstrap'
 import Paypal from '../../Image/Layer 2.svg'
 import Bank from '../../Image/Group 290.svg'
 import PaypalMethod from './PaypalMethod'
+import BankPayment from './PaymentSystem'
+import SavedAcc from './SavedAcc';
+import WithCss from '../../styles/GraphLine.module.css'
 
 export default function WithDrawal() {
-  
+
+const Saved = [{
+name : 'Benjamin Elliot',
+method : 'Paypal account',
+pay : Paypal 
+},
+{
+name: 'Timothy Fox',
+method : 'AIB Mortgage bank',
+pay : Bank
+ }]
+
+const [click, isClicked] = useState(false)
+const SwitchPay = () => {
+    isClicked(false)
+  }
+const SwitchBank = () =>{
+  isClicked(true)
+}
   return (
     <>
     <div className="pay-bal">
@@ -15,24 +36,33 @@ export default function WithDrawal() {
    
     <div>
       <p className="bank-money">
-      Available balance : <span>£35,485</span></p>
+      <b>Available balance:</b> <span>£35,485</span></p>
     </div>
     </div>
       <Row>
-          <Col md={8}>
+          <Col md={9}>
           <div className="payment-row">
-            <div className="col-md-5 col-sm-5 payment">
+            <button className="col-md-5 col-sm-5 payment" onClick={SwitchPay}>
             <img src={Paypal} alt="pay-pal"/>
             <p>Paypal method</p>
-            </div>
-            <div className="col-md-5 col-sm-5 payment">
+            </button>
+            <button className="col-md-5 col-sm-5 payment" onClick={SwitchBank}>
             <img src={Bank} alt="pay-pal"/>
             <p>Bank account</p>
-            </div>
-            <span className="line"></span>
+            </button>
+            <span className={`line ${click ? 'move-line' : '' }`}></span>
            
   </div>
-  <PaypalMethod/>
+  { click ? <BankPayment/> : <PaypalMethod/>}
+    </Col>
+    
+    <Col md={3} className="saved-acc">
+      <div className="saved-acc-details">
+        <p className={WithCss.popular}>Saved account</p>
+    {Saved.map((acc, i) =>{
+      return <SavedAcc save={acc}/>
+    })}
+    </div>
     </Col>
     </Row>
     </>

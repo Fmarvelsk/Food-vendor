@@ -21,11 +21,6 @@ function Signup(props) {
 				{/* <SignUp /> */}
 			</Modal.Body>
 
-			<Modal.Footer style={{ display: 'flex', justifyContent: 'center' }}>
-				<Form.Group controlId="formBasicCheckbox">
-					<Form.Check type="checkbox" label="Some BS over here" />
-				</Form.Group>
-			</Modal.Footer>
 		</Modal.Dialog>
 		</Modal>
 	);

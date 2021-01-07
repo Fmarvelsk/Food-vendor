@@ -9,7 +9,6 @@ const FoodNav = (props) => {
 const userValidate = useSelector((state) => state.filterStore)
 	
   const dispatch = useDispatch()
-const user = false
 	const showModalLoginHandler = () => {
         dispatch(showModalLogin())
 	}

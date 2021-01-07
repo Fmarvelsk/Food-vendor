@@ -23,11 +23,11 @@ function Signup() {
 		 [ userError, setUserError ] = useState(),
 		 [ errorConfirm, setErrorConfirm] = useState()
 		 
-		 const visiblity = (e) => (
-			showType('Text'),
+		 const visiblity = () => {
+			showType('Text')
 			   show(false)
-		)
-		const hideVisbilty = (e) => {
+		 }
+		const hideVisbilty = () => {
 			showType('Password')
 			show(true)
 		}
@@ -56,7 +56,6 @@ const emailValidate = (e) => {
 		}
 }
 		const validatePassword = (e) => {
-			const patt =new RegExp()
 			if(!e.target.value ){
 				return setErrorPassword("Required")
 					
@@ -129,8 +128,11 @@ const emailValidate = (e) => {
 					</Button>
 					
 				</div>
-				<Form.Text className="pb-3 text-center">By logging in, you agree to <a className="link-color">vendr</a> Terms of Service and acknowledge vendr. <a className="link-color">Privacy Policy.</a>
+				<Form.Text className="pb-3 text-center">
+					By logging in, you agree to <span className="link-color">vendr</span>
+					 Terms of Service and acknowledge vendr. <a href="/vendr-policies" className="link-color">Privacy Policy.</a>
 				</Form.Text>	
+
 				<div className="pos-or mb-3">
 		<div className="border-or"><hr/></div>
 			<div className="text-center">OR</div>
@@ -190,7 +192,7 @@ const emailValidate = (e) => {
 				
 				</Form>
 				<Form.Text className="text-center" id="no-account">
-					Already have an account? <a onClick={showModalLoginHandler} className="link-color" ><span>Login</span></a>
+					Already have an account? <span onClick={showModalLoginHandler} className="link-color" ><span>Login</span></span>
 				</Form.Text>	
 		
 		</>

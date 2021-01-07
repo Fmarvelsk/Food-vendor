@@ -1,6 +1,5 @@
 import Foodnav from './FoodNav'
 import Menu from './Menu'
-//import Moblie from './MoblieMenu'
 
  const Foodmenu = () => {
     return( <>

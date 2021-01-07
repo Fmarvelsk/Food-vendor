@@ -1,6 +1,7 @@
 import Card from '../../Image/credit-cards-payment.svg'
 import payPal from '../../Image/assests/Group 203.svg'
 import { useHistory } from 'react-router-dom'
+
 const Checkout = () => {
   const history = useHistory()
     const DecreaseQuantity = () => {
@@ -28,7 +29,7 @@ const Checkout = () => {
         </div>
         <div className="item-order">
                   <div>      
-                    <a className="remove">Remove</a></div>
+                    <span className="remove">Remove</span></div>
                     <div>
                     <span className="span-btn" onClick={()=>DecreaseQuantity()}>-</span>
                                     <span className="b">0</span>
@@ -39,14 +40,15 @@ const Checkout = () => {
         <hr/>
         <div className="my-row">
             <span className="i-link">i</span>
-        <a className="link">Click here if you have any food allergy or intolerance</a>
+        <a className="link" href="/food-allergy">Click here if you have any food allergy or intolerance</a>
         </div>
         <hr/>
+        
         <div>
            <b> <p>Delivery address</p>
             <div className="border-address">
                 <p>St. Edmondsbury, Lucan, Co.Dublin, K78 Y892</p>
-                <a className="change-l">change</a>
+                <span className="change-l">change</span>
             </div></b>
         </div>
         <hr/>

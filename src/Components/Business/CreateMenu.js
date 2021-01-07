@@ -1,9 +1,9 @@
-import { Col, Row, Container, Card, Form, Button } from 'react-bootstrap';
+import { Col, Row, Container, Card, Form } from 'react-bootstrap';
 import CurrencySvg from '../../Image/assests/Group 270.svg'
 import SvgPhoto from '../../Image/assests/Group 230.svg'
-//import SideBar from "./Sidebar";
 import '../../styles/upload.scss'
 import { useState } from 'react';
+
 const CreateMenu =  () => {
     const [file, showUpload] = useState()
     var fileUpload = (e) => {
@@ -54,12 +54,10 @@ const CreateMenu =  () => {
                         <Form.Control placeholder="Set Price" className="change-input"/>
             <div className="currency-svg">
             <img src={CurrencySvg} alt="Currency" width="83%"/>
-           {/*<SearchOutlinedIcon className="outline"/>*/}
-            </div>
+            </div> 
+              </Form.Group>  
+                  </Col> 
 
-                        </Form.Group>
-
-                        </Col> 
                         <Col xs={12} sm={6} md={6} className="mt-3">
 						<Form.Group>
 							<label>Description of menu</label>
@@ -80,12 +78,7 @@ const CreateMenu =  () => {
   
   </div>
       
-                        {/*
-							<Form.File className="change-textarea upload-form">
-                            
-                            </Form.File>
-                        <img src={SvgPhoto}  alt/>*/}
-						</Form.Group>
+                  		</Form.Group>
 					</Col>
                     
 				</Form.Row>

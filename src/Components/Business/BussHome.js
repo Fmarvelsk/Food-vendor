@@ -1,6 +1,7 @@
-import {Col, Row} from 'react-bootstrap'
+import {Col } from 'react-bootstrap'
 import { Link } from 'react-router-dom' 
 import GrowVendr from '../../Image/vendrmerc.png'
+
 const BussHome = () => {
     return(
         <div className="merchant-row">

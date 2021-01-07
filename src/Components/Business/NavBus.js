@@ -8,14 +8,17 @@ import NotificationsIcon from '@material-ui/icons/Notifications';
 const NavBus = (props) => {
     const dispatch = useDispatch()
 
-	const LoginHandler = () => {
+	const MerchantId = () => {
        dispatch(showModalLogin())
+	}
+	const DriverId = () =>{
+		dispatch(showModalLogin())
 	}
 
     return (
 		<>
 			<Navbar collapseOnSelect className={props.style ? props.style : "nav-bus"} variant="light" expand="lg">
-                <Navbar.Brand className="navbrand mb-3 nav-bus-brand" href="/merchant">
+                <Navbar.Brand className="navbrand mb-3 nav-bus-brand" href={props.nav ? "/merchant" : '/driver'}>
                <img src={Logo} alt="vendr"/>  </Navbar.Brand>
                     
 			   {props.notification ? 
@@ -30,7 +33,7 @@ const NavBus = (props) => {
 				
 
 			  <div>
-						<Nav.Item className="log-btn mr-3" onClick={LoginHandler}>
+						<Nav.Item className="log-btn mr-3"  onClick={props.nav ? MerchantId : DriverId}>
 							Login
 						</Nav.Item>
 					</div>

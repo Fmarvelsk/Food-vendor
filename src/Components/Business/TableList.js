@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import {
 Container, 
 Row,
@@ -16,7 +16,7 @@ import { showMealOrder } from '../../store/actionTypes'
 
 const Status = (prop) => (
 prop === 'Confirmed' || prop === 'Sucessful' ? 'confirmed-cls' :
-prop==='Pending' || prop=='Waiting'? 'pending-cls' :
+prop ==='Pending' || prop === 'Waiting'? 'pending-cls' :
 prop === 'Cancelled' || prop === 'Failed' ? 'warn-cls' :
 ''
 )

@@ -3,7 +3,7 @@ const OrderDetails = () => {
     return(
         <>
             <div className="merchant-header">
-                <img src={Logo} className="mr-3" width="75px" height ="75px"/>
+                <img src={Logo} className="mr-3" width="75px" height ="75px" alt="log"/>
                 <div className="setspacing">
                     <p>Heritage Kitchen (African Cuisine)</p>
                     <p className="f-15">St. Edmondsbury, Lucan, Co.Dublin, K78 Y892</p>

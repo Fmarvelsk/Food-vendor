@@ -3,7 +3,7 @@ import Logo from '../../Image/Group 88@2x.png'
 const LocationDetails = () => {
     return(<>
         <div className="merchant-header wid">
-              <img src={Logo} className="mr-3" width="45px" height ="45px"/>
+              <img src={Logo} className="mr-3" alt="Location" width="45px" height ="45px"/>
               <div className="setspacing">
                     <p>Heritage Kitchen (African Cuisine)</p>
                     <p className="f-15">St. Edmondsbury, Lucan, Co.Dublin, K78 Y892</p>

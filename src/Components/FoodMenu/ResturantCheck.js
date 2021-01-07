@@ -1,4 +1,4 @@
-import {Form} from 'react-bootstrap'
+
 const ResturantCheck = (props) => {
     return(
         <>
@@ -7,7 +7,7 @@ const ResturantCheck = (props) => {
             return(
                             <div className="checkbox-menu form-check" key={i}>
                     
-                    <input type="checkbox" class=" box-color form-check-input position-static "/> <p className="mg">{check.Title}</p>
+                    <input type="checkbox" className="box-color form-check-input position-static "/> <p className="mg">{check.Title}</p>
                             </div>
             )
                             
