@@ -1,5 +1,5 @@
 import {Col, Form, Button} from 'react-bootstrap'
-import DeliverVendr from '../../Image/driver.svg'
+import DeliverVendr from '../../Image/driver.png'
 const DriverHome = () => {
     return(
         <div className="merchant-row">
