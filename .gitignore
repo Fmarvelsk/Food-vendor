@@ -6,6 +6,7 @@
 
 # testing
 /coverage
+.env
 
 # production
 /build
@@ -20,22 +21,3 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-        <Col xs={12}>
-						<Form.Group controlId="formBasicPassword" id="form-group-signup-password">
-							<Form.Label>Confirm Password</Form.Label>
-							<Form.Control
-								type={type}
-								placeholder="Password"
-								maxLength="20"
-								onChange = {confirmPassword}
-								
-								/>{
-									(hide ? ( <VisibilityOffIcon className="visiblity" onClick={visiblity}/>) : (
-										<VisibilityIcon className="visiblity" onClick={hideVisbilty}/>
-									))
-									}
-								<div className="red">{errorPassword}</div>
-						</Form.Group>
-					</Col>
-				
