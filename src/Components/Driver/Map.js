@@ -3,6 +3,7 @@ import { GoogleMap, LoadScript, Marker, InfoWindow } from "@react-google-maps/ap
 import {Maplocations} from '../Business/Data'
 import LocationDetails from './LocationDetails';
 import Strike from '../../Image/assests/Path 1279.svg'
+
 const MapContainer = () => {
   const [selected, isSelected] = useState()
 
@@ -15,11 +16,10 @@ const MapContainer = () => {
   const defaultCenter = {
     lat: 41.3851, lng: 2.1734
   }
-  
   return (
     <>
      <LoadScript
-       googleMapsApiKey=''>
+       googleMapsApiKey={process.env.REACT_APP_GOOGLEAPI_KEY}>
         <GoogleMap
           mapContainerStyle={mapStyles}
           zoom={13}

@@ -23,7 +23,6 @@ import DriverLanding from './Components/Driver/DriverLanding';
 import DriverBoard from './Components/Driver/DriverDashboard'
 
 function App() {
-  
   /*useEffect(() => {
     
       const FoodMenuDB = async () => {
