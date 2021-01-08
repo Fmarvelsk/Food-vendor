@@ -1,5 +1,6 @@
 import React,{ useState } from 'react';
 import { NavLink } from 'react-bootstrap'
+import {Link} from 'react-router-dom'
 import Blank from '../../Image/assests/blank-profile-picture.png'
 import DehazeIcon from '@material-ui/icons/Dehaze';
 import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
@@ -55,12 +56,12 @@ return(
                 key={key}
                   >
                     {prop.icon}
-                    <NavLink
-                      href={prop.layout + prop.path}
+                    <Link
+                      to={prop.layout + prop.path}
                       className="nav-link nav-path"
                     >
                       <p>{prop.name}</p>
-                    </NavLink>
+                    </Link>
                   </li>
                 );
             })}
