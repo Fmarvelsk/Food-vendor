@@ -27,7 +27,7 @@ const Driverbar = () => {
         },
         {
           path: "/settings",
-          name: "Settings",
+          name: "Verification",
           icon: <SettingsOutlinedIcon className="dash-icon"/>,
           layout: "/driver/user"
         },

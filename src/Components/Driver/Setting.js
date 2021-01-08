@@ -5,7 +5,7 @@ const Settings = () => {
     return(
         <div className="main-panel">
             <div className="hurt container-fluid">
-      <h3>Verifation</h3>
+      <h3>Verification</h3>
       <p className="f-15">Upload document for verification</p>
         <Row>
                 {topic.map((passport) => {
