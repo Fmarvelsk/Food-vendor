@@ -31,13 +31,13 @@ const Dashboard = () => {
     return(
       <>
       <Switch>
-        <Route exact path={`${path}/dashboard`}>
-        <NavBus 
-        notification={true} 
-        style={{position:'fixed'}}/>
-        <div>
-        <Sidebar/>
-        
+        <>
+        <NavBus
+  notification={true}
+  style={{position : 'fixed'}}/>
+  <Sidebar/>
+    
+        <Route exact path={`${path}/dashboard`}>  
                     <div className="main-panel">
       <Container fluid className="hurt">
         <StatsData data={driverStats} topic={driveTopic}/>
@@ -48,35 +48,23 @@ const Dashboard = () => {
         />
         </Container>
         </div>
-        </div>
         </Route>
 
 <Route exact path={`${path}/transaction`}>
-<NavBus 
-        notification={true} 
-        style={{position:'fixed'}}/>
         <div>
-        <Sidebar/>
+        
   <DriverTable/>
   </div>
 </Route>
 
 <Route exact path={`${path}/settings`}>
-  <NavBus
-  notification={true}
-  style={{position : 'fixed'}}/>
   <div>
-    <Sidebar/>
     <Settings/>
   </div>
 </Route>
 
 <Route exact path={`${path}/payment-system`}>
-  <NavBus 
-  notification={true}
-      style={{position : 'fixed'}}/>
-      
-        <Sidebar/>
+        
         <div className="main-panel">
       <Container fluid className="hurt">
 
@@ -87,17 +75,14 @@ const Dashboard = () => {
 </Route>
 
 <Route exact path={`${path}/map`}>
-  <NavBus
-  notification={true}
-  style={{position : 'fixed'}}/>
-  
-    <Sidebar/>
+    
     <div className="main-panel">
 <Container fluid className="hurt">
   <MapContainer/>
   </Container>
   </div>
 </Route>
+</>
   <Route 
   exact 
   path={`${window.location.pathname}*`}>
