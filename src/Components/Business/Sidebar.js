@@ -3,9 +3,12 @@ import { NavLink } from 'react-bootstrap'
 import Blank from '../../Image/assests/blank-profile-picture.png'
 import DehazeIcon from '@material-ui/icons/Dehaze';
 import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
+import { useSelector } from 'react-redux';
 
 const Sidebar = (props) => {
+  const loggedIn = useSelector(state => state.filterStore)
   const [showBar, hideBar] = useState()
+
   const showSidebar = () => {
     hideBar(!showBar)
   }
@@ -13,6 +16,7 @@ const activeRoute = (routeName) => {
     console.log(window.location.pathname)
   return window.location.pathname.indexOf(routeName) > -1 ? "active my-row" : "my-row"
   }
+  
 return(
   <>
 <div className={showBar ? "sidebar open-nav" : "sidebar"}>
@@ -20,7 +24,7 @@ return(
 <div className="togl"><span className="navbar-toggler-icon" onClick={showSidebar}><DehazeIcon/></span></div>
   <div className="ml-5 mr-5 mt-3 moblie-sidebar">
     <img src={Blank} className="profile-pic" alt="profile" />
-    <h4 className="mt">Hello Femi</h4>
+    <h4 className="mt">{props.main ? 'Femi' : loggedIn.busId.email}</h4>
 
   {props.main ?
    (<><p className="f-15">Heritage Kitchen</p>

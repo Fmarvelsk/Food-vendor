@@ -1,11 +1,11 @@
 import { SORT_BY_LESS_POPULAR, SORT_BY_MOST_POPULAR, LOAD_DATA} from './index'
-import { SHOW_MODAL_LOGIN, HIDE_MODAL, SHOW_MODAL_SIGNUP, SHOW_ORDER_NO, SIGNED_USER } from './actionTypes';
+import { SHOW_MODAL_LOGIN, HIDE_MODAL, SHOW_MODAL_SIGNUP, SHOW_ORDER_NO, SIGNED_USER, SIGNED_BUSSINESS } from './actionTypes';
 const initialState = {
     show: false,
     loginPage: true,
     order : true,
-    user : null
-       
+    user : null,
+    busId : {}
 }
 
 export const filterStore = ( state = initialState, action) =>{
@@ -58,6 +58,11 @@ export const filterStore = ( state = initialState, action) =>{
                             user : action.payload,
                             show: false
                         }
+                        case SIGNED_BUSSINESS:
+                            return {
+                                ...state,
+                                busId : action.payload
+                            }
             
                     default :
                 return state

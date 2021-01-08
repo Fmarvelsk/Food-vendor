@@ -1,6 +1,26 @@
 import {Col, Form, Button} from 'react-bootstrap'
 import DeliverVendr from '../../Image/driver.png'
+import { useHistory } from "react-router-dom";
+import {useDispatch} from 'react-redux'
+import {signedBus} from '../../store/actionTypes'
+import React, { useState } from 'react';
 const DriverHome = () => {
+    const history = useHistory()
+    const dispatch = useDispatch()
+    const [email, setEmail] = useState()
+    const [password, setPassword] = useState()
+
+    const Signin = (e) => {
+        e.preventDefault()
+        const Business = {
+            email : email,
+            password : password
+            
+        }
+        dispatch(signedBus(Business))
+        history.push('/driver/user/dashboard')
+    }
+
     return(
         <div className="merchant-row">
         <Col md={6} lg={5} sm={12}>
@@ -8,23 +28,22 @@ const DriverHome = () => {
                 <h1 className="font-weight-bold home-2-title display-3 mb-0">Deliver with Vendr.</h1>
                 <div className="mt-5">
                  
-                 <Form>
+                 <Form onSubmit={Signin}>
                      <Form.Group>
                          <Form.Control 
                          className="change-input spec" 
-                         placeholder="Email address"/>
+                         placeholder="Email address"
+                         onChange={ (e) => setEmail(e.target.value)}
+                         />
                      </Form.Group>
                      
                      <Form.Group>
-                         <Form.Control 
+                         <Form.Control type="password"
                          className="change-input spec" 
-                         placeholder="Password"/>
+                         placeholder="Password" 
+                         onChange={ (e) => setPassword(e.target.value)}/>
                      </Form.Group>
-                 </Form>
-                 <div className="mt-3">
-			<p className="orders-data-font">By clicking "Sign Up" you agree to the <span className="vendr-color">Vendr.</span> Privacy Policy and <span className="vendr-color"> Terms of Service.</span> This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.</p>
-                    </div>
-                    <div className="buss-sign-btn mt-3">
+                     <div className="buss-sign-btn mt-3">
                     <Button 
                     variant="primary" 
                     className="w-100 p-btn login-btn" 
@@ -33,6 +52,11 @@ const DriverHome = () => {
 					</Button>
 				</div>
 			
+                 </Form>
+                 <div className="mt-3">
+			<p className="orders-data-font">By clicking "Sign Up" you agree to the <span className="vendr-color">Vendr.</span> Privacy Policy and <span className="vendr-color"> Terms of Service.</span> This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.</p>
+                    </div>
+                  
                 </div>
                 </div>
                 </Col>
@@ -40,10 +64,7 @@ const DriverHome = () => {
                     <div className="mt-40">
                         
                         <img src={DeliverVendr} alt="Driver" className="img-fluid mx-auto d-block home-2-img mover-img"/>
-                        <div className="home-2-bottom-img">
-                            <img src="images/homr-2-bg-bottom.png" alt="" className="img-fluid d-block mx-auto"/>
-                                </div>
-                                </div>
+                              </div>
                                 </Col>
                                 </div>
                       

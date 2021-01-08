@@ -3,6 +3,7 @@ export const HIDE_MODAL = "HIDE_MODAL"
 export const SHOW_MODAL_SIGNUP = "SHOW_MODAL_SIGNUP"
 export const SHOW_ORDER_NO = "SHOW_ORDER_NO"
 export const SIGNED_USER = "SIGNED_USER"
+export const SIGNED_BUSSINESS =  "SIGNED_BUSSINESS"
 
 export const showModalLogin = () => {
     return {
@@ -30,9 +31,17 @@ export const showMealOrder = (payload) => {
     
 }
 export const signedUser = payload => {
-    console.log(payload)
+    
     return{
         type : SIGNED_USER,
+        payload
+    }
+}
+
+export const signedBus = payload =>{
+    console.log(payload)
+    return {
+        type : SIGNED_BUSSINESS,
         payload
     }
 }
