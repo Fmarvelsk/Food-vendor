@@ -274,7 +274,7 @@ img.img-change {
     top: auto;
 }
 .bg-footer-header {
-  height: 100vh;
+  padding-bottom: 11rem;
 }
 }
 @media only screen and (max-width:575px){

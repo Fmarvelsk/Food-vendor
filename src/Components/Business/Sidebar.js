@@ -30,12 +30,12 @@ return(
   {props.main ?
    (<><p className="f-15">Heritage Kitchen</p>
   <div className="mb-3 pt-3">
-  <a className=" p-btn login-btn new-menu" href="/merchant/user/create-menu">Create new menu +</a>
+  <Link className=" p-btn login-btn new-menu" to="/merchant/user/create-menu">Create new menu +</Link>
   </div></>) : 
   
   (<> <p className="f-15">Fast-track Delivery</p>
   <div className="mb-3 pt-3">
-  <a className=" p-btn login-btn new-menu" href="/driver/user/map">Go online now <ArrowRightAltIcon/></a>
+  <Link className=" p-btn login-btn new-menu" to="/driver/user/map">Go online now <ArrowRightAltIcon/></Link>
   </div></>) }
   
   <hr/>

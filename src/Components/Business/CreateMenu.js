@@ -68,7 +68,7 @@ const CreateMenu =  () => {
 						<Form.Group>
                         <label>Upload picture</label>
 							
-                        <div className="wrapper">
+                        <div className="wrapper bd">
   <div className="file-upload">
   {file}
     <input type="file" onChange={fileUpload}/>

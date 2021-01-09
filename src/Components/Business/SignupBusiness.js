@@ -47,7 +47,7 @@ const LoginBus = () => {
                     <Col lg={6} sm={12}>
 						<h3>Sell on vendr.</h3>
 						<p className="f-15">Reach new customers, deliver exceptional customer service</p>
-                    <Form className="log-form" onClick={businessSignup}>
+                    <Form className="log-form" onSubmit={businessSignup}>
 				<Form.Row>
 					
 					<Col xs={12} sm={6} md={6} className="mt-3">
