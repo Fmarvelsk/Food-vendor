@@ -1,7 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
-import { Popular } from '../Business/Data'
 import Tab from '@material-ui/core/Tab';
 import TabContext from '@material-ui/lab/TabContext';
 import FoodList from './FoodList'
@@ -71,10 +70,9 @@ export default function LabTabs() {
             <SearchOutlinedIcon className="outline"/>
             </div>
           </Form>
-      {Popular.map((Food, i) => (
-          
-  <FoodList menu={Food} key={i}/>
-      ))}
+                
+  <FoodList/>
+    
         </TabPanel>
         <TabPanel value="2">
       <h5>About Heritage Kitchen</h5>

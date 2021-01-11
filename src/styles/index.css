@@ -6,6 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   letter-spacing: 0.5px;
+  font-size: 15px;
 }
 .carousel-fade .carousel-item {
 	opacity: 0;

@@ -487,8 +487,7 @@ img.sos {
 .scssc {
   font-size: x-small;
   font-style: italic;
-  /* display: block; */
-}
+ }
 .notification {
   position: absolute;
   background-color: #FFE01B;
@@ -499,4 +498,8 @@ img.sos {
   height: 10px;
   top: 0px;
   left: 18px;
+}
+span.span-btn.h {
+  padding-left:0.7rem;
+  padding-right: 0.7rem;
 }

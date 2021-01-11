@@ -3,6 +3,7 @@ import {Row, Container, Col } from 'react-bootstrap'
 import ResturantCheck from './ResturantCheck'
 import Checkout from './Checkout'
 import Tab from './Tab'
+
 const Resturant = () => {
     useEffect( () => {
         document.body.style.backgroundColor = '#F9F9F9'

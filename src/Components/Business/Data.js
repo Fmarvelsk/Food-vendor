@@ -207,8 +207,42 @@ const CheckMenu=[{
   l5:'Grilled fish'
 }]
 
+const productExample = [
+  {
+    id  : 1,
+    name : 'Efo Riro',
+    price :  '15.00',
+    details : 'Served with choice of swallow (e.g poundo, eba, etc), and choice of protein (e.g goat meat, fish, assorted, etc)'
+  },
+  {
+    id : 2,
+    name :"Egusi Soup",
+    price : '10.00', 
+    details : 'Served with choice of swallow (e.g poundo, eba, etc), and choice of protein (e.g goat meat, fish, assorted, etc)'
+  },
+  {
+    id : 3,
+    name : "Bangana Soup",
+    details : 'Served with choice of swallow (e.g poundo, eba, etc), and choice of protein (e.g goat meat, fish, assorted, etc)',
+    price : '10.50'
+  },
+  {
+    id : 4,
+    name :  "Jollof Rice",
+    details : 'Served with choice of swallow (e.g poundo, eba, etc), and choice of protein (e.g goat meat, fish, assorted, etc)',
+    price : '8.20' 
+  },
+  {
+    id : 5,
+    name : "Fried Rice",
+    details : 'Served with choice of swallow (e.g poundo, eba, etc), and choice of protein (e.g goat meat, fish, assorted, etc)',
+    price : '12.00'
+  }
+]
+
   module.exports = {
     managerData,
+    productExample,
     yearLabels,
     thArray,
     tdArray,

@@ -1,10 +1,11 @@
 import { createStore, combineReducers, compose } from 'redux'
 
 
-import { filterStore } from './filterStore'
+import { filterStore, Carts } from './filterStore'
 
 const rootReducer = combineReducers({
-    filterStore
+    filterStore,
+    Carts
 })
 
 let composeEnhancers = compose

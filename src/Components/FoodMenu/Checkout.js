@@ -1,43 +1,63 @@
 import Card from '../../Image/credit-cards-payment.svg'
 import payPal from '../../Image/assests/Group 203.svg'
 import { useHistory } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
+import { increaseCarts, decreaseCarts, deleteCarts } from '../../store/cartsAction'
+import {TotalQuantity, TotalProduct} from '../../store/filterStore'
 
 const Checkout = () => {
   const history = useHistory()
-    const DecreaseQuantity = () => {
-            console.log('Decrese')
+  const checkoutCart = useSelector((state => state.Carts)) 
+  const dispatch = useDispatch()
+      
+    const DecreaseQuantity = (key) => {
+      dispatch((decreaseCarts(key)))
     }
-    const IncreaseQuantity = () => {
-        console.log('increase')
+    const IncreaseQuantity = (key) => {
+        dispatch((increaseCarts(key)))
+    }
+    const Remove_Carts = (key) =>{
+      dispatch((deleteCarts(key)))
     }
     const OrderSucess = (e) =>{
       e.preventDefault()
       history.push('/Success')
     } 
-    return(
+
+      if(checkoutCart.carts.length >= 1)
+          return(
         <>
-        <p className="order-p"><b>Order no: 2345473854</b></p>
+            <p className="order-p"><b>Order no: 2345473854</b></p>
+        {checkoutCart.carts && checkoutCart.carts.map( (product, index) => 
+          ( <div key={index}>
+            
         <div className="item-order bold">
       
       <div>    
-        <p>Efo riro</p></div>
+        <p>{product.name}</p></div>
         <div>
                               
-                    <p>£ 20.00</p>
+                    <p>£ {TotalQuantity(product)}</p>
          </div>
          
         </div>
         <div className="item-order">
-                  <div>      
-                    <span className="remove">Remove</span></div>
-                    <div>
-                    <span className="span-btn" onClick={()=>DecreaseQuantity()}>-</span>
-                                    <span className="b">0</span>
-                                    <span className="span-btn" onClick={()=>IncreaseQuantity()}>+</span>
-                    </div>
-                    </div>
                   
+                    <span className="remove" onClick={ ()=> Remove_Carts(index)}>Remove</span>
+                    <div>
+                    <span className="span-btn h" 
+                    onClick={()=>DecreaseQuantity(index)}>-</span>
+                                    
+                      <span className="b">{product.quantity}</span>
+                      <span className="span-btn" onClick={()=>IncreaseQuantity(index)}>+</span>
+                    </div>
+                    </div>
         <hr/>
+            </div>)
+
+            
+        )}
+        
         <div className="my-row">
             <span className="i-link">i</span>
         <a className="link" href="/food-allergy">Click here if you have any food allergy or intolerance</a>
@@ -56,7 +76,7 @@ const Checkout = () => {
                   <div>      
                     <p>Subtotal</p></div>
                     <div>
-                    <p>£ 80.00</p>
+                    <p>£ {TotalProduct(checkoutCart.carts)}</p>
                     </div>
                     </div>
                     <div className="item-order">
@@ -92,5 +112,8 @@ const Checkout = () => {
              
        </>
     )
+    else 
+    return <div className="text-center">Your basket is empty</div>
+   
 }
 export default Checkout

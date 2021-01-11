@@ -5,9 +5,13 @@ import { showModalLogin, showModalSignup } from '../../store/actionTypes'
 import Logo from '../../Image/vendr..svg'
 import { useSelector } from 'react-redux'
 import Details from './Details'
+import { TotalProduct} from '../../store/filterStore'
+
+
 const FoodNav = (props) => {
-const userValidate = useSelector((state) => state.filterStore)
-	
+  const userValidate = useSelector((state) => state.filterStore)
+  const totalCarts = useSelector((state) => state.Carts)
+
   const dispatch = useDispatch()
 	const showModalLoginHandler = () => {
         dispatch(showModalLogin())
@@ -55,7 +59,7 @@ const userValidate = useSelector((state) => state.filterStore)
   </div>
   <div >
     <Nav.Item className="adapt total">
-      Carts
+     £ {TotalProduct(totalCarts.carts)}
     </Nav.Item>
   </div>
 
