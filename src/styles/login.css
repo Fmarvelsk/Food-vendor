@@ -184,5 +184,8 @@ cursor: pointer;
     margin-top: 5px;
     color: black;
     padding: .3rem .7rem;
-    
+        
+}
+.nav-path:hover {
+    color: black;
 }

@@ -36,7 +36,7 @@ const TableList = (props) =>  {
           {menuDetails.order ? (
           <>
           <div>
-                <h3 className="mb-3">{props.h3}</h3>
+                <p className="dashboard-style">{props.h3}</p>
                 <div className="table-cat">
                 <Form className="form-btn w-80">
             <Form.Control placeholder="search orders" className="change-input"/>

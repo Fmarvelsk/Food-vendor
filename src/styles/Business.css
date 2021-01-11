@@ -160,3 +160,10 @@ button.p-btn{
 .bd{
     border: 1px solid #ced4da;
 }
+.earn {
+font: normal normal normal 20px/24px Roboto;
+}
+.dash-topic{
+font: normal normal 300 30px/37px Roboto;
+letter-spacing: 0.09px;
+}

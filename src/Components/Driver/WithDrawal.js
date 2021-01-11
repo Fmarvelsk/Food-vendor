@@ -31,7 +31,7 @@ const SwitchBank = () =>{
     <>
     <div className="pay-bal">
       <div>
-    <h3>WithDrawal</h3>
+    <p className="dash-topic">WithDraw</p>
     <p className="f-15">Select a withdrawal option</p>  </div>
    
     <div>

@@ -11,7 +11,7 @@ const ManageMenu = () => {
     <div className="main-panel">
       <Container fluid className="hurt">
         <div>
-          <h3>Manage Menu</h3>
+          <p className="dashboard-style">Manage Menu</p>
         </div>
         <div className="table-cat">
           <Form className="form-btn w-80">

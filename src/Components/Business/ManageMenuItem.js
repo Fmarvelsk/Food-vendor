@@ -7,7 +7,7 @@ export default function ManageMenuItem({ nameId }) {
   const [setDate, UseData] = useState("");
 
   const ToogleMenu = () => {
-    useShow(!hide);
+    useShow(true);
   };
 
   const SuspendMeal = () => {
@@ -40,7 +40,7 @@ export default function ManageMenuItem({ nameId }) {
               <input type="checkbox" onChange={ToogleMenu} />
               <span class="slider round"></span>
             </label>
-            <p className="mt">toogle to suspend menu</p>
+            <p className="mt-3">toogle to suspend menu</p>
           </div>
         </div>
       </div>

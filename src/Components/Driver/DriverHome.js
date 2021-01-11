@@ -26,6 +26,7 @@ const DriverHome = () => {
         <Col md={6} lg={5} sm={12}>
             <div className="mt-40 home-2-content">
                 <h1 className="font-weight-bold home-2-title display-3 mb-0">Deliver with Vendr.</h1>
+                <p className="earn">Earn additional revenues making deliveries along your routes. Easy sign up, seamless cashout.</p>
                 <div className="mt-5">
                  
                  <Form onSubmit={Signin}>

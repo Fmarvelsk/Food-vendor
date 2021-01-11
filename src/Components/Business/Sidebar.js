@@ -13,7 +13,6 @@ const Sidebar = (props) => {
     hideBar(!showBar)
   }
 const activeRoute = (routeName) => {
-    console.log(window.location.pathname)
   return window.location.pathname.indexOf(routeName) > -1 ? "active my-row" : "my-row"
   }
   
@@ -24,9 +23,9 @@ return(
 <div className="togl"><span className="navbar-toggler-icon" onClick={showSidebar}><DehazeIcon/></span></div>
   <div className="ml-5 mr-5 mt-3 moblie-sidebar">
     <img src={Blank} className="profile-pic" alt="profile" />
-    <h4 className="mt">
-{props.main ? 'Femi' : loggedIn.busId.email}</h4>
-{/*props.main ? 'Femi' : loggedIn.busId.email*/}
+    <p className="mt"> 
+    {`Hello ${props.main ? 'Femi' : loggedIn.busId.email}`}</p>
+
   {props.main ?
    (<><p className="f-15">Heritage Kitchen</p>
   <div className="mb-3 pt-3">
@@ -43,7 +42,6 @@ return(
           <ul className="nav-dash">
             {props.dashboard.map((prop, key) => {
               if (!prop.redirect)
-              {console.log(window.location.pathname)}
 
                 return (
                   <li
