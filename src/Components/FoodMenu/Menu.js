@@ -1,6 +1,6 @@
 import { Container, Col, Row, Dropdown } from 'react-bootstrap'
 import MenuTab from './MenuTab'
-import Group1 from '../../Image/kitchen (1).jpeg'
+import Group1 from '../../Image/Pounded.jpeg'
 import Group2 from '../../Image/kitchen (2).jpeg'
 import Chicken from '../../Image/kitchen (3).jpeg'
 import ChooseMenu from './ChooseMenu'
@@ -23,6 +23,7 @@ const Menu = () => {
     return(
         <Container className={`${style.jumbocolor} jumbotron`}>
             <Row className={style.create_menu}>
+                {/*
             <Col md={2} className="content nav">
     			<div className={style.filter} onClick={Showfilter}>
                 <span className="filter-toggle-text">Filters By</span>
@@ -38,8 +39,8 @@ const Menu = () => {
                 
              </div>
                          </Col>
-            
-            <Col md={9}>
+                */}
+            <Col md={10} lg={10}>
             <div className="dropdown-sort">
                 <Dropdown>
 							<Dropdown.Toggle variant="success" id="dropdown-basic">

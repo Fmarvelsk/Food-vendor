@@ -1,7 +1,12 @@
 import { Dropdown } from 'react-bootstrap'
+import { useDispatch } from 'react-redux'
+import { filterValue } from '../../store/index'
 
 const DropDown = (props) => {
-    return(
+	const dispatch = useDispatch()
+	const showValue = (result) => dispatch(filterValue({value :result})) 
+
+	    return(
         <div>
           <Dropdown className="search-m">
 							<Dropdown.Toggle id="dropdown-basic">
@@ -9,7 +14,7 @@ const DropDown = (props) => {
 							</Dropdown.Toggle>
 							<Dropdown.Menu>
 				{props.drop.item.map( (dropdown, i) =>(
-						<Dropdown.Item key={i} onClick={ (e) => console.log(dropdown.title)}>
+						<Dropdown.Item key={i} onClick={ () => showValue(dropdown.title)}>
 						{dropdown.title}
 					</Dropdown.Item>
 					

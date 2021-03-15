@@ -28,13 +28,13 @@ const FoodList = () => {
             <span className="ml-5 bold">£ {food.price}</span>
           </div>
           <div>
-          <span className="span-btn" onClick={ () => addCarts({
+          <button className="span-btn" onClick={ () => addCarts({
             id : food.id,
             name : food.name,
             image : Meats,
             details : food.details,
             price : food.price
-          })}>+</span>
+          })}>+</button>
          
         </div>
           </div>

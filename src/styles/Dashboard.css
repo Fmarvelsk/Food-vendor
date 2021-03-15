@@ -17,6 +17,19 @@
     margin: 0 3rem;
 
 }
+
+.file-upload {
+    position: relative;
+    cursor: pointer;
+    width: 46px;
+}
+.avatar{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    width: 45px;
+    left: 0px;
+}
 .main-panel {
     position: relative;
     float: right;

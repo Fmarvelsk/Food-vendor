@@ -1,5 +1,5 @@
 export const SORT_BY_MOST_POPULAR = "SORT_BY_MOST_POPULAR"
-export const SORT_BY_LESS_POPULAR = "SORT_BY_LESS_POPULAR"
+export const FILTER_BY_VALUE = "FILTER_BY_VALUE"
 export const LOAD_DATA = "LOAD_DATA"
 /*export const SHOW_ORDER_NO = "SHOW_ORDER_NO"*/
 
@@ -7,8 +7,8 @@ export const sortByHighRating = payload =>({
     type : SORT_BY_MOST_POPULAR,
     payload
 })
-export const sortByLowRating = payload => ({
-    type : SORT_BY_LESS_POPULAR,
+export const filterValue = payload => ({
+    type : FILTER_BY_VALUE,
     payload
 })
 export const loadData = payload => ({

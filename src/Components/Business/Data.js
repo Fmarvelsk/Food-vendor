@@ -82,7 +82,7 @@ const Menu = [{
 
 const Managefilter = [{
 Type : 'Order type',
-item : [{title: "Single"}, {title : "Mutiple"}]
+item : [{title: "Single"}, {title : "Multiple"}]
 },
 {
   Type : 'Date',

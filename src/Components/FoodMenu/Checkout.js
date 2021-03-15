@@ -3,7 +3,7 @@ import payPal from '../../Image/assests/Group 203.svg'
 import { useHistory } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { increaseCarts, decreaseCarts, deleteCarts } from '../../store/cartsAction'
-import {TotalQuantity, TotalProduct} from '../../store/filterStore'
+import {TotalQuantity, TotalProduct, Total} from '../../store/filterStore'
 
 const Checkout = () => {
   const history = useHistory()
@@ -45,11 +45,11 @@ const Checkout = () => {
                   
                     <span className="remove" onClick={ ()=> Remove_Carts(index)}>Remove</span>
                     <div>
-                    <span className="span-btn h" 
-                    onClick={()=>DecreaseQuantity(index)}>-</span>
+                    <button className="span-btn h" 
+                    onClick={()=>DecreaseQuantity(index)}>-</button>
                                     
                       <span className="b">{product.quantity}</span>
-                      <span className="span-btn" onClick={()=>IncreaseQuantity(index)}>+</span>
+                      <button className="span-btn" onClick={()=>IncreaseQuantity(index)}>+</button>
                     </div>
                     </div>
         <hr/>
@@ -90,7 +90,7 @@ const Checkout = () => {
                   <div>      
                     <p><b>Total :</b></p></div>
                     <div className="total">
-                    <p>£ 100.00</p>
+                    <p>£ {Total(checkoutCart.carts)}</p>
                     </div>
                  </div>
                  <hr/>

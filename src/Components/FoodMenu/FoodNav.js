@@ -5,7 +5,7 @@ import { showModalLogin, showModalSignup } from '../../store/actionTypes'
 import Logo from '../../Image/vendr..svg'
 import { useSelector } from 'react-redux'
 import Details from './Details'
-import { TotalProduct} from '../../store/filterStore'
+import { Total } from '../../store/filterStore'
 
 
 const FoodNav = (props) => {
@@ -59,7 +59,7 @@ const FoodNav = (props) => {
   </div>
   <div >
     <Nav.Item className="adapt total">
-     £ {TotalProduct(totalCarts.carts)}
+     £ {Total(totalCarts.carts)}
     </Nav.Item>
   </div>
 

@@ -84,27 +84,6 @@ const emailValidate = (e) => {
 			console.log(info)
 		history.push('/home')
 		}
-		
-					/*const dbUrl = async() => {
-						const response = await axios({
-							method: "post",
-							headers: { 'Content-Type' : 'application/json'},
-							data: info,
-							url: "https://dev-bestops.herokuapp.com/v1/signup"
-			
-						}).then( response => {
-							
-							setErrorPassword('')
-							history.push('/profile')
-							console.log(response.data)
-						}).catch(err => 
-							setUserError("Email already exist")
-							 
-						)
-					}
-					dbUrl()*/
-		
-		
 		}
 		
 		

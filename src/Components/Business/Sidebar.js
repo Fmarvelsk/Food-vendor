@@ -8,7 +8,16 @@ import { useSelector } from 'react-redux';
 const Sidebar = (props) => {
   const loggedIn = useSelector(state => state.filterStore)
   const [showBar, hideBar] = useState()
+  const [profile, setProfile] = useState()
 
+const uploadAvatar = (e) => {
+  const file = e.target.files[0]
+  const reader = new FileReader()
+  reader.readAsDataURL(file);
+  reader.onloadend = () => {
+    setProfile(reader.result)
+  }
+}
   const showSidebar = () => {
     hideBar(!showBar)
   }
@@ -22,7 +31,10 @@ return(
   
 <div className="togl"><span className="navbar-toggler-icon" onClick={showSidebar}><DehazeIcon/></span></div>
   <div className="ml-5 mr-5 mt-3 moblie-sidebar">
+    <div className="file-upload">
     <img src={Blank} className="profile-pic" alt="profile" />
+    <input type="file" className="avatar" onChange= { (e) => uploadAvatar(e) }/>
+    </div>
     <p className="mt"> 
     {`Hello ${props.main ? 'Femi' : loggedIn.busId.email}`}</p>
 

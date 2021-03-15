@@ -1,10 +1,11 @@
-import { SORT_BY_LESS_POPULAR, SORT_BY_MOST_POPULAR, LOAD_DATA} from './index'
+import { FILTER_BY_VALUE, SORT_BY_MOST_POPULAR, LOAD_DATA} from './index'
 import { ADD_CARTS, INCREASE_QUANTITY, DECREASE_QUANTITY, DELETE_CART } from './cartsAction'
 import { 
 SHOW_MODAL_LOGIN, 
 HIDE_MODAL, SHOW_MODAL_SIGNUP, 
 SHOW_ORDER_NO, SIGNED_USER, 
 SIGNED_BUSSINESS } from './actionTypes';
+import {tdData} from '../Components/Business/Data'
 
 const initialState = {
     show: false,
@@ -13,17 +14,34 @@ const initialState = {
     order : true,
     user : null,
     busId : {},
-    numberOfCarts : 0
+    numberOfCarts : 0,
+    data : tdData
+    
 }
 
 export const filterStore = ( state = initialState, action) =>{
     switch(action.type){
-        case SORT_BY_MOST_POPULAR:
-            return state
-            case SORT_BY_LESS_POPULAR:
+/*        case SORT_BY_DATE:
+            let statusArr = action.payload.direction === 'asc'  ?
+            sortAsc(state.filteredProducts, 'name') :
+            sortDesc(state.filteredProducts, 'name');
+     
+        return {
+            ...state,
+            filteredProducts: sortedArr
+        };*/
+
+                 case FILTER_BY_VALUE:
+                    let value = action.payload.value
+                    let filterValue = state.data.filter( result => result.includes(value))
+                    
                 return{
-                    ...state                    
+                    ...state,
+                    data : filterValue
+                    
                 }
+                
+
                 case LOAD_DATA:
                     let count = action.payload.count;
                     let products =count
@@ -54,7 +72,6 @@ export const filterStore = ( state = initialState, action) =>{
                         };
 
                     case SHOW_ORDER_NO : 
-                    console.log(action)
                     return {
                         ...state,
                         order: action.payload
@@ -162,8 +179,13 @@ export const TotalQuantity = (carts) =>{
 
 export const TotalProduct = (result) =>{
         let total = 0
-        result.map((result) => {
-  return total+=result.price * result.quantity
-        })
+        result.map((result) => total+=result.price * result.quantity )
         return total.toFixed(2)
+}
+
+export const Total = (result) => {
+    let total = 0
+    result.map((result) => total+= result.price * result.quantity)
+    let sum = total + 20.00
+    return sum.toFixed(2)
 }
