@@ -8,11 +8,12 @@ function Login(props) {
 		<Modal show={props.show} onHide={props.handleClose}>
 			<div className="logo-modal">  <img src={Logo} alt="logo"/>
               </div>
-		<Modal.Dialog style={{margin: 0}}>
+		<Modal.Dialog 
+		style={{margin: 0}}>
 			<Modal.Header closeButton>
 			</Modal.Header>
 
-			<Modal.Body>
+			<Modal.Body className="login-mod">
 				{/* <Route exact path={`${path}/login`} component={LoginForm}/>
 							<Route exact path={`${path}/signup`} component={SignUp}/> */}
 				<LoginForm/>

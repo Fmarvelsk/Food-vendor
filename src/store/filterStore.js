@@ -4,7 +4,7 @@ import {
 SHOW_MODAL_LOGIN, 
 HIDE_MODAL, SHOW_MODAL_SIGNUP, 
 SHOW_ORDER_NO, SIGNED_USER, 
-SIGNED_BUSSINESS } from './actionTypes';
+SIGNED_BUSSINESS, FOOD_MODAL, HIDE_FOOD } from './actionTypes';
 
 const initialState = {
     show: false,
@@ -13,7 +13,9 @@ const initialState = {
     order : true,
     user : null,
     busId : {},
-    numberOfCarts : 0
+    numberOfCarts : 0,
+    display : false
+
 }
 
 export const filterStore = ( state = initialState, action) =>{
@@ -71,7 +73,17 @@ export const filterStore = ( state = initialState, action) =>{
                                 ...state,
                                 busId : action.payload
                             }
-            
+                            
+                            case FOOD_MODAL : 
+                            return {
+                                ...state,
+                                display: true
+                            } 
+                            case HIDE_FOOD : 
+                            return {
+                                ...state,
+                                display : false
+                            }
                         
                     default :
                 return state

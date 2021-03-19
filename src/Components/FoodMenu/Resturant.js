@@ -3,12 +3,21 @@ import {Row, Container, Col } from 'react-bootstrap'
 import ResturantCheck from './ResturantCheck'
 import Checkout from './Checkout'
 import Tab from './Tab'
+import ModalFood from './ModalFood'
+import { useSelector, useDispatch } from 'react-redux'
+import { hideFood } from '../../store/actionTypes'
 
 const Resturant = () => {
     useEffect( () => {
         document.body.style.backgroundColor = '#F9F9F9'
             }, [])
-           
+   
+const dispatch = useDispatch()     
+const { display } = useSelector( state => state.filterStore ) 
+const handleClose = () => {
+    dispatch(hideFood())
+}
+
 const check = [{
     Title:'Soup'
 },
@@ -45,6 +54,11 @@ return(<Container className="pb-5 mb-5 pt-5 my-container-lg my-container">
 <div className="mt-3 mb-3">
 <div>
 <Tab/>
+
+<ModalFood 
+show={display} 
+handleClose = {handleClose}
+/>
     </div>
 
 </div>

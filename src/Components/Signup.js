@@ -14,7 +14,7 @@ function Signup(props) {
 				
 			</Modal.Header>
 
-			<Modal.Body>
+			<Modal.Body className="login-mod">
 				{/* <Route exact path={`${path}/login`} component={LoginForm}/>
 							<Route exact path={`${path}/signup`} component={SignUp}/> */}
 				<SignUpForm/>

@@ -7,6 +7,7 @@
   background-color:#e9cb0e;
   
 }
+
 .login-btn{
   display: inline-block;
 text-decoration: none !important;
@@ -442,15 +443,14 @@ img.sos {
 .modal-dialog {
     max-width: 921px !important;
 }
-.modal-body{
+.login-mod{
   padding: 1rem 4rem;
 }
 }
 @media ( min-width : 920px){
-  .modal-body{
-     padding: 1rem 12rem;
-     
-}
+  .login-mod {
+      padding: 1rem 12rem;
+  }
 }
 .adapt {
   border: 1px solid transparent;

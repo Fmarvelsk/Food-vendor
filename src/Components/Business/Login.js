@@ -12,7 +12,7 @@ function Login(props) {
 			<Modal.Header closeButton>
 			</Modal.Header>
 
-			<Modal.Body>
+			<Modal.Body className="login-mod">
 				{/* <Route exact path={`${path}/login`} component={LoginForm}/>
 							<Route exact path={`${path}/signup`} component={SignUp}/> */}
 				<LoginForm label={props.idLabel}/>

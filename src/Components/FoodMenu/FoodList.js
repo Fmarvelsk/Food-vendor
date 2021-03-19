@@ -3,11 +3,15 @@ import { useDispatch } from 'react-redux'
 import Meats from '../../Image/Meats.jpeg'
 import { addToCarts } from '../../store/cartsAction'
 import { productExample } from '../Business/Data'
+import { foodModal } from '../../store/actionTypes'
 
 const FoodList = () => {
   const dispatch = useDispatch()
   const addCarts = (result) => {
     dispatch(addToCarts(result))
+  }
+  const DisplayFood = () => {
+    dispatch(foodModal())
   }
     return(
         <>
@@ -28,13 +32,14 @@ const FoodList = () => {
             <span className="ml-5 bold">£ {food.price}</span>
           </div>
           <div>
-          <span className="span-btn" onClick={ () => addCarts({
+            <button className="span-btn" onClick = {DisplayFood} ></button>
+          <button className="span-btn" onClick={ () => addCarts({
             id : food.id,
             name : food.name,
             image : Meats,
             details : food.details,
             price : food.price
-          })}>+</span>
+          })}>+</button>
          
         </div>
           </div>
